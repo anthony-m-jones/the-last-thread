@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c82le7s75oyac"]
+
+; SmallSpider — one of the gentle worker spiders in Room 3 (and the ending).
+; Same reusable NPC pattern as the cats: npc.gd root + an AnimatedSprite2D with a
+; 24-frame idle. Drop several copies into a room as warm, hopeful set-dressing.
+
+[ext_resource type="Script" uid="uid://bppdw37kq27pm" path="res://scenes/interactables/npc.gd" id="npc"]
+[ext_resource type="Texture2D" uid="uid://lorlwdvwvh1t" path="res://assets/characters/smallspider/idle/skeleton-animation_00.png" id="0"]
+[ext_resource type="Texture2D" uid="uid://55kqbi4y57l5" path="res://assets/characters/smallspider/idle/skeleton-animation_01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://djflvmxyoh3cm" path="res://assets/characters/smallspider/idle/skeleton-animation_02.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cbsynj43jb6c4" path="res://assets/characters/smallspider/idle/skeleton-animation_03.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://h5r3o01ipk8" path="res://assets/characters/smallspider/idle/skeleton-animation_04.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c31yruvwljf4s" path="res://assets/characters/smallspider/idle/skeleton-animation_05.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cj585yt78amnt" path="res://assets/characters/smallspider/idle/skeleton-animation_06.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bf2twwjgq062k" path="res://assets/characters/smallspider/idle/skeleton-animation_07.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://buwrx6d8en6bp" path="res://assets/characters/smallspider/idle/skeleton-animation_08.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cln8pp4m2kxrr" path="res://assets/characters/smallspider/idle/skeleton-animation_09.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bjpitso6jwsij" path="res://assets/characters/smallspider/idle/skeleton-animation_10.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://wdtkqj8ndb0g" path="res://assets/characters/smallspider/idle/skeleton-animation_11.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://beu7pltt0pu03" path="res://assets/characters/smallspider/idle/skeleton-animation_12.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://crnv3yjaqes3r" path="res://assets/characters/smallspider/idle/skeleton-animation_13.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://j3fxq5sll0cw" path="res://assets/characters/smallspider/idle/skeleton-animation_14.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dfl0o5118wr2c" path="res://assets/characters/smallspider/idle/skeleton-animation_15.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://cxiitqkawk0l1" path="res://assets/characters/smallspider/idle/skeleton-animation_16.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cb5mmvvcn3kay" path="res://assets/characters/smallspider/idle/skeleton-animation_17.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bsiaeo62m1awu" path="res://assets/characters/smallspider/idle/skeleton-animation_18.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://7regjyvnk1bq" path="res://assets/characters/smallspider/idle/skeleton-animation_19.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://dn0d0eahory3a" path="res://assets/characters/smallspider/idle/skeleton-animation_20.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://dfm2vfw5nlcip" path="res://assets/characters/smallspider/idle/skeleton-animation_21.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://cowwyg6vohetw" path="res://assets/characters/smallspider/idle/skeleton-animation_22.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://clrl5syt0jnpq" path="res://assets/characters/smallspider/idle/skeleton-animation_23.png" id="23"]
+
+[sub_resource type="SpriteFrames" id="frames_spider"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": ExtResource("0")}, {"duration": 1.0, "texture": ExtResource("1")}, {"duration": 1.0, "texture": ExtResource("2")}, {"duration": 1.0, "texture": ExtResource("3")}, {"duration": 1.0, "texture": ExtResource("4")}, {"duration": 1.0, "texture": ExtResource("5")}, {"duration": 1.0, "texture": ExtResource("6")}, {"duration": 1.0, "texture": ExtResource("7")}, {"duration": 1.0, "texture": ExtResource("8")}, {"duration": 1.0, "texture": ExtResource("9")}, {"duration": 1.0, "texture": ExtResource("10")}, {"duration": 1.0, "texture": ExtResource("11")}, {"duration": 1.0, "texture": ExtResource("12")}, {"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}, {"duration": 1.0, "texture": ExtResource("17")}, {"duration": 1.0, "texture": ExtResource("18")}, {"duration": 1.0, "texture": ExtResource("19")}, {"duration": 1.0, "texture": ExtResource("20")}, {"duration": 1.0, "texture": ExtResource("21")}, {"duration": 1.0, "texture": ExtResource("22")}, {"duration": 1.0, "texture": ExtResource("23")}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="SmallSpider" type="Node2D"]
+script = ExtResource("npc")
+face_player = false
+
+; scale 0.09: 599x496 art -> ~54x45 world units. A small, gentle creature, much
+; smaller than the cats. Tune scale + position in the editor. face_player is OFF
+; (these are ambient critters, not conversation partners); set static_facing in
+; the Inspector per copy if you want some looking left and some right.
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.09, 0.09)
+sprite_frames = SubResource("frames_spider")
+animation = &"idle"
+autoplay = "idle"

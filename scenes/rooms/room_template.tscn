@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c7t5n5kl6oh02"]
+
+[ext_resource type="Script" uid="uid://dxliboi2f7rip" path="res://scenes/rooms/room.gd" id="1_room"]
+[ext_resource type="Script" uid="uid://cixw1bo465tt3" path="res://scenes/rooms/goal_zone.gd" id="2_goal"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/door.tscn" id="3_door"]
+[ext_resource type="PackedScene" uid="uid://dr3xy1ikyh0kf" path="res://scenes/player/player.tscn" id="4_player"]
+
+[sub_resource type="RectangleShape2D" id="shape_floor"]
+size = Vector2(1600, 48)
+
+[sub_resource type="RectangleShape2D" id="shape_goal"]
+size = Vector2(64, 48)
+
+[node name="Room" type="Node2D" unique_id=899293316]
+script = ExtResource("1_room")
+
+[node name="Background" type="Parallax2D" parent="." unique_id=311444549]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(483, 239)
+
+[node name="Placeholder" type="ColorRect" parent="Background" unique_id=400412399]
+offset_left = -600.0
+offset_top = -200.0
+offset_right = 600.0
+offset_bottom = 400.0
+mouse_filter = 2
+color = Color(0.1, 0.12, 0.2, 1)
+
+[node name="SlotLabel" type="Label" parent="Background" unique_id=364055723]
+offset_left = -560.0
+offset_top = -180.0
+offset_right = -160.0
+offset_bottom = -160.0
+text = "BACKGROUND SLOT (scroll_scale 0.3)"
+
+[node name="Midground" type="Parallax2D" parent="." unique_id=237535656]
+scroll_scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(483, 239)
+
+[node name="Placeholder" type="ColorRect" parent="Midground" unique_id=42719924]
+offset_left = -500.0
+offset_right = 500.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.13, 0.16, 0.24, 1)
+
+[node name="SlotLabel" type="Label" parent="Midground" unique_id=2125774629]
+offset_left = -480.0
+offset_top = 8.0
+offset_right = -120.0
+offset_bottom = 28.0
+text = "MIDGROUND SLOT (scroll_scale 0.6)"
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=461652304]
+position = Vector2(576, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=899438246]
+shape = SubResource("shape_floor")
+
+[node name="Visual" type="ColorRect" parent="Floor" unique_id=2028039447]
+offset_left = -800.0
+offset_top = -24.0
+offset_right = 800.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.22, 0.24, 0.28, 1)
+
+[node name="GoalZone" type="Area2D" parent="." unique_id=724444585]
+position = Vector2(576, 576)
+script = ExtResource("2_goal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalZone" unique_id=609873329]
+shape = SubResource("shape_goal")
+
+[node name="Visual" type="ColorRect" parent="GoalZone" unique_id=1248958400]
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.3, 0.55, 0.35, 1)
+
+[node name="Label" type="Label" parent="GoalZone" unique_id=1782186223]
+offset_left = -60.0
+offset_top = -48.0
+offset_right = 140.0
+offset_bottom = -28.0
+text = "GOAL: step here"
+
+[node name="Door" parent="." unique_id=283796004 instance=ExtResource("3_door")]
+position = Vector2(1040, 552)
+next_room_path = "res://scenes/rooms/room_template.tscn"
+
+[node name="Player" parent="." unique_id=599950063 instance=ExtResource("4_player")]
+position = Vector2(150, 581)
+
+[node name="Foreground" type="Parallax2D" parent="." unique_id=1438067217]
+scroll_scale = Vector2(1.3, 1.3)
+scroll_offset = Vector2(463, 702)
+
+[node name="Placeholder" type="ColorRect" parent="Foreground" unique_id=905036253]
+offset_left = -679.0
+offset_top = -28.0
+offset_right = 721.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(0.18, 0.14, 0.12, 0.6)
+
+[node name="SlotLabel" type="Label" parent="Foreground" unique_id=351878411]
+offset_left = -659.0
+offset_top = -7.0
+offset_right = -259.0
+offset_bottom = 16.0
+text = "FOREGROUND SLOT (scroll_scale 1.3)"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=385701820]
+
+[node name="Instructions" type="Label" parent="UI" unique_id=1150187036]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 700.0
+offset_bottom = 120.0
+text = "ROOM TEMPLATE — Step 4: doors & parallax
+Move/jump/dash as before. Move right and watch the parallax layers drift
+at different speeds (depth). Step on the GREEN goal pad to solve the puzzle,
+which OPENS the red door. Walk into the open door to change rooms (this demo
+reloads the same room)."

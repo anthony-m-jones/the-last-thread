@@ -1,0 +1,54 @@
+# =============================================================================
+# .gitignore — The Last Thread (Godot 4 .NET / mono project)
+# -----------------------------------------------------------------------------
+# RULE OF THUMB for Godot:
+#   - IGNORE  ".godot/"      -> the editor's import CACHE; it rebuilds itself.
+#   - COMMIT  "*.import"     -> the per-asset import files next to each PNG.
+#                               These store the UIDs your .tscn scenes point at.
+#                               If you ignore these, scenes break for collaborators!
+#   - COMMIT  "addons/"      -> third-party addons (Dialogue Manager) so teammates
+#                               get them automatically.
+# =============================================================================
+
+# --- Godot 4 editor cache (regenerated on open) ---
+.godot/
+/android/
+
+# --- .NET / C# build artifacts (this is a Mono/.NET project) ---
+# Godot regenerates the solution/project files and these build folders, so they
+# don't belong in version control.
+.mono/
+bin/
+obj/
+*.csproj.user
+*.sln.user
+
+# --- Exported game builds (don't commit compiled output) ---
+# If you export to one of these folders, it stays off GitHub. Adjust to taste.
+/build/
+/builds/
+/export/
+/exports/
+
+# --- Local assistant / editor settings (personal, not shared) ---
+# settings.local.json is YOUR machine's local config; collaborators have their own.
+.claude/settings.local.json
+
+# --- IDE / editor folders ---
+.vs/
+.vscode/
+.idea/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# =============================================================================
+# NOTE on export_presets.cfg (not present yet):
+#   When you set up exporting, Godot creates export_presets.cfg. It's normally
+#   fine to commit (collaborators get your export settings) — BUT if you ever add
+#   a signing keystore PASSWORD to it, do NOT commit it. If that happens, add this
+#   line here:   export_presets.cfg
+# =============================================================================

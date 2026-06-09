@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+; This is a hand-written, deliberately tiny scene used only to confirm the
+; project runs after Step 1. A ".tscn" file is just a text description of a
+; scene tree: each [node] block is one node, "type" is the node class, and
+; "parent" says where it hangs in the tree ("." means the root).
+;
+; This will be replaced by real rooms in later steps. Press F5 (Run Project)
+; and you should see the label text in the top-left of a black window.
+
+[node name="Main" type="Node2D"]
+
+[node name="SetupLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+text = "The Last Thread — Step 1 setup is working.
+GameState autoload + Input Map + folders are in place.
+Replace this scene with real rooms in later steps."

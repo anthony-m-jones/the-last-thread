@@ -1,0 +1,42 @@
+# =============================================================================
+# room_02.dialogue — ROOM 2: The Glass House in the Rain. Ability: WALL-JUMP.
+# -----------------------------------------------------------------------------
+#   ~ intro     room entry — The Cat & The Weaver (in the rain)
+#   ~ cat       talk to Patch (grants Wall-jump)
+#   ~ complete  on reaching the top — The Weaver, closing
+# =============================================================================
+
+
+# --- OPENING CUTSCENE: The Cat & The Weaver --------------------------------
+~ intro
+The cat shelters under a leaf from the rain, soaked, discouraged. The Weaver's eyes appear in the dark above, upside-down.
+Weaver: You're wet, and you're doubting. Good. Doubt means you understand what's being asked.
+Cat: I can't reach it. Whatever it is. It's too high. There's a wall.
+Weaver: There is ALWAYS a wall. I have spent my whole long life among walls.
+Weaver: Here is the secret no spider tells: a wall is only a barrier if you push AGAINST it. Push OFF it, and it throws you higher than open air ever could.
+Weaver: The girl you love is a wall, too, ember. Skittish thing — you keep hurling yourself at her and bouncing off and calling it failure. It isn't. It's the climb.
+Cat: ...How do you know about her.
+Weaver: I told you. We watch the window. She carries my children outside on a leaf, you know. When the others would crush them. She has never once been afraid of the right things.
+Weaver: Now climb. The one who taught me about walls is here. He learned it the hard way, as the best ones do.
+=> END
+
+
+# --- ABILITY CAT: Patch (grants WALL-JUMP) ---------------------------------
+~ cat
+A battered alley cat sits on a high ledge, watching the rain through his one good eye. He doesn't turn around.
+Patch: You're the one the spider's running errands for. Heard about you.
+Cat: Everyone's heard about me but me, apparently.
+Patch: Funny. Most cats your size don't have a sense of humor. Too busy being scared.
+Patch: You want to get up there? You gotta stop seeing walls as the end of the road. I got every one of these scars falling OFF things. Then one day I figured out the wall was the only friend I had — push off it, you go up. Hit it, kick away, hit the next one.
+Patch: You don't have to make it all the way in one go. You just can't stop bouncing.
+Cat: And if I fall?
+Patch: Then you fall, and you climb again, and nobody up there's keeping score but you. Quit keeping score. Climb.
+=> END
+
+
+# --- CLOSING BEAT: The Weaver, at the top ----------------------------------
+~ complete
+Reaching the chandelier, the cat is exhausted but high above the rain now, the storm below him.
+Weaver: You see? From down there it was a prison of glass. From up here it is a lantern in the dark.
+Weaver: Nothing changed but how high you were willing to climb. One room left, ember. Come and learn what you've been carrying toward.
+=> END

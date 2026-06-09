@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c6boesv61dj1b"]
+
+[ext_resource type="Script" uid="uid://bwa6wr8vi3e73" path="res://scenes/rooms/door.gd" id="1_door"]
+
+[sub_resource type="RectangleShape2D" id="shape_door"]
+size = Vector2(48, 96)
+
+[node name="Door" type="Area2D" unique_id=356865901]
+script = ExtResource("1_door")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228157819]
+shape = SubResource("shape_door")
+
+[node name="Visual" type="ColorRect" parent="." unique_id=1106383082]
+visible = false
+offset_left = -24.0
+offset_top = -48.0
+offset_right = 24.0
+offset_bottom = 48.0
+mouse_filter = 2
+color = Color(0.6, 0.2, 0.2, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1095864788]
+visible = false
+offset_left = -55.0
+offset_top = -74.0
+offset_right = 57.0
+offset_bottom = -51.0
+text = "DOOR (locked)"

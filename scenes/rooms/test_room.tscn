@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bn3eutis18ci"]
+
+[ext_resource type="PackedScene" uid="uid://dr3xy1ikyh0kf" path="res://scenes/player/player.tscn" id="player_scene"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/interactable.tscn" id="interactable_scene"]
+[ext_resource type="Resource" uid="uid://carl7cyna8mvs" path="res://dialogue/room_01.dialogue" id="dialogue_room01"]
+
+[sub_resource type="RectangleShape2D" id="shape_floor"]
+size = Vector2(1200, 48)
+
+[sub_resource type="RectangleShape2D" id="shape_plat_wide"]
+size = Vector2(220, 24)
+
+[sub_resource type="RectangleShape2D" id="shape_plat_small"]
+size = Vector2(160, 24)
+
+; Tall, thin shape for the two walls used to test WALL-JUMP (Step 3).
+[sub_resource type="RectangleShape2D" id="shape_wall"]
+size = Vector2(24, 320)
+
+[node name="TestRoom" type="Node2D" unique_id=1115498132]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=949024589]
+position = Vector2(576, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2121095803]
+shape = SubResource("shape_floor")
+
+[node name="Visual" type="ColorRect" parent="Floor" unique_id=1082163375]
+offset_left = -600.0
+offset_top = -24.0
+offset_right = 600.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.22, 0.24, 0.28, 1)
+
+[node name="PlatformA" type="StaticBody2D" parent="." unique_id=1110623760]
+position = Vector2(353, 582)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformA" unique_id=346168204]
+shape = SubResource("shape_plat_wide")
+
+[node name="Visual" type="ColorRect" parent="PlatformA" unique_id=1788034033]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 12.0
+mouse_filter = 2
+color = Color(0.3, 0.33, 0.38, 1)
+
+[node name="PlatformB" type="StaticBody2D" parent="." unique_id=1398612722]
+position = Vector2(680, 459)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformB" unique_id=299196744]
+shape = SubResource("shape_plat_wide")
+
+[node name="Visual" type="ColorRect" parent="PlatformB" unique_id=308662631]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 12.0
+mouse_filter = 2
+color = Color(0.3, 0.33, 0.38, 1)
+
+[node name="PlatformC" type="StaticBody2D" parent="." unique_id=1809770335]
+position = Vector2(972, 531)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformC" unique_id=438969619]
+shape = SubResource("shape_plat_small")
+
+[node name="Visual" type="ColorRect" parent="PlatformC" unique_id=917205171]
+offset_left = -80.0
+offset_top = -12.0
+offset_right = 80.0
+offset_bottom = 12.0
+mouse_filter = 2
+color = Color(0.3, 0.33, 0.38, 1)
+
+; ---- WALL-JUMP TEST CHANNEL (Step 3) -------------------------------------
+; Two tall walls facing each other with a narrow gap between them. Jump into one
+; wall, then press jump to leap off it toward the other, and repeat to climb the
+; gap. If the cat just slides down instead of kicking off, wall-jump isn't
+; unlocked (GameState.has_wall_jump) — see the debug toggle.
+[node name="WallLeft" type="StaticBody2D" parent="."]
+position = Vector2(70, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+shape = SubResource("shape_wall")
+
+[node name="Visual" type="ColorRect" parent="WallLeft"]
+offset_left = -12.0
+offset_top = -160.0
+offset_right = 12.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0.36, 0.3, 0.26, 1)
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+position = Vector2(170, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+shape = SubResource("shape_wall")
+
+[node name="Visual" type="ColorRect" parent="WallRight"]
+offset_left = -12.0
+offset_top = -160.0
+offset_right = 12.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0.36, 0.3, 0.26, 1)
+
+; STEP 6 DEMO — ABILITY CAT: walk up, press E, and the REAL "cat" conversation
+; from room_01.dialogue plays in a balloon. JUMP is granted when that talk hits
+; => END (watch Output for "[GameState] Jump unlocked.").
+[node name="JumpCat" parent="." instance=ExtResource("interactable_scene")]
+position = Vector2(500, 584)
+dialogue_file = ExtResource("dialogue_room01")
+dialogue_title = "cat"
+ability_to_unlock = 1
+
+; STEP 6 DEMO — AUTO CUTSCENE ZONE: an invisible trigger near the spawn. Walking
+; into it auto-plays the "intro" cutscene (requires_button_press = false), grants
+; nothing (ability NONE), and one_shot so it only plays once.
+[node name="IntroZone" parent="." instance=ExtResource("interactable_scene")]
+position = Vector2(360, 560)
+dialogue_file = ExtResource("dialogue_room01")
+dialogue_title = "intro"
+requires_button_press = false
+
+[node name="Player" parent="." unique_id=1149419318 instance=ExtResource("player_scene")]
+position = Vector2(300, 540)
+
+[node name="Controls" type="Label" parent="." unique_id=313465975]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 130.0
+text = "TEST ROOM — Steps 2 & 3
+Move: A/D or Arrow keys
+Jump: Space or W  (hold for higher, tap for a hop)
+Wall-jump: jump into the left walls, press jump to kick off, zig-zag up
+Dash: Left Shift  (bursts in your facing / held direction)
+
+All abilities are on while GameState.debug_unlock_everything = true."

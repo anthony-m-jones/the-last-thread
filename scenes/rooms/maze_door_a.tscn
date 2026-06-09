@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://b6868pbxb2akr"]
+
+[ext_resource type="Texture2D" uid="uid://doyjgqebqfwor" path="res://assets/maze/maze_door01.png" id="2_vxh42"]
+[ext_resource type="PackedScene" uid="uid://crv1ntqbeq6i4" path="res://scenes/rooms/firefly_cluster.tscn" id="4_ki0v6"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/camera_bounds.tscn" id="6_ki0v6"]
+[ext_resource type="Script" uid="uid://dv16sykpaflty" path="res://scenes/rooms/maze_exit.gd" id="maze_exit"]
+[ext_resource type="Script" uid="uid://spwduqdui02a" path="res://scenes/rooms/maze_room.gd" id="maze_room"]
+[ext_resource type="PackedScene" uid="uid://dr3xy1ikyh0kf" path="res://scenes/player/player.tscn" id="player"]
+
+[sub_resource type="RectangleShape2D" id="shape_floor"]
+size = Vector2(1294, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki0v6"]
+size = Vector2(96.25, 781)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odiqm"]
+size = Vector2(96.25, 781)
+
+[sub_resource type="RectangleShape2D" id="shape_exit"]
+size = Vector2(80, 120)
+
+[node name="MazeDoorA" type="Node2D" unique_id=869753329]
+script = ExtResource("maze_room")
+room_kind = 1
+spawn_points = Array[NodePath]([NodePath("Spawns/SpawnLeft"), NodePath("Spawns/SpawnCenter"), NodePath("Spawns/SpawnRight")])
+exits = Array[NodePath]([NodePath("ExitLeft"), NodePath("ExitCenter"), NodePath("ExitRight")])
+
+[node name="MazeDoor01" type="Sprite2D" parent="." unique_id=363008188]
+position = Vector2(608, 379)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("2_vxh42")
+
+[node name="DuskTint" type="CanvasModulate" parent="." unique_id=184279926]
+color = Color(0.6, 0.62, 0.55, 1)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1886717105]
+position = Vector2(600, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=794255446]
+position = Vector2(20, 89.59)
+shape = SubResource("shape_floor")
+
+[node name="Visual" type="ColorRect" parent="Floor" unique_id=58901520]
+visible = false
+offset_left = -600.0
+offset_top = -24.0
+offset_right = 600.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.14, 0.16, 0.12, 1)
+
+[node name="Left_Wall" type="StaticBody2D" parent="." unique_id=691594523]
+position = Vector2(152, 554)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Wall" unique_id=42466326]
+position = Vector2(-5, -154.5)
+shape = SubResource("RectangleShape2D_ki0v6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Left_Wall" unique_id=599773645]
+position = Vector2(913, -161)
+shape = SubResource("RectangleShape2D_odiqm")
+
+[node name="Visual" type="ColorRect" parent="Left_Wall" unique_id=1843955511]
+visible = false
+offset_left = -600.0
+offset_top = -24.0
+offset_right = 600.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.14, 0.16, 0.12, 1)
+
+[node name="Spawns" type="Node2D" parent="." unique_id=420322185]
+
+[node name="SpawnLeft" type="Marker2D" parent="Spawns" unique_id=2093077263]
+position = Vector2(379, 560)
+
+[node name="SpawnCenter" type="Marker2D" parent="Spawns" unique_id=1592488725]
+position = Vector2(722, 560)
+
+[node name="SpawnRight" type="Marker2D" parent="Spawns" unique_id=763050493]
+position = Vector2(845, 560)
+
+[node name="ExitLeft" type="Area2D" parent="." unique_id=679868114]
+position = Vector2(252, 540)
+script = ExtResource("maze_exit")
+firefly_hint_path = NodePath("FireflyCluster2")
+require_press = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitLeft" unique_id=486223034]
+position = Vector2(1, 14)
+shape = SubResource("shape_exit")
+
+[node name="Visual" type="ColorRect" parent="ExitLeft" unique_id=1276352476]
+visible = false
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.08, 1)
+
+[node name="FireflyCluster2" parent="ExitLeft" unique_id=40272224 instance=ExtResource("4_ki0v6")]
+position = Vector2(2, -4)
+
+[node name="ExitCenter" type="Area2D" parent="." unique_id=514049844]
+position = Vector2(600, 540)
+script = ExtResource("maze_exit")
+firefly_hint_path = NodePath("FireflyCluster")
+require_press = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitCenter" unique_id=2049265263]
+position = Vector2(0, 18)
+shape = SubResource("shape_exit")
+
+[node name="Visual" type="ColorRect" parent="ExitCenter" unique_id=658810724]
+visible = false
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.08, 1)
+
+[node name="FireflyCluster" parent="ExitCenter" unique_id=95426466 instance=ExtResource("4_ki0v6")]
+position = Vector2(2, -4)
+
+[node name="ExitRight" type="Area2D" parent="." unique_id=1047216227]
+position = Vector2(957, 540)
+script = ExtResource("maze_exit")
+firefly_hint_path = NodePath("FireflyCluster3")
+require_press = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitRight" unique_id=724325232]
+position = Vector2(0, 14)
+shape = SubResource("shape_exit")
+
+[node name="Visual" type="ColorRect" parent="ExitRight" unique_id=1138608015]
+visible = false
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+mouse_filter = 2
+color = Color(0.08, 0.1, 0.08, 1)
+
+[node name="FireflyCluster3" parent="ExitRight" unique_id=862706310 instance=ExtResource("4_ki0v6")]
+position = Vector2(2, -4)
+
+[node name="Player" parent="." unique_id=976180134 instance=ExtResource("player")]
+position = Vector2(600, 560)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2125515769]
+
+[node name="Hint" type="Label" parent="UI" unique_id=654885173]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 780.0
+offset_bottom = 70.0
+text = "MAZE — DOOR ROOM (gray-box). Pick an exit. Fireflies mark the way (after a
+while, or if you jump near the right one)."
+
+[node name="CameraBounds" parent="." unique_id=1367040244 instance=ExtResource("6_ki0v6")]
+position = Vector2(83, 307)
+left_limit = 130.735
+right_limit = 1046.608
+use_top = true
+top_limit = -205.125
+bottom_limit = 634.495

@@ -1,0 +1,11 @@
+; camera_bounds.tscn — drop this into a room to lock the camera to the room edges.
+; Keep it at position (0,0) so the limit numbers read as plain world coordinates.
+; Select it and edit the Left/Right/Top/Bottom groups in the Inspector; the cyan
+; lines in the editor show where each active limit sits. See camera_bounds.gd.
+
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/rooms/camera_bounds.gd" id="1_cambounds"]
+
+[node name="CameraBounds" type="Node2D"]
+script = ExtResource("1_cambounds")

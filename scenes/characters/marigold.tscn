@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cxn2qnukdhggq"]
+
+; Marigold — the old, dignified house cat who grants DASH in Room 3.
+; Built exactly like patch.tscn / pip.tscn: an npc.gd root + an AnimatedSprite2D
+; child holding her 24-frame idle. To add more of her animations later, just add
+; a same-named animation to the SpriteFrames in the editor (no code changes).
+
+[ext_resource type="Script" uid="uid://bppdw37kq27pm" path="res://scenes/interactables/npc.gd" id="npc"]
+[ext_resource type="Texture2D" uid="uid://dlytmv3j3b6cg" path="res://assets/characters/marigold/idle/skeleton-animation_00.png" id="0"]
+[ext_resource type="Texture2D" uid="uid://bypullc6a7711" path="res://assets/characters/marigold/idle/skeleton-animation_01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://wb858rjtp70g" path="res://assets/characters/marigold/idle/skeleton-animation_02.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://m8batvjbeimy" path="res://assets/characters/marigold/idle/skeleton-animation_03.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c0v166u338cw5" path="res://assets/characters/marigold/idle/skeleton-animation_04.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dfha6o6fwji8w" path="res://assets/characters/marigold/idle/skeleton-animation_05.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://chrpvb8fuv86c" path="res://assets/characters/marigold/idle/skeleton-animation_06.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c722gmx8cb0tp" path="res://assets/characters/marigold/idle/skeleton-animation_07.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b74in8jq6aq3s" path="res://assets/characters/marigold/idle/skeleton-animation_08.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://5n7wjst8ecil" path="res://assets/characters/marigold/idle/skeleton-animation_09.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://fmcq1yv12cv3" path="res://assets/characters/marigold/idle/skeleton-animation_10.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://oxpjebtsrcpn" path="res://assets/characters/marigold/idle/skeleton-animation_11.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ckrtomupjsxrp" path="res://assets/characters/marigold/idle/skeleton-animation_12.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://nmbt8d3eguqj" path="res://assets/characters/marigold/idle/skeleton-animation_13.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cjcuku2jwnj0p" path="res://assets/characters/marigold/idle/skeleton-animation_14.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dg8cx3uharut2" path="res://assets/characters/marigold/idle/skeleton-animation_15.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://dg4x7yrwc1ebi" path="res://assets/characters/marigold/idle/skeleton-animation_16.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://b1a2pi3nkh3th" path="res://assets/characters/marigold/idle/skeleton-animation_17.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://c81mlnxbbqfkh" path="res://assets/characters/marigold/idle/skeleton-animation_18.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dae62iqlfq07k" path="res://assets/characters/marigold/idle/skeleton-animation_19.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://cd3hwrqohn6ym" path="res://assets/characters/marigold/idle/skeleton-animation_20.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://hab3bi16e6vp" path="res://assets/characters/marigold/idle/skeleton-animation_21.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://4yqwtdfhij1a" path="res://assets/characters/marigold/idle/skeleton-animation_22.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://d0ocpn8crxbbm" path="res://assets/characters/marigold/idle/skeleton-animation_23.png" id="23"]
+
+[sub_resource type="SpriteFrames" id="frames_marigold"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": ExtResource("0")}, {"duration": 1.0, "texture": ExtResource("1")}, {"duration": 1.0, "texture": ExtResource("2")}, {"duration": 1.0, "texture": ExtResource("3")}, {"duration": 1.0, "texture": ExtResource("4")}, {"duration": 1.0, "texture": ExtResource("5")}, {"duration": 1.0, "texture": ExtResource("6")}, {"duration": 1.0, "texture": ExtResource("7")}, {"duration": 1.0, "texture": ExtResource("8")}, {"duration": 1.0, "texture": ExtResource("9")}, {"duration": 1.0, "texture": ExtResource("10")}, {"duration": 1.0, "texture": ExtResource("11")}, {"duration": 1.0, "texture": ExtResource("12")}, {"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}, {"duration": 1.0, "texture": ExtResource("17")}, {"duration": 1.0, "texture": ExtResource("18")}, {"duration": 1.0, "texture": ExtResource("19")}, {"duration": 1.0, "texture": ExtResource("20")}, {"duration": 1.0, "texture": ExtResource("21")}, {"duration": 1.0, "texture": ExtResource("22")}, {"duration": 1.0, "texture": ExtResource("23")}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[node name="Marigold" type="Node2D"]
+script = ExtResource("npc")
+
+; scale 0.13: 1240x826 art -> ~161x107 world units. Marigold is an old house cat,
+; about the hero's size (a touch grander). Tune scale + position.y in the editor
+; so her paws rest on her platform. Leave face_player on (she looks at you while
+; you talk); set face_player off + static_facing in the Inspector if you want her
+; gazing at the dew instead.
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+sprite_frames = SubResource("frames_marigold")
+animation = &"idle"
+autoplay = "idle"

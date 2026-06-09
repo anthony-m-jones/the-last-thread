@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://crv1ntqbeq6i4"]
+
+[ext_resource type="Script" uid="uid://b17wq1urvv2aq" path="res://scenes/rooms/firefly_hint.gd" id="firefly"]
+
+[sub_resource type="Gradient" id="grad_glow"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="tex_glow"]
+gradient = SubResource("grad_glow")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Curve" id="curve_blink"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="curvetex_blink"]
+curve = SubResource("curve_blink")
+
+[sub_resource type="Gradient" id="grad_color"]
+colors = PackedColorArray(1, 0.95, 0.55, 1, 1, 0.8, 0.4, 1)
+
+[sub_resource type="GradientTexture1D" id="gradtex_color"]
+gradient = SubResource("grad_color")
+
+[sub_resource type="ParticleProcessMaterial" id="pm_fireflies"]
+emission_shape = 1
+emission_sphere_radius = 60.0
+spread = 180.0
+initial_velocity_min = 6.0
+initial_velocity_max = 18.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.0
+damping_max = 6.0
+scale_min = 0.4
+color_ramp = SubResource("gradtex_color")
+alpha_curve = SubResource("curvetex_blink")
+
+[sub_resource type="CircleShape2D" id="reach_shape"]
+radius = 180.0
+
+[node name="FireflyCluster" type="Node2D" unique_id=40272224]
+script = ExtResource("firefly")
+baseline_color = Color(1, 1, 1, 0.03137255)
+
+[node name="Swarm" type="GPUParticles2D" parent="." unique_id=1648083635]
+amount = 12
+texture = SubResource("tex_glow")
+lifetime = 3.0
+randomness = 1.0
+process_material = SubResource("pm_fireflies")
+
+[node name="Reach" type="Area2D" parent="." unique_id=1041799]
+
+[node name="ReachShape" type="CollisionShape2D" parent="Reach" unique_id=712168386]
+shape = SubResource("reach_shape")

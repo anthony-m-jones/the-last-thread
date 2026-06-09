@@ -1,0 +1,640 @@
+[gd_scene format=3 uid="uid://dr3xy1ikyh0kf"]
+
+[ext_resource type="Script" uid="uid://c8rj0q0wfc5kv" path="res://scenes/player/player.gd" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://c1ly4v7j5bxgr" path="res://assets/characters/tobers/idle_v2/tobers-idle_00.png" id="2_3j4b4"]
+[ext_resource type="Texture2D" uid="uid://dtk7mk1cpl542" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_00.png" id="2_ei0bd"]
+[ext_resource type="Texture2D" uid="uid://bc2jj2agl53m6" path="res://assets/characters/tobers/fall/tobers-fall_00.png" id="2_ws0t6"]
+[ext_resource type="Texture2D" uid="uid://dssu2hgworu44" path="res://assets/characters/tobers/fall/tobers-fall_01.png" id="3_i6ap2"]
+[ext_resource type="Texture2D" uid="uid://bh1qyvsmlrndb" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_01.png" id="3_wwa77"]
+[ext_resource type="Texture2D" uid="uid://bsqvo2e3hl24a" path="res://assets/characters/tobers/idle_v2/tobers-idle_01.png" id="3_yj68g"]
+[ext_resource type="Texture2D" uid="uid://s0ef4qq88y0l" path="res://assets/characters/tobers/fall/tobers-fall_02.png" id="4_88c1f"]
+[ext_resource type="Texture2D" uid="uid://dvqc8n5wxw8fn" path="res://assets/characters/tobers/idle_v2/tobers-idle_02.png" id="4_ioxgp"]
+[ext_resource type="Texture2D" uid="uid://clyhboauni2mt" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_02.png" id="4_tdwly"]
+[ext_resource type="Texture2D" uid="uid://cn0eewogpai5o" path="res://assets/characters/tobers/idle_v2/tobers-idle_03.png" id="5_cnsyf"]
+[ext_resource type="Texture2D" uid="uid://db62hba2mwdfo" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_03.png" id="5_fmlco"]
+[ext_resource type="Texture2D" uid="uid://blrddo54gr21a" path="res://assets/characters/tobers/fall/tobers-fall_03.png" id="5_hdu4s"]
+[ext_resource type="Texture2D" uid="uid://blhhlnnh0t1ej" path="res://assets/characters/tobers/fall/tobers-fall_04.png" id="6_0wr6q"]
+[ext_resource type="Texture2D" uid="uid://cldispmgcqor8" path="res://assets/characters/tobers/idle_v2/tobers-idle_04.png" id="6_007i1"]
+[ext_resource type="Texture2D" uid="uid://bowb4mbp2chri" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_04.png" id="6_duoik"]
+[ext_resource type="Texture2D" uid="uid://8qjpcy5as0m5" path="res://assets/characters/tobers/idle_v2/tobers-idle_05.png" id="7_6cv16"]
+[ext_resource type="Texture2D" uid="uid://dv4k45gwe5veg" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_05.png" id="7_6qclm"]
+[ext_resource type="Texture2D" uid="uid://w3e7watflk8f" path="res://assets/characters/tobers/fall/tobers-fall_05.png" id="7_p0anf"]
+[ext_resource type="Texture2D" uid="uid://b7i8kt744hr2" path="res://assets/characters/tobers/idle_v2/tobers-idle_06.png" id="8_j4nxn"]
+[ext_resource type="Texture2D" uid="uid://b54cqsarfgppx" path="res://assets/characters/tobers/fall/tobers-fall_06.png" id="8_lhgc7"]
+[ext_resource type="Texture2D" uid="uid://drksw7nh1nfhq" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_06.png" id="8_mtkxs"]
+[ext_resource type="Texture2D" uid="uid://b50734odpsv3y" path="res://assets/characters/tobers/idle_v2/tobers-idle_07.png" id="9_28m0y"]
+[ext_resource type="Texture2D" uid="uid://cvthcf5n3o6xk" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_07.png" id="9_pxyg8"]
+[ext_resource type="Texture2D" uid="uid://bhfmdiqyboumr" path="res://assets/characters/tobers/fall/tobers-fall_07.png" id="9_vy876"]
+[ext_resource type="Texture2D" uid="uid://dap4jybh5gqxs" path="res://assets/characters/tobers/fall/tobers-fall_08.png" id="10_0vtlm"]
+[ext_resource type="Texture2D" uid="uid://x0a2w1ot6ra3" path="res://assets/characters/tobers/idle_v2/tobers-idle_08.png" id="10_uniwh"]
+[ext_resource type="Texture2D" uid="uid://ddiwjab0nqhri" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_08.png" id="10_xm1em"]
+[ext_resource type="Texture2D" uid="uid://b3ve0i6nx04qd" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_09.png" id="11_6ix8p"]
+[ext_resource type="Texture2D" uid="uid://15818mfa6t1" path="res://assets/characters/tobers/fall/tobers-fall_09.png" id="11_drv02"]
+[ext_resource type="Texture2D" uid="uid://btwxsfl8q76c6" path="res://assets/characters/tobers/idle_v2/tobers-idle_09.png" id="11_iqsei"]
+[ext_resource type="Texture2D" uid="uid://cqrakhvbepx06" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_10.png" id="12_fntve"]
+[ext_resource type="Texture2D" uid="uid://ddvn308evv0hb" path="res://assets/characters/tobers/idle_v2/tobers-idle_10.png" id="12_tffgl"]
+[ext_resource type="Texture2D" uid="uid://dlps8wafekqfq" path="res://assets/characters/tobers/fall/tobers-fall_10.png" id="12_tmafg"]
+[ext_resource type="Texture2D" uid="uid://4pgys8teolrs" path="res://assets/characters/tobers/fall/tobers-fall_11.png" id="13_2enr6"]
+[ext_resource type="Texture2D" uid="uid://cp58b536mijue" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_11.png" id="13_a2vma"]
+[ext_resource type="Texture2D" uid="uid://dqedwaqjhymsd" path="res://assets/characters/tobers/idle_v2/tobers-idle_11.png" id="13_pk8ii"]
+[ext_resource type="Texture2D" uid="uid://twu8p1ksu3dy" path="res://assets/characters/tobers/idle_v2/tobers-idle_12.png" id="14_5mf0n"]
+[ext_resource type="Texture2D" uid="uid://dnj85j8h01v0" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_12.png" id="14_b63cp"]
+[ext_resource type="Texture2D" uid="uid://bei2pqgywiviw" path="res://assets/characters/tobers/fall/tobers-fall_12.png" id="14_qxlpa"]
+[ext_resource type="Texture2D" uid="uid://d2fky817yp6a0" path="res://assets/characters/tobers/idle_v2/tobers-idle_13.png" id="15_4hvnv"]
+[ext_resource type="Texture2D" uid="uid://dg1ggs7tjx7bm" path="res://assets/characters/tobers/fall/tobers-fall_13.png" id="15_iwd08"]
+[ext_resource type="Texture2D" uid="uid://nb5lf8ri3l0p" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_13.png" id="15_l2ov3"]
+[ext_resource type="Texture2D" uid="uid://bli8ujnggluym" path="res://assets/characters/tobers/fall/tobers-fall_14.png" id="16_5oeuk"]
+[ext_resource type="Texture2D" uid="uid://bxmkelvnjkirm" path="res://assets/characters/tobers/idle_v2/tobers-idle_14.png" id="16_bbmj2"]
+[ext_resource type="Texture2D" uid="uid://cocftttria3xw" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_14.png" id="16_gdxup"]
+[ext_resource type="Texture2D" uid="uid://bqxk44i6pb3fh" path="res://assets/characters/tobers/idle_v2/tobers-idle_15.png" id="17_kxw46"]
+[ext_resource type="Texture2D" uid="uid://de4galqqp4goo" path="res://assets/characters/tobers/fall/tobers-fall_15.png" id="17_oq5hk"]
+[ext_resource type="Texture2D" uid="uid://dam7o8om4wyhp" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_15.png" id="17_vbe6q"]
+[ext_resource type="Texture2D" uid="uid://l6jstqjd3hnt" path="res://assets/characters/tobers/idle_v2/tobers-idle_16.png" id="18_8qxvo"]
+[ext_resource type="Texture2D" uid="uid://eqkrfp2iso1s" path="res://assets/characters/tobers/fall/tobers-fall_16.png" id="18_kfile"]
+[ext_resource type="Texture2D" uid="uid://7l5i64f8tn6u" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_16.png" id="18_xkbl4"]
+[ext_resource type="Texture2D" uid="uid://d0ojuyg04o42o" path="res://assets/characters/tobers/idle_v2/tobers-idle_17.png" id="19_5q8fn"]
+[ext_resource type="Texture2D" uid="uid://v6xr6pbsivgr" path="res://assets/characters/tobers/fall/tobers-fall_17.png" id="19_pkjeu"]
+[ext_resource type="Texture2D" uid="uid://defphmnp0qbh2" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_17.png" id="19_xfllp"]
+[ext_resource type="Texture2D" uid="uid://oe3vu24qa83i" path="res://assets/characters/tobers/fall/tobers-fall_18.png" id="20_0epl4"]
+[ext_resource type="Texture2D" uid="uid://35bxksd7snlj" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_18.png" id="20_qr5dr"]
+[ext_resource type="Texture2D" uid="uid://c3tbrtxfseqiu" path="res://assets/characters/tobers/idle_v2/tobers-idle_18.png" id="20_wva7c"]
+[ext_resource type="Texture2D" uid="uid://cdwds7ci86puk" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_19.png" id="21_2t0dv"]
+[ext_resource type="Texture2D" uid="uid://bprlniutgjy7k" path="res://assets/characters/tobers/fall/tobers-fall_19.png" id="21_3r8w6"]
+[ext_resource type="Texture2D" uid="uid://bm66padxkaht7" path="res://assets/characters/tobers/idle_v2/tobers-idle_19.png" id="21_7obkq"]
+[ext_resource type="Texture2D" uid="uid://dprud1btbdmg" path="res://assets/characters/tobers/idle_v2/tobers-idle_20.png" id="22_007i1"]
+[ext_resource type="Texture2D" uid="uid://bg78mh10crm5t" path="res://assets/characters/tobers/fall/tobers-fall_20.png" id="22_i816j"]
+[ext_resource type="Texture2D" uid="uid://l12mx52jxbyv" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_20.png" id="22_xfwra"]
+[ext_resource type="Texture2D" uid="uid://ddwq4c0n2wjnu" path="res://assets/characters/tobers/idle_v2/tobers-idle_21.png" id="23_6cv16"]
+[ext_resource type="Texture2D" uid="uid://e7oatspe67t0" path="res://assets/characters/tobers/fall/tobers-fall_21.png" id="23_laqvq"]
+[ext_resource type="Texture2D" uid="uid://djh1mua1s74q1" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_21.png" id="23_txs7c"]
+[ext_resource type="Texture2D" uid="uid://v8w27cu6dgrr" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_22.png" id="24_18o63"]
+[ext_resource type="Texture2D" uid="uid://wrdtjs8kh83k" path="res://assets/characters/tobers/fall/tobers-fall_22.png" id="24_aq51r"]
+[ext_resource type="Texture2D" uid="uid://bcukiywt38o05" path="res://assets/characters/tobers/idle_v2/tobers-idle_22.png" id="24_j4nxn"]
+[ext_resource type="Texture2D" uid="uid://77fg2n3dxnim" path="res://assets/characters/tobers/idle_v2/tobers-idle_23.png" id="25_28m0y"]
+[ext_resource type="Texture2D" uid="uid://du2uk2xnxsqj4" path="res://assets/characters/tobers/fall/tobers-fall_23.png" id="25_q3ejk"]
+[ext_resource type="Texture2D" uid="uid://ml71mt2erm14" path="res://assets/characters/tobers/dash/tobers-character-sheet-dash_23.png" id="25_shj53"]
+[ext_resource type="Texture2D" uid="uid://cfqtmbb7ybjwk" path="res://assets/characters/tobers/run/tobers-run_00.png" id="26_1u1sw"]
+[ext_resource type="Texture2D" uid="uid://kjljnpr5aw4g" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_00.png" id="26_bysbl"]
+[ext_resource type="Texture2D" uid="uid://cbnlrbkfnj78j" path="res://assets/characters/tobers/run/tobers-run_01.png" id="27_2t3bg"]
+[ext_resource type="Texture2D" uid="uid://im5r6xq3bp6f" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_01.png" id="27_2wy34"]
+[ext_resource type="Texture2D" uid="uid://ddkayu6mb1xdc" path="res://assets/characters/tobers/run/tobers-run_02.png" id="28_jrbya"]
+[ext_resource type="Texture2D" uid="uid://1fnhp2nnnr24" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_02.png" id="28_ymths"]
+[ext_resource type="Texture2D" uid="uid://cda4ijio6txqm" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_03.png" id="29_3p0jd"]
+[ext_resource type="Texture2D" uid="uid://fwtuagb330vd" path="res://assets/characters/tobers/run/tobers-run_03.png" id="29_ahqnk"]
+[ext_resource type="Texture2D" uid="uid://usdfovrxx6" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_04.png" id="30_7nf13"]
+[ext_resource type="Texture2D" uid="uid://cmf056k0ed0vw" path="res://assets/characters/tobers/run/tobers-run_04.png" id="30_vb1ce"]
+[ext_resource type="Texture2D" uid="uid://rtfjnpoiuh5b" path="res://assets/characters/tobers/run/tobers-run_05.png" id="31_0ncpa"]
+[ext_resource type="Texture2D" uid="uid://bn0rcwf63lbqd" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_05.png" id="31_0y4ya"]
+[ext_resource type="Texture2D" uid="uid://dfnm2khu6axcf" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_06.png" id="32_s050l"]
+[ext_resource type="Texture2D" uid="uid://ke7ft2h58t1e" path="res://assets/characters/tobers/run/tobers-run_06.png" id="32_upxxc"]
+[ext_resource type="Texture2D" uid="uid://c8renu5jrslt7" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_07.png" id="33_4sw5w"]
+[ext_resource type="Texture2D" uid="uid://riu7mjptuvnr" path="res://assets/characters/tobers/run/tobers-run_07.png" id="33_ln3h3"]
+[ext_resource type="Texture2D" uid="uid://ffau52j4wvk4" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_08.png" id="34_s4k4a"]
+[ext_resource type="Texture2D" uid="uid://d1cbq3pms576m" path="res://assets/characters/tobers/run/tobers-run_08.png" id="34_uygh0"]
+[ext_resource type="Texture2D" uid="uid://bf3kehihobii4" path="res://assets/characters/tobers/run/tobers-run_09.png" id="35_t1aof"]
+[ext_resource type="Texture2D" uid="uid://c0yq6s2gmrbhf" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_09.png" id="35_vkc6f"]
+[ext_resource type="Texture2D" uid="uid://dh1q3xoy8aets" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_10.png" id="36_21yht"]
+[ext_resource type="Texture2D" uid="uid://d0i6cfnwd4d8" path="res://assets/characters/tobers/run/tobers-run_10.png" id="36_w8qe1"]
+[ext_resource type="Texture2D" uid="uid://7lsg8m831mi6" path="res://assets/characters/tobers/run/tobers-run_11.png" id="37_hdvrm"]
+[ext_resource type="Texture2D" uid="uid://cksxx005xwvbh" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_11.png" id="37_trum3"]
+[ext_resource type="Texture2D" uid="uid://cnxd7cnumkx4w" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_12.png" id="38_4b1ex"]
+[ext_resource type="Texture2D" uid="uid://y2yodlcuhfr2" path="res://assets/characters/tobers/run/tobers-run_12.png" id="38_5xbmr"]
+[ext_resource type="Texture2D" uid="uid://bi0cgnxn53k7" path="res://assets/characters/tobers/run/tobers-run_13.png" id="39_hir57"]
+[ext_resource type="Texture2D" uid="uid://c3v1m6hkuy1gd" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_13.png" id="39_v8cnd"]
+[ext_resource type="Texture2D" uid="uid://d28mq3eef13ea" path="res://assets/characters/tobers/run/tobers-run_14.png" id="40_7072n"]
+[ext_resource type="Texture2D" uid="uid://c3s4prdxfamat" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_14.png" id="40_wuxn4"]
+[ext_resource type="Texture2D" uid="uid://c5jyp2utp1xmb" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_15.png" id="41_46q5t"]
+[ext_resource type="Texture2D" uid="uid://iidctf17064r" path="res://assets/characters/tobers/run/tobers-run_15.png" id="41_gmu8b"]
+[ext_resource type="Texture2D" uid="uid://bckoer7jq6eoe" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_16.png" id="42_5miun"]
+[ext_resource type="Texture2D" uid="uid://0cyjtxdhvhdn" path="res://assets/characters/tobers/run/tobers-run_16.png" id="42_a38bk"]
+[ext_resource type="Texture2D" uid="uid://cquf6p5vnk6pw" path="res://assets/characters/tobers/run/tobers-run_17.png" id="43_3chqh"]
+[ext_resource type="Texture2D" uid="uid://d3ektdkfwxiew" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_17.png" id="43_7u1tp"]
+[ext_resource type="Texture2D" uid="uid://bvl84sttxeuun" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_18.png" id="44_pq1ih"]
+[ext_resource type="Texture2D" uid="uid://dtp3uui3t412r" path="res://assets/characters/tobers/run/tobers-run_18.png" id="44_pwfqx"]
+[ext_resource type="Texture2D" uid="uid://hvp6gk1ldblr" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_19.png" id="45_31ki0"]
+[ext_resource type="Texture2D" uid="uid://cjmyodh52h0mf" path="res://assets/characters/tobers/run/tobers-run_19.png" id="45_kssj8"]
+[ext_resource type="Texture2D" uid="uid://dvnm0er788mra" path="res://assets/characters/tobers/run/tobers-run_20.png" id="46_8lfxt"]
+[ext_resource type="Texture2D" uid="uid://vjogr3nyug0o" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_20.png" id="46_hf5gj"]
+[ext_resource type="Texture2D" uid="uid://cogm33pyd48yq" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_21.png" id="47_avmva"]
+[ext_resource type="Texture2D" uid="uid://bfcmf5ij3ownm" path="res://assets/characters/tobers/run/tobers-run_21.png" id="47_lclul"]
+[ext_resource type="Texture2D" uid="uid://cswnk7gjn05ot" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_22.png" id="48_0ioy2"]
+[ext_resource type="Texture2D" uid="uid://ivy4rasjh6hr" path="res://assets/characters/tobers/run/tobers-run_22.png" id="48_ej2d6"]
+[ext_resource type="Texture2D" uid="uid://3qagy0331f2c" path="res://assets/characters/tobers/run/tobers-run_23.png" id="49_fvjb1"]
+[ext_resource type="Texture2D" uid="uid://nbodoch0yvjj" path="res://assets/characters/tobers/jump-rise/tobers-jump-rise_23.png" id="49_vlhku"]
+[ext_resource type="Texture2D" uid="uid://csint1c8o0p45" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_00.png" id="98_2dxln"]
+[ext_resource type="Texture2D" uid="uid://cpfaq7eosxvcd" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_01.png" id="99_gsldg"]
+[ext_resource type="Texture2D" uid="uid://di4ep13y0vp71" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_02.png" id="100_rrrpt"]
+[ext_resource type="Texture2D" uid="uid://ctj6a628esaew" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_03.png" id="101_us45u"]
+[ext_resource type="Texture2D" uid="uid://dcok5w87gnfl7" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_04.png" id="102_wvv85"]
+[ext_resource type="Texture2D" uid="uid://bqlku85kn8hxp" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_05.png" id="103_hxu4r"]
+[ext_resource type="Texture2D" uid="uid://b84loj3jrkld7" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_06.png" id="104_i6dto"]
+[ext_resource type="Texture2D" uid="uid://df8fp0k1wj2ro" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_07.png" id="105_4d8j4"]
+[ext_resource type="Texture2D" uid="uid://n28iu3nb23f2" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_08.png" id="106_s27sh"]
+[ext_resource type="Texture2D" uid="uid://cd3afmu7gxnre" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_09.png" id="107_1vi86"]
+[ext_resource type="Texture2D" uid="uid://dxoeiy7dkvim0" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_10.png" id="108_beayq"]
+[ext_resource type="Texture2D" uid="uid://bbf7ph7247ry3" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_11.png" id="109_12j61"]
+[ext_resource type="Texture2D" uid="uid://cck20ts4eoxvc" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_12.png" id="110_kthys"]
+[ext_resource type="Texture2D" uid="uid://c36wc4qnphhrt" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_13.png" id="111_48o5h"]
+[ext_resource type="Texture2D" uid="uid://cswp24ww2aov3" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_14.png" id="112_xum3i"]
+[ext_resource type="Texture2D" uid="uid://dynain4hh8j8s" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_15.png" id="113_ct4wv"]
+[ext_resource type="Texture2D" uid="uid://brl1hmltohl4j" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_16.png" id="114_teg5g"]
+[ext_resource type="Texture2D" uid="uid://buvh5u4wa2jhj" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_17.png" id="115_vcxk4"]
+[ext_resource type="Texture2D" uid="uid://gremylm1imk2" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_18.png" id="116_x6bw1"]
+[ext_resource type="Texture2D" uid="uid://cylud0qc4xpr" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_19.png" id="117_e1bru"]
+[ext_resource type="Texture2D" uid="uid://csy6aolnrf70d" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_20.png" id="118_63x2c"]
+[ext_resource type="Texture2D" uid="uid://qwcvmx54jgek" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_21.png" id="119_arxfr"]
+[ext_resource type="Texture2D" uid="uid://bi4hv7tqw36c0" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_22.png" id="120_5ecds"]
+[ext_resource type="Texture2D" uid="uid://dgagjp2s0wr6p" path="res://assets/characters/tobers/wall_slide/tobers-character-sheet-wall_slide_23.png" id="121_nssm8"]
+
+[sub_resource type="RectangleShape2D" id="shape_player"]
+size = Vector2(24, 32)
+
+[sub_resource type="SpriteFrames" id="frames_tobers"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ei0bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wwa77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tdwly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fmlco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_duoik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6qclm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mtkxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pxyg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xm1em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6ix8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fntve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a2vma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b63cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l2ov3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gdxup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vbe6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xkbl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xfllp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qr5dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2t0dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xfwra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_txs7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_18o63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_shj53")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ws0t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i6ap2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_88c1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hdu4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0wr6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p0anf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lhgc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vy876")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0vtlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_drv02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tmafg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2enr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qxlpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iwd08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5oeuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_oq5hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kfile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pkjeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0epl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3r8w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i816j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_laqvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_aq51r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_q3ejk")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3j4b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yj68g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ioxgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cnsyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_007i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6cv16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4nxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_28m0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uniwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iqsei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tffgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pk8ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5mf0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4hvnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bbmj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kxw46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8qxvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5q8fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wva7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7obkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_007i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6cv16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_j4nxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_28m0y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_bysbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2wy34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ymths")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3p0jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7nf13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0y4ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_s050l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_4sw5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_s4k4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_vkc6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_21yht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_trum3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4b1ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_v8cnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wuxn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_46q5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_5miun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7u1tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_pq1ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_31ki0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hf5gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_avmva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0ioy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_vlhku")
+}],
+"loop": true,
+"name": &"jump_rise",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_1u1sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2t3bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jrbya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ahqnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vb1ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0ncpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_upxxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ln3h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uygh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_t1aof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_w8qe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hdvrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5xbmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hir57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_7072n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_gmu8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_a38bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_3chqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_pwfqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_kssj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_8lfxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_lclul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ej2d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_fvjb1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_2dxln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_gsldg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_rrrpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_us45u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wvv85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_hxu4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_i6dto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_4d8j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_s27sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_1vi86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_beayq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_12j61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_kthys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_48o5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_xum3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ct4wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_teg5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_vcxk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_x6bw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_e1bru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_63x2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_arxfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_5ecds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_nssm8")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 24.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=803719548]
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1553045400]
+shape = SubResource("shape_player")
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=226904861]
+visible = false
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = 16.0
+mouse_filter = 2
+color = Color(0.86, 0.55, 0.27, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=900000001]
+position = Vector2(0, -6)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("frames_tobers")
+animation = &"dash"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=81052751]
+zoom = Vector2(3, 3)

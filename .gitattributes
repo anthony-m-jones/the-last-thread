@@ -1,0 +1,25 @@
+# Normalize line endings for everything Git detects as text (.gd, .tscn, .cfg,
+# .import, .json, .dialogue ...). Stored as LF; safe on Windows + cross-platform.
+* text=auto eol=lf
+
+# --- Force these to be treated as BINARY (no line-ending conversion, no diff) ---
+# Without this, Git could "normalize" a binary file and corrupt it.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.bmp   binary
+*.ico   binary
+*.psd   binary
+*.aseprite binary
+*.wav   binary
+*.ogg   binary
+*.mp3   binary
+*.flac  binary
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+*.res   binary
+*.scn   binary

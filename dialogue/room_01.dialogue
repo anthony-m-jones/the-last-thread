@@ -1,0 +1,44 @@
+# =============================================================================
+# room_01.dialogue — ROOM 1: The Garden at Dusk. Ability: JUMP.
+# -----------------------------------------------------------------------------
+# Real writing from the design doc. Titles used by the room wiring:
+#   ~ intro     played on room entry (auto zone)         — The Cat & The Weaver
+#   ~ cat       played when you talk to Pip (grants Jump) — Pip
+#   ~ complete  played when the maze is solved            — The Weaver, closing
+# Edit freely; keep the title lines (~ ...) so the scene still finds them.
+# =============================================================================
+
+
+# --- OPENING CUTSCENE: The Cat & The Weaver --------------------------------
+~ intro
+The cat creeps in, chasing a single drifting strand of silk. It leads to the dark heart of the hedge. Something enormous shifts there. Only one long leg emerges into the light.
+Weaver: ...So. The little ember comes. Closer. No — not too close. I am easier to bear in pieces.
+Cat: You're the one the others whisper about.
+Weaver: I am the one the others whisper TO. There is a difference, though I'll not waste dusk explaining it.
+Weaver: You watch that window. Every evening. From exactly this far. [#highlight_window]
+The cat says nothing.
+Weaver: We watch it too. The girl there is kind to small frightened things — kinder than the world taught her to be. We have made her something. A thing of thread and patience. We hid it deep, where it would be safe.
+Weaver: Bring it back to her. You needn't know yet what it is. You need only know you're the right one to carry it.
+Cat: Why me?
+Weaver: ...You'll answer that yourself, by the end. Now. You've forgotten how to leave the ground. Someone here will remind you.
+=> END
+
+
+# --- ABILITY CAT: Pip (grants JUMP) ----------------------------------------
+~ cat
+A kitten is bouncing off a mushroom for no reason at all, delighted every single time.
+Pip: Hi hi hi! Did you SEE that?! I did it again! Watch — (boing) — AGAIN!
+Cat: I don't jump.
+Pip: What? Everybody jumps. You're BUILT for it. Look at your legs! Those are jumping legs!
+Cat: It's a long way down.
+Pip: Sure, but the good stuff's UP. You're not scared of falling. You're scared of being ALLOWED. It's okay. You're allowed.
+Pip: Watch me, then copy me. The first one's the only hard one.
+=> END
+
+
+# --- CLOSING BEAT: The Weaver, on maze complete ----------------------------
+~ complete
+The silk gate unspools. The Weaver's voice drifts from nowhere and everywhere.
+Weaver: One leap, and already higher than you've ever stood. Remember that, ember.
+Weaver: The ground lied to you about how far you could go.
+=> END

@@ -1,0 +1,94 @@
+; trivia.tscn — the data-driven trivia puzzle UI (Room 3).
+; Drop this scene into a room (as a child of the Room root, so it can auto-mark
+; the puzzle complete) OR instance it and connect its `trivia_completed` signal.
+; It reads its questions from data/trivia.json (see the "Trivia Data Path" export
+; in the Inspector). See trivia.gd for everything.
+;
+; TREE:
+;   Trivia (CanvasLayer, trivia.gd)   <- draws in screen space, over the room
+;   └── Root (Control, full screen)
+;       ├── Dimmer (ColorRect)        <- darkens the room behind the quiz
+;       └── Panel
+;           └── Layout (VBoxContainer)
+;               ├── ProgressLabel     "Question 1 of 3"
+;               ├── QuestionLabel     the prompt
+;               ├── AnswersBox (VBox) <- answer Buttons are added here at runtime
+;               └── FeedbackLabel     gentle correction on a wrong pick
+
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/trivia.gd" id="1_trivia"]
+
+[node name="Trivia" type="CanvasLayer"]
+script = ExtResource("1_trivia")
+
+; Control set to fill the whole screen (anchors 0..1). The trivia centers itself
+; inside this.
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+; Semi-transparent black rectangle that dims the gameplay behind the quiz so the
+; questions are easy to read.
+[node name="Dimmer" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+; A centered panel that holds the quiz. anchors_preset 8 = center; we give it a
+; fixed size and offset it so its middle sits at screen center.
+[node name="Panel" type="Panel" parent="Root"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+; VBoxContainer stacks its children top-to-bottom. We pad it inside the panel
+; with offsets so text isn't jammed against the edges.
+[node name="Layout" type="VBoxContainer" parent="Root/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="ProgressLabel" type="Label" parent="Root/Panel/Layout"]
+layout_mode = 2
+text = "Question 1 of 3"
+
+[node name="QuestionLabel" type="Label" parent="Root/Panel/Layout"]
+layout_mode = 2
+text = "Question goes here"
+autowrap_mode = 3
+
+; Empty container — trivia.gd fills this with one Button per answer at runtime.
+[node name="AnswersBox" type="VBoxContainer" parent="Root/Panel/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FeedbackLabel" type="Label" parent="Root/Panel/Layout"]
+layout_mode = 2
+text = ""
+autowrap_mode = 3

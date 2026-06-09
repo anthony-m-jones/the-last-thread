@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwk1xluapbt2b"
+path="res://.godot/imported/room_02.dialogue-072d3574a46bcf903c7706a0ade98e72.tres"
+
+[deps]
+
+source_file="res://dialogue/room_02.dialogue"
+dest_files=["res://.godot/imported/room_02.dialogue-072d3574a46bcf903c7706a0ade98e72.tres"]
+
+[params]
+
+defaults=true

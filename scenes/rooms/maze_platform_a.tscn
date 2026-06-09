@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://xtbr00jee65d"]
+
+[ext_resource type="Texture2D" uid="uid://c81bobdlbna7f" path="res://assets/maze/platforms2/maze_platform02.PNG" id="2_hsc10"]
+[ext_resource type="Texture2D" uid="uid://cup6yggf5iwd5" path="res://assets/maze/background.png" id="2_o4evm"]
+[ext_resource type="PackedScene" uid="uid://cjiip3kjg43eb" path="res://scenes/rooms/maze_platform_exit.tscn" id="3_hsc10"]
+[ext_resource type="Texture2D" uid="uid://d3s648uiajmi" path="res://assets/maze/maze_wall.png" id="3_ua4uu"]
+[ext_resource type="Texture2D" uid="uid://dr4u0buytx3he" path="res://assets/maze/platforms2/maze_platform03.PNG" id="3_yfa25"]
+[ext_resource type="Texture2D" uid="uid://d3k5bkfm5fjqw" path="res://assets/maze/platforms2/maze_platform01.PNG" id="4_ua4uu"]
+[ext_resource type="PackedScene" uid="uid://crv1ntqbeq6i4" path="res://scenes/rooms/firefly_cluster.tscn" id="6_p2oqd"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/camera_bounds.tscn" id="8_hsc10"]
+[ext_resource type="PackedScene" uid="uid://dr3xy1ikyh0kf" path="res://scenes/player/player.tscn" id="player"]
+[ext_resource type="Script" uid="uid://spwduqdui02a" path="res://scenes/rooms/maze_room.gd" id="maze_room"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hsc10"]
+load_path = "res://.godot/imported/tileable-ground.png-025a9e381a5696595ad2a1fee1a16ac5.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfa25"]
+size = Vector2(1685, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsc10"]
+size = Vector2(322, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ua4uu"]
+size = Vector2(20, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hiad"]
+size = Vector2(20, 750)
+
+[sub_resource type="RectangleShape2D" id="shape_ground"]
+size = Vector2(283, 59)
+
+[sub_resource type="RectangleShape2D" id="shape_ledge"]
+size = Vector2(303, 90)
+
+[node name="MazePlatformA" type="Node2D" unique_id=1162371441]
+script = ExtResource("maze_room")
+room_kind = 0
+spawn_points = [NodePath("Spawns/SpawnA"), NodePath("Spawns/SpawnB")]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2049437709]
+scroll_offset = Vector2(652, 248)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=192615821]
+texture = ExtResource("2_o4evm")
+
+[node name="DuskTint" type="CanvasModulate" parent="." unique_id=1867703721]
+color = Color(0.55, 0.58, 0.52, 1)
+
+[node name="BottomGround" type="StaticBody2D" parent="." unique_id=1251480315]
+position = Vector2(609, 688)
+
+[node name="Visual" type="ColorRect" parent="BottomGround" unique_id=453105935]
+visible = false
+offset_left = -180.0
+offset_top = -24.0
+offset_right = 180.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.14, 0.16, 0.12, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="BottomGround" unique_id=474669582]
+scale = Vector2(0.33, 0.33)
+texture = SubResource("CompressedTexture2D_hsc10")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BottomGround" unique_id=1711317878]
+position = Vector2(654.39, 0)
+scale = Vector2(0.33, 0.33)
+texture = SubResource("CompressedTexture2D_hsc10")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BottomGround" unique_id=1723906041]
+position = Vector2(-654.38, 0)
+scale = Vector2(0.33, 0.33)
+texture = SubResource("CompressedTexture2D_hsc10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomGround" unique_id=1500170934]
+position = Vector2(48.5, 35)
+shape = SubResource("RectangleShape2D_yfa25")
+
+[node name="GroundLeft" type="StaticBody2D" parent="." unique_id=1757471216]
+position = Vector2(107, 624)
+
+[node name="Visual" type="ColorRect" parent="GroundLeft" unique_id=124324397]
+visible = false
+offset_left = -180.0
+offset_top = -24.0
+offset_right = 180.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.14, 0.16, 0.12, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="GroundLeft" unique_id=278796078]
+scale = Vector2(0.445, 0.445)
+texture = ExtResource("3_yfa25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundLeft" unique_id=1728307997]
+position = Vector2(3, -8.5)
+shape = SubResource("RectangleShape2D_hsc10")
+
+[node name="maze_platform_exit" parent="." unique_id=1867698332 instance=ExtResource("3_hsc10")]
+position = Vector2(16, 537)
+require_press = true
+
+[node name="maze_platform_exit2" parent="." unique_id=1590579107 instance=ExtResource("3_hsc10")]
+position = Vector2(1281, 631)
+require_press = true
+
+[node name="LeftSide" type="StaticBody2D" parent="." unique_id=1613995876]
+position = Vector2(-102, 468)
+
+[node name="Sprite2D4" type="Sprite2D" parent="LeftSide" unique_id=1413988733]
+position = Vector2(-103, -184)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_ua4uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSide" unique_id=424124507]
+position = Vector2(48.5, -205)
+shape = SubResource("RectangleShape2D_ua4uu")
+
+[node name="LeftSide2" type="StaticBody2D" parent="." unique_id=687344835]
+position = Vector2(1608, 487)
+
+[node name="Sprite2D4" type="Sprite2D" parent="LeftSide2" unique_id=448389033]
+position = Vector2(-168, 45)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ua4uu")
+
+[node name="Sprite2D5" type="Sprite2D" parent="LeftSide2" unique_id=247496956]
+position = Vector2(-168, -456.28)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ua4uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSide2" unique_id=1224013630]
+position = Vector2(-232, -71)
+shape = SubResource("RectangleShape2D_7hiad")
+
+[node name="GroundRight" type="StaticBody2D" parent="." unique_id=47549459]
+position = Vector2(916, 689)
+
+[node name="Visual" type="ColorRect" parent="GroundRight" unique_id=1974287017]
+visible = false
+offset_left = -180.0
+offset_top = -24.0
+offset_right = 180.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.14, 0.16, 0.12, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="GroundRight" unique_id=1185852336]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_hsc10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundRight" unique_id=1301623342]
+position = Vector2(9.5, -23.5)
+shape = SubResource("shape_ground")
+
+[node name="Ledge" type="StaticBody2D" parent="." unique_id=1125567658]
+position = Vector2(520, 710)
+
+[node name="Visual" type="ColorRect" parent="Ledge" unique_id=1516134433]
+visible = false
+offset_left = -110.0
+offset_top = -18.0
+offset_right = 110.0
+offset_bottom = 18.0
+mouse_filter = 2
+color = Color(0.16, 0.18, 0.13, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ledge" unique_id=767286626]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ua4uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ledge" unique_id=991818960]
+position = Vector2(-2.5, -27)
+shape = SubResource("shape_ledge")
+
+[node name="Spawns" type="Node2D" parent="." unique_id=801219114]
+
+[node name="SpawnA" type="Marker2D" parent="Spawns" unique_id=594214435]
+position = Vector2(140, 560)
+
+[node name="SpawnB" type="Marker2D" parent="Spawns" unique_id=835255534]
+position = Vector2(1188, 644)
+
+[node name="FireflyCluster" parent="." unique_id=285016319 instance=ExtResource("6_p2oqd")]
+position = Vector2(536, 487)
+
+[node name="FireflyCluster4" parent="." unique_id=40272224 instance=ExtResource("6_p2oqd")]
+position = Vector2(108, 483)
+
+[node name="FireflyCluster2" parent="." unique_id=1125233483 instance=ExtResource("6_p2oqd")]
+position = Vector2(932, 498)
+
+[node name="FireflyCluster3" parent="." unique_id=956946367 instance=ExtResource("6_p2oqd")]
+position = Vector2(1225, 559)
+
+[node name="Player" parent="." unique_id=15099429 instance=ExtResource("player")]
+position = Vector2(141, 551)
+
+[node name="CameraBounds" parent="." unique_id=1039552088 instance=ExtResource("8_hsc10")]
+left_limit = -81.935
+bottom_limit = 759.87
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1378069560]
+
+[node name="Hint" type="Label" parent="UI" unique_id=225755619]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 780.0
+offset_bottom = 70.0
+text = "MAZE — PLATFORM ROOM (gray-box). Jump across to the exit. Notice the
+fireflies react when you jump near them."

@@ -1,0 +1,56 @@
+; pip.tscn — the Room 1 kitten NPC (grants Jump via dialogue).
+; This is the VISUAL only (idle animation + face-the-player). Drop it as a CHILD
+; of an interactable so the dialogue/trigger and the looks stay aligned. To make
+; another NPC: duplicate this scene, swap the SpriteFrames frames. See npc.gd.
+;
+; TREE:
+;   Pip (Node2D, npc.gd)
+;   └── AnimatedSprite2D (plays "idle")
+
+[gd_scene load_steps=27 format=3 uid="uid://pip0npcscene01"]
+
+[ext_resource type="Script" path="res://scenes/interactables/npc.gd" id="npc"]
+[ext_resource type="Texture2D" uid="uid://beytmc0jbmdu3" path="res://assets/characters/pip/idle/skeleton-idle_00.png" id="0"]
+[ext_resource type="Texture2D" uid="uid://cgex6s8rd71ke" path="res://assets/characters/pip/idle/skeleton-idle_01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c08rduch3kyn1" path="res://assets/characters/pip/idle/skeleton-idle_02.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b1uqmbt0ka4ok" path="res://assets/characters/pip/idle/skeleton-idle_03.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b5y3y56v13wuc" path="res://assets/characters/pip/idle/skeleton-idle_04.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dptlnvbbyrh2a" path="res://assets/characters/pip/idle/skeleton-idle_05.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://6yboo8pa0l4i" path="res://assets/characters/pip/idle/skeleton-idle_06.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cln50wgfnhdak" path="res://assets/characters/pip/idle/skeleton-idle_07.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://ccjjxgmloo1pk" path="res://assets/characters/pip/idle/skeleton-idle_08.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bskitgr0e5sn" path="res://assets/characters/pip/idle/skeleton-idle_09.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c2og6ixsepxxp" path="res://assets/characters/pip/idle/skeleton-idle_10.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dtm7c63acnot0" path="res://assets/characters/pip/idle/skeleton-idle_11.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://cho8kdnoclrke" path="res://assets/characters/pip/idle/skeleton-idle_12.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dyjljryewmxbi" path="res://assets/characters/pip/idle/skeleton-idle_13.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ca2jvpc4j84fy" path="res://assets/characters/pip/idle/skeleton-idle_14.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://b02da60tgw2wa" path="res://assets/characters/pip/idle/skeleton-idle_15.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://d0opfijth8li3" path="res://assets/characters/pip/idle/skeleton-idle_16.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://djbqiwaon6dme" path="res://assets/characters/pip/idle/skeleton-idle_17.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://ccisuqwcvgpat" path="res://assets/characters/pip/idle/skeleton-idle_18.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://gr6w3ky6u0ta" path="res://assets/characters/pip/idle/skeleton-idle_19.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://c28fqb3xrjps3" path="res://assets/characters/pip/idle/skeleton-idle_20.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bc33r31udyoxl" path="res://assets/characters/pip/idle/skeleton-idle_21.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://bc7voqa2ur1uv" path="res://assets/characters/pip/idle/skeleton-idle_22.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://b8jh07x2plykw" path="res://assets/characters/pip/idle/skeleton-idle_23.png" id="23"]
+
+[sub_resource type="SpriteFrames" id="frames_pip"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": ExtResource("0")}, {"duration": 1.0, "texture": ExtResource("1")}, {"duration": 1.0, "texture": ExtResource("2")}, {"duration": 1.0, "texture": ExtResource("3")}, {"duration": 1.0, "texture": ExtResource("4")}, {"duration": 1.0, "texture": ExtResource("5")}, {"duration": 1.0, "texture": ExtResource("6")}, {"duration": 1.0, "texture": ExtResource("7")}, {"duration": 1.0, "texture": ExtResource("8")}, {"duration": 1.0, "texture": ExtResource("9")}, {"duration": 1.0, "texture": ExtResource("10")}, {"duration": 1.0, "texture": ExtResource("11")}, {"duration": 1.0, "texture": ExtResource("12")}, {"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}, {"duration": 1.0, "texture": ExtResource("17")}, {"duration": 1.0, "texture": ExtResource("18")}, {"duration": 1.0, "texture": ExtResource("19")}, {"duration": 1.0, "texture": ExtResource("20")}, {"duration": 1.0, "texture": ExtResource("21")}, {"duration": 1.0, "texture": ExtResource("22")}, {"duration": 1.0, "texture": ExtResource("23")}],
+"loop": true,
+"name": &"idle",
+"speed": 24.0
+}]
+
+[node name="Pip" type="Node2D"]
+script = ExtResource("npc")
+
+; scale 0.06: 655x596 art -> ~39x36 world units. Pip is a KITTEN — smaller than
+; the hero cat. Tune scale + the sprite's position.y in the editor so his paws sit
+; on the ground next to the interactable.
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.06, 0.06)
+sprite_frames = SubResource("frames_pip")
+animation = &"idle"
+autoplay = "idle"

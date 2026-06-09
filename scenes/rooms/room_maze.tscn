@@ -1,0 +1,124 @@
+; room_maze.tscn — ROOM 1.5: THE HEDGE MAZE.
+; -----------------------------------------------------------------------------
+; Reached from the garden (room_01) via its press-to-enter door. Per the design
+; doc, the maze is the Room-1 puzzle ("find your way when you're lost"); solving
+; it spins open a silk-sealed gate — the door to Room 2 (the greenhouse).
+;
+; This is a GRAY-BOX scaffold: a floor, the hedge-maze art as a backdrop, a goal
+; pad that marks the puzzle solved, and a door to the greenhouse that opens once
+; solved. Build the real maze geometry (walls/turns/fireflies) on top of this in
+; the editor — it uses the same Room/GoalZone/Door pattern as every other room.
+;
+; FLOW: room_01 (garden) -> room_maze (here) -> room_02 (greenhouse).
+
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" uid="uid://dxliboi2f7rip" path="res://scenes/rooms/room.gd" id="room_script"]
+[ext_resource type="Script" uid="uid://cixw1bo465tt3" path="res://scenes/rooms/goal_zone.gd" id="goal_script"]
+[ext_resource type="PackedScene" uid="uid://c6boesv61dj1b" path="res://scenes/rooms/door.tscn" id="door"]
+[ext_resource type="PackedScene" uid="uid://dr3xy1ikyh0kf" path="res://scenes/player/player.tscn" id="player"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/camera_bounds.tscn" id="cam_bounds"]
+[ext_resource type="Texture2D" uid="uid://b2vb0wuf4m11c" path="res://assets/room_01/hedgemaze2.png" id="maze_bg"]
+[ext_resource type="Texture2D" uid="uid://cavvj7aiqggyt" path="res://assets/room_01/hedgemaze2front.png" id="maze_fg"]
+
+[sub_resource type="RectangleShape2D" id="shape_floor"]
+size = Vector2(1600, 48)
+
+[sub_resource type="RectangleShape2D" id="shape_goal"]
+size = Vector2(64, 96)
+
+[node name="Room" type="Node2D"]
+script = ExtResource("room_script")
+
+; Dusk tint to match the garden's mood (tune to taste; deeper inside a hedge it
+; could be darker/greener than the open garden).
+[node name="DuskTint" type="CanvasModulate" parent="."]
+color = Color(0.78, 0.82, 0.7, 1)
+
+; --- Maze art. hedgemaze2 = the maze body (behind the player); hedgemaze2front =
+;     the front hedges that pass IN FRONT of the cat. Both 1576x998. Reposition /
+;     scale and add more hedge pieces in the editor to build the real maze. ---
+[node name="Background" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.6)
+
+[node name="Maze" type="Sprite2D" parent="Background"]
+position = Vector2(600, 360)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("maze_bg")
+
+[node name="Foreground" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.15, 1.15)
+
+[node name="MazeFront" type="Sprite2D" parent="Foreground"]
+position = Vector2(600, 380)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("maze_fg")
+
+; --- Ground ---
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(600, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("shape_floor")
+
+[node name="Visual" type="ColorRect" parent="Floor"]
+visible = false
+offset_left = -800.0
+offset_top = -24.0
+offset_right = 800.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.18, 0.22, 0.14, 1)
+
+; --- Goal pad: reaching the maze's end solves the room (opens the gate/door).
+;     Move this to wherever the real maze exit ends up. ---
+[node name="GoalZone" type="Area2D" parent="."]
+position = Vector2(1080, 552)
+script = ExtResource("goal_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalZone"]
+shape = SubResource("shape_goal")
+
+[node name="Visual" type="ColorRect" parent="GoalZone"]
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = 48.0
+mouse_filter = 2
+color = Color(0.3, 0.55, 0.35, 1)
+
+[node name="Label" type="Label" parent="GoalZone"]
+offset_left = -70.0
+offset_top = -72.0
+offset_right = 130.0
+offset_bottom = -50.0
+text = "MAZE EXIT"
+
+; --- Door to the greenhouse (Room 2). Press-to-enter, opens once the maze is
+;     solved (the "silk gate unspools"). ---
+[node name="Door" parent="." instance=ExtResource("door")]
+position = Vector2(1180, 552)
+next_room_path = "res://scenes/rooms/room_02.tscn"
+require_press = true
+prompt_text = "Press E to leave the maze"
+
+; --- Player. Spawns at the maze entrance (left). ---
+[node name="Player" parent="." instance=ExtResource("player")]
+position = Vector2(120, 552)
+
+; --- Camera bounds (tune to the real maze size). ---
+[node name="CameraBounds" parent="." instance=ExtResource("cam_bounds")]
+left_limit = 0.0
+right_limit = 1200.0
+bottom_limit = 660.0
+
+; --- On-screen help ---
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hint" type="Label" parent="UI"]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 780.0
+offset_bottom = 90.0
+text = "THE HEDGE MAZE — find your way to the exit, then press E to leave.
+(Gray-box scaffold: build the real maze walls/turns over this.)"

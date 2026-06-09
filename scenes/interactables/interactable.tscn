@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bg1rsdg8g4xpm"]
+
+[ext_resource type="Script" uid="uid://coiaorntym5ol" path="res://scenes/interactables/interactable.gd" id="1_inter"]
+
+[sub_resource type="RectangleShape2D" id="shape_reach"]
+size = Vector2(286, 64)
+
+[node name="Interactable" type="Area2D" unique_id=1869055016]
+script = ExtResource("1_inter")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623487399]
+position = Vector2(-1, 0)
+shape = SubResource("shape_reach")
+
+[node name="Visual" type="ColorRect" parent="." unique_id=1944842511]
+visible = false
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(0.55, 0.45, 0.75, 1)
+
+[node name="Prompt" type="Label" parent="." unique_id=401864900]
+offset_left = -40.0
+offset_top = -52.0
+offset_right = 60.0
+offset_bottom = -30.0
+text = "Press E"

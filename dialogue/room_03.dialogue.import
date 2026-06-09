@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://vddhoklpytgc"
+path="res://.godot/imported/room_03.dialogue-6abf729e6d445161a5767669eac45bad.tres"
+
+[deps]
+
+source_file="res://dialogue/room_03.dialogue"
+dest_files=["res://.godot/imported/room_03.dialogue-6abf729e6d445161a5767669eac45bad.tres"]
+
+[params]
+
+defaults=true

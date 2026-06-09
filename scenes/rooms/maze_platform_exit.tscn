@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cjiip3kjg43eb"]
+
+[ext_resource type="Script" uid="uid://dv16sykpaflty" path="res://scenes/rooms/maze_exit.gd" id="1_4yiuv"]
+[ext_resource type="Texture2D" uid="uid://b5qiwb4do652d" path="res://assets/room_01/Paint Layer 1.PNG" id="2_6m6js"]
+[ext_resource type="Texture2D" uid="uid://2nawufdadowj" path="res://assets/maze/decorations/decoration03.PNG" id="3_speye"]
+[ext_resource type="Texture2D" uid="uid://d33f26xw23n2x" path="res://assets/maze/decorations/decoration09.PNG" id="4_qrvxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_224gf"]
+size = Vector2(78, 71.5)
+
+[node name="maze_platform_exit" type="Area2D" unique_id=1685940519]
+script = ExtResource("1_4yiuv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=854883024]
+position = Vector2(2, 32)
+texture = ExtResource("2_6m6js")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1634093886]
+position = Vector2(-80, 26)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_speye")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1128283659]
+position = Vector2(71, 29)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_speye")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2055244425]
+position = Vector2(-6, 46)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_qrvxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=893613918]
+position = Vector2(0, 31.75)
+shape = SubResource("RectangleShape2D_224gf")
+
+; Renamed to "Prompt" so maze_exit.gd finds and uses THIS label for the "Press E"
+; popup (the script looks for a child named exactly "Prompt"). Hidden until the
+; player is in range. Set its text in the Inspector or via the exit's prompt_text.
+[node name="Prompt" type="Label" parent="." unique_id=197395075]
+offset_left = -21.0
+offset_top = -4.0
+offset_right = 19.0
+offset_bottom = 19.0
+text = "Press E"
