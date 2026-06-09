@@ -1,8 +1,8 @@
 {
-	"_comment": "Room 3 trivia — 'Do you truly know her?' Each question characterizes Wren (who never appears on screen) through the cat's knowledge of her. Wrong answers are NEVER punishing: the 'correction' is a gentle Weaver nudge and the player retries. The 'reply' on a correct answer is the Weaver's warm confirmation, shown briefly before advancing. correct_index is 0-based. Edit freely.",
+	"_comment": "Room 3 trivia — 'Do you truly know her?' Each question characterizes Ella (who never appears on screen) through the cat's knowledge of her. Wrong answers are NEVER punishing: the 'correction' is a gentle Weaver nudge and the player retries. The 'reply' on a correct answer is the Weaver's warm confirmation, shown briefly before advancing. correct_index is 0-based. Edit freely.",
 	"questions": [
 		{
-			"question": "When Wren finds a spider in the house, what does she do?",
+			"question": "When Ella finds a spider in the house, what does she do?",
 			"answers": ["Carries it outside on a leaf.", "Crushes it with a shoe.", "Screams for someone else."],
 			"correct_index": 0,
 			"reply": "Yes. Now you understand why we love her.",
@@ -24,9 +24,9 @@
 		},
 		{
 			"question": "What is the name she almost calls you — the one you always run from?",
-			"answers": ["Marmalade.", "Ember.", "She has never named you."],
+			"answers": ["Tobers.", "Ember.", "She has never named you."],
 			"correct_index": 0,
-			"reply": "Marmalade. ...You knew it all along.",
+			"reply": "Tobers. ...You knew it all along.",
 			"correction": "You know this one, ember. You have heard her start to say it a hundred dusks. Try again."
 		}
 	]

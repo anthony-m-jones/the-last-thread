@@ -20,7 +20,7 @@ Why zoom 3 (you asked me to choose for a story-first game): your old 1.0 felt
 distant; 2.66 was better. 3.0 makes the cat a bit bigger again, lands on the
 clean, well-known **640×360** retro design size (so all art math is just "thirds
 of 1080"), and still keeps enough of the gorgeous vista on screen — which matters
-because the **distant glowing window (Wren) is an emotional throughline** that
+because the **distant glowing window (Ella) is an emotional throughline** that
 needs to stay visible. If you ever want the cat even bigger / more intimate, nudge
 the Zoom toward 3.5–4 (visible world shrinks toward 480×270); all the art sizes
 below scale the same way. It's literally one number in the Inspector.
@@ -154,7 +154,7 @@ depth, stylized organic shapes, cozy melancholy — palette/lighting per room.*
 4. **Don't rig everything in Spine.** Rain, fireflies, glowworms, dew, eye-shine
    = Godot particles/shaders. Backgrounds = static parallax images. Spine only
    for: the player cat (priority), the 3 NPC cats (idle+talk), small spiders.
-5. **The story gives free art savings:** Wren is never shown (no character art).
+5. **The story gives free art savings:** Ella is never shown (no character art).
    The Weaver is almost never visible (just one leg + eight eye-points).
 
 ---
@@ -407,12 +407,12 @@ Match the uploaded reference's brushwork and shapes.
 
 > These are tuned for the model-sheet prompt: physical, visual, and readable at
 > small size. Keep personality light (a hint via posture/expression) — the bulk
-> of personality comes later from Spine animation. The Weaver and Wren are
+> of personality comes later from Spine animation. The Weaver and Ella are
 > special cases (see notes after the table).
 
-**The Cat — protagonist ("Marmalade", but unnamed on screen):**
+**The Cat — protagonist ("Tobers", but unnamed on screen):**
 ```
-a small shy orange tabby cat, soft and a little melancholy. Warm marmalade-orange
+a small shy orange tabby cat, soft and a little melancholy. Warm orange
 fur with faint darker ginger stripes, a paler cream chest and muzzle, a small pink
 nose, and large gentle amber eyes that look slightly worried. Rounded, soft body;
 medium-length fluffy tail; neat upright ears. Youngish and a touch underfed —
@@ -480,7 +480,7 @@ else in frame. Majestic and ancient, not gross or threatening.
 >   eye-glints with Godot particles/sprites — no art needed).
 > - For his Room 2 lightning-flash silhouette (the one scare), you don't need a
 >   clean asset — a dark hint is the point. We can make that in Godot.
-> - **Wren needs NO character art at all** — she is heard, never seen. Skip her.
+> - **Ella needs NO character art at all** — she is heard, never seen. Skip her.
 
 ### Prompt E — Prop for cut-out
 ```

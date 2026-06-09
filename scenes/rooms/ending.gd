@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 # WHAT THIS FILE IS
 #   The ending scene's tiny controller. When the scene loads, it plays the final
-#   conversation (Wren off-screen, the purring, the Weaver's last words) through
+#   conversation (Ella off-screen, the purring, the Weaver's last words) through
 #   the DialogueManager. That's all it does.
 # =============================================================================
 extends Node2D

@@ -9,9 +9,9 @@
 
 Everything in the game is one idea wearing three costumes: **the things we're afraid of are usually the things that love us.**
 
-- The cat is afraid to let the girl, **Wren**, pet him — even though he loves her.
+- The cat is afraid to let the girl, **Ella**, pet him — even though he loves her.
 - The cat is afraid of the **spiders**, and especially their hidden leader — even though they're gentle.
-- Wren, we slowly learn, is the one human who is gentle to spiders: she carries them outside on a leaf instead of crushing them. *That's why the spiders love her.* It's also the mirror the whole game turns on — the feared thing (spider, skittish cat) turns out to be safe, if you're brave enough to stay still.
+- Ella, we slowly learn, is the one human who is gentle to spiders: she carries them outside on a leaf instead of crushing them. *That's why the spiders love her.* It's also the mirror the whole game turns on — the feared thing (spider, skittish cat) turns out to be safe, if you're brave enough to stay still.
 
 The three abilities map to three escalating acts of courage:
 
@@ -21,13 +21,13 @@ The three abilities map to three escalating acts of courage:
 | 2 | **Wall-jump** | The walls that stop you can also lift you. Keep climbing. | Cold, striving, persistence |
 | 3 | **Dash** | Don't wait. Close the distance while you still can. | Warm, magical, arrival |
 
-The "thing the spiders hid" stays a secret until Room 3. The reveal: it's a **silk tapestry** the spiders spent a long time weaving — a portrait of Wren with the orange cat asleep in her lap. **A picture of a moment that hasn't happened yet.** And it's *unfinished* on purpose: only the cat can complete it, by actually doing the thing it shows.
+The "thing the spiders hid" stays a secret until Room 3. The reveal: it's a **silk tapestry** the spiders spent a long time weaving — a portrait of Ella with the orange cat asleep in her lap. **A picture of a moment that hasn't happened yet.** And it's *unfinished* on purpose: only the cat can complete it, by actually doing the thing it shows.
 
 ---
 
 ## The cast
 
-- **The cat** — orange, shy, terse. Speaks rarely and plainly (render his lines as meows + subtitle, or thought-text). Has no name: he's never let anyone get close enough to give him one. Wren *almost* names him — she always gets out "Mar—" before he bolts.
+- **The cat** — orange, shy, terse. Speaks rarely and plainly (render his lines as meows + subtitle, or thought-text). Has no name: he's never let anyone get close enough to give him one. Ella *almost* names him — she always gets out "Tob—" before he bolts.
 - **The Weaver** — the leader spider. Always *partially* hidden: a single long leg in a shaft of light, eight points of glinting eyes in the dark, a voice that comes from above and behind you. Speaks grand, old-fashioned, and dry — but every word he says is kind, and you only realize that in hindsight. Calls the cat **"little ember."**
 - **Pip** — a kitten. Gives **Jump.** Pure joy, no fear yet.
 - **Patch** — a one-eyed alley cat. Gives **Wall-jump.** Scarred, dry-humored, kind underneath.
@@ -36,7 +36,7 @@ The "thing the spiders hid" stays a secret until Room 3. The reveal: it's a **si
 ---
 
 # ROOM 1 — THE GARDEN AT DUSK
-*Intro. Establishes cat, Wren, spiders. Ability: **Jump.** Puzzle: **hedge maze.***
+*Intro. Establishes cat, Ella, spiders. Ability: **Jump.** Puzzle: **hedge maze.***
 
 ### Environment
 
@@ -44,7 +44,7 @@ An overgrown autumn garden in the last twenty minutes of daylight. This is the w
 
 - **Look:** Tall dry grass, a leaning wooden fence, a cracked stone birdbath, fat pumpkins gone soft, a forgotten ball of yarn snagged on a thorn. A trellis and a tool shed give you things to climb once you have Jump.
 - **Color & light:** Burnt orange, dusty rose, deepening violet. Long shadows. Fireflies start to wake as the scene darkens — they double as soft light-guides toward the next platform.
-- **The detail that sells it:** Far in the background, *unreachable,* a single window in a house glows warm gold. That window is **Wren.** It's always on screen, always too far. The whole first room is the cat being close to her and unable to reach.
+- **The detail that sells it:** Far in the background, *unreachable,* a single window in a house glows warm gold. That window is **Ella.** It's always on screen, always too far. The whole first room is the cat being close to her and unable to reach.
 - **Sound:** Crickets, a wind chime from the house, the rustle of grass.
 - **Traversal & puzzle:** You start at ground level, boxed in. Pip gives you Jump near the start. You jump up crates → trellis → shed roof → into the **hedge maze** at the top of the garden. The maze is a "find your way when you're lost" puzzle — fitting, since the cat is lost. Fireflies cluster at correct turns. Completing it spins open a gate woven shut with silk: the door to Room 2.
 
@@ -196,24 +196,24 @@ Inside the hollow of an ancient oak — the spiders' home, and the most beautifu
 
 **WEAVER:** *Here it is. The thing of thread and patience. But I will not let you carry it to her on love alone. Plenty of creatures *want* someone. Few have ever truly *seen* them.* *(the eyes fix on the cat)* *Love is only attention that lasted. So tell me, ember — these long dusks at the window. Were you watching her? Or only watching the warm light she happened to stand in?*
 
-> **Trivia begins.** *(This does the clever double job of characterizing Wren — who never appears on screen — through the cat's own knowledge of her. Every right answer is a brick of who she is. Suggested questions; tune to your taste. Wrong answers don't fail you — the Weaver gently corrects and lets you try again, because the point is learning her, not being punished.)*
+> **Trivia begins.** *(This does the clever double job of characterizing Ella — who never appears on screen — through the cat's own knowledge of her. Every right answer is a brick of who she is. Suggested questions; tune to your taste. Wrong answers don't fail you — the Weaver gently corrects and lets you try again, because the point is learning her, not being punished.)*
 
-1. **When Wren finds a spider in the house, what does she do?**
+1. **When Ella finds a spider in the house, what does she do?**
    → *Carries it outside on a leaf.* (Correct: *"Yes. Now you understand why we love her."*)
 2. **What does she hum when she thinks no one is listening?**
    → *No real tune — just whatever's in her head.* (Correct: *"Off-key. Constantly. It's perfect."*)
 3. **Why does she leave the garden window open even in the cold?**
    → *For the orange cat, in case he ever wants to come in.* (Correct: *"...She has been waiting for you longer than you know, ember."*)
 4. **What is the name she almost calls you, the one you always run from?**
-   → ***Marmalade.*** (Correct — and the Weaver goes quiet a moment.)
+   → ***Tobers.*** (Correct — and the Weaver goes quiet a moment.)
 
 > On the final answer:
 
-**WEAVER:** *Marmalade.* *(a long pause)* *You knew it all along. You ran every time, not because you didn't want it — but because once she finished saying it, you'd be hers, and there would be no more running. You've been afraid of being *home.** *(he steps aside)* *Then let me show you what we wove for her. And for you.*
+**WEAVER:** *Tobers.* *(a long pause)* *You knew it all along. You ran every time, not because you didn't want it — but because once she finished saying it, you'd be hers, and there would be no more running. You've been afraid of being *home.** *(he steps aside)* *Then let me show you what we wove for her. And for you.*
 
 ### THE REVEAL
 
-> The silk falls away. The tapestry is a portrait, woven in shining thread: **Wren, sitting in her chair by the open window — with the orange cat asleep in her lap.** A perfect, impossible image. But the cat's shape in the picture is woven only in faint, unfinished outline — a ghost, a hope.
+> The silk falls away. The tapestry is a portrait, woven in shining thread: **Ella, sitting in her chair by the open window — with the orange cat asleep in her lap.** A perfect, impossible image. But the cat's shape in the picture is woven only in faint, unfinished outline — a ghost, a hope.
 
 **CAT:** *(staring)* That's... that hasn't happened. I've never— I always run before—
 
@@ -222,15 +222,15 @@ Inside the hollow of an ancient oak — the spiders' home, and the most beautifu
 ---
 
 # THE ENDING
-*(Wren stays off-screen, as you wanted — heard, never shown. The whole emotional weight lands on sound and on what we *don't* see.)*
+*(Ella stays off-screen, as you wanted — heard, never shown. The whole emotional weight lands on sound and on what we *don't* see.)*
 
 > Final sequence — playable or cutscene. The cat carries a strand of the silk out into the dawn garden of Room 1. The unreachable golden window is now a warm **open door,** finally at ground level. We see the cat from behind, small, facing the light. Inside, a girl's shape we never quite see.
 
-**WREN (off-screen):** Oh... *(soft)* Hey. It's you. You came back. You always come back, and then you— *(a held breath)*
+**ELLA (off-screen):** Oh... *(soft)* Hey. It's you. You came back. You always come back, and then you— *(a held breath)*
 
 > The cat does not run. *(If playable: the last input is a single Dash, toward the door. One button. Everything the game taught, in one press.)* The cat steps inside.
 
-**WREN (off-screen, delighted, gentle):** ...Marmalade.
+**ELLA (off-screen, delighted, gentle):** ...Tobers.
 
 > This time he doesn't bolt. The screen holds on the open door, the warm light, the dawn. We hear a chair creak, a girl settle, a quiet *"there you are."* And then — for the first time in the whole game — **purring.**
 
@@ -241,7 +241,7 @@ Inside the hollow of an ancient oak — the spiders' home, and the most beautifu
 **WEAVER:** *(softly, the warmest he's ever sounded)* *He stayed. The last thread is spun.* *(a beat)* *Come. We have a great deal of weeping in the rain ahead of us — there are always more frightened little embers in the world who've forgotten they're allowed.*
 
 > **THE END.**
-> *(The save screen / title card now shows the tapestry — completed. The cat's outline is filled in solid gold at last, asleep in Wren's lap. The image you spent the whole game earning.)*
+> *(The save screen / title card now shows the tapestry — completed. The cat's outline is filled in solid gold at last, asleep in Ella's lap. The image you spent the whole game earning.)*
 
 ---
 
@@ -249,6 +249,6 @@ Inside the hollow of an ancient oak — the spiders' home, and the most beautifu
 
 - **Keep the Weaver hidden almost to the end, and only ever reveal him as *gentle,* never as a monster.** The lightning-flash silhouette in Room 2 is your one scare. Everything after pays off the subversion. If you show too much, you lose the "feared thing is kind" theme that carries the whole story.
 - **The golden window is your throughline prop.** Unreachable (R1) → glimpsed from above (R2 as a far light) → an open door at ground level (ending). The player should feel the distance close without you ever saying it.
-- **Withhold the cat's name.** "Marmalade" only appears in the Room 3 trivia and the final line. The player feels the weight of him never having been named because no one ever got close enough.
-- **Let wrong trivia answers be kind, not punishing.** The Weaver correcting you teaches Wren's character; failure states would break the tone.
+- **Withhold the cat's name.** "Tobers" only appears in the Room 3 trivia and the final line. The player feels the weight of him never having been named because no one ever got close enough.
+- **Let wrong trivia answers be kind, not punishing.** The Weaver correcting you teaches Ella's character; failure states would break the tone.
 - **Music:** keep it sparse and a little lonely in Rooms 1–2; let the *first* truly warm, resolved theme play only when you enter the oak in Room 3, and let it bloom fully over the purring at the end.
