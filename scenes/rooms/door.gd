@@ -143,7 +143,7 @@ func _on_room_puzzle_completed() -> void:
 	_is_unlocked = true
 	_refresh_visual()
 	_update_prompt()
-	AudioManager.play_one_shot(&"sfx.world.unlock")
+	AudioManager.play_one_shot(&"sfx.world.door_unlock")
 	print("[Door] Unlocked: ", name)
 
 # Runs when ANY body enters the area. We only care about the player.

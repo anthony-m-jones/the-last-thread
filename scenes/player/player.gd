@@ -133,6 +133,7 @@ var _dash_direction: float = 1.0        # which way the current dash points (-1/
 
 # Wall-jump state (Step 3).
 var _wall_jump_lockout_timer: float = 0.0  # > 0 = ignore horizontal input
+var _was_on_floor: bool = false
 
 # FACING: which way the cat last moved (-1 = left, +1 = right). We need this so
 # a dash with no direction held still shoots the way the cat is "looking."
@@ -165,6 +166,7 @@ var _dialogue_active: bool = false
 
 func _ready() -> void:
 	add_to_group("player")
+	_was_on_floor = is_on_floor()
 
 	# CONTROL LOCK DURING DIALOGUE
 	# DialogueManager (the autoload) announces when any conversation starts and
@@ -224,6 +226,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0.0
 		_play_if_exists(&"idle")
 		move_and_slide()
+		_track_landing_sfx()
 		return
 
 	_update_timers(delta)
@@ -239,6 +242,7 @@ func _physics_process(delta: float) -> void:
 		_apply_dash_motion()
 		_update_animation()
 		move_and_slide()
+		_track_landing_sfx()
 		return
 
 	# --- Normal (non-dashing) movement ---
@@ -257,6 +261,7 @@ func _physics_process(delta: float) -> void:
 	# move_and_slide() reads our `velocity`, moves the body, resolves collisions,
 	# and refreshes is_on_floor()/is_on_wall() for next frame.
 	move_and_slide()
+	_track_landing_sfx()
 
 
 # -----------------------------------------------------------------------------
@@ -477,7 +482,7 @@ func _do_wall_jump() -> void:
 
 	# Spend the buffer so one press = one wall jump.
 	_jump_buffer_timer = 0.0
-	AudioManager.play_one_shot(&"sfx.player.jump")
+	AudioManager.play_one_shot(&"sfx.player.wall_jump")
 	jumped.emit()
 
 
@@ -538,3 +543,11 @@ func _is_dashing() -> bool:
 func _apply_dash_motion() -> void:
 	velocity.x = _dash_direction * dash_speed
 	velocity.y = 0.0   # ignore gravity for the duration of the dash
+
+
+func _track_landing_sfx() -> void:
+	var is_now_on_floor: bool = is_on_floor()
+	var landed_this_frame: bool = is_now_on_floor and not _was_on_floor
+	if landed_this_frame and absf(velocity.y) > 40.0:
+		AudioManager.play_one_shot(&"sfx.player.land")
+	_was_on_floor = is_now_on_floor

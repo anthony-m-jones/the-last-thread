@@ -5,7 +5,10 @@ const FALLBACK_BUS: String = "Master"
 
 var _cue_map: Dictionary = {}
 var _music_player: AudioStreamPlayer
+var _ambience_player: AudioStreamPlayer
 var _one_shot_root: Node
+var _current_music_cue: StringName = &""
+var _current_ambience_cue: StringName = &""
 
 
 func _ready() -> void:
@@ -13,6 +16,11 @@ func _ready() -> void:
 	_music_player.name = "MusicPlayer"
 	_music_player.bus = _resolve_bus("Music")
 	add_child(_music_player)
+
+	_ambience_player = AudioStreamPlayer.new()
+	_ambience_player.name = "AmbiencePlayer"
+	_ambience_player.bus = _resolve_bus("Ambience")
+	add_child(_ambience_player)
 
 	_one_shot_root = Node.new()
 	_one_shot_root.name = "OneShots"
@@ -57,21 +65,48 @@ func has_cue(cue_id: StringName) -> bool:
 	return _cue_map.has(String(cue_id))
 
 
-func play_music(cue_id: StringName, volume_db: float = 0.0) -> bool:
+func play_music(cue_id: StringName, volume_db: float = 0.0, force_restart: bool = false) -> bool:
 	var stream: AudioStream = _load_stream_for_cue(String(cue_id))
 	if stream == null:
 		return false
+
+	if not force_restart and _current_music_cue == cue_id and _music_player.playing:
+		return true
 
 	_music_player.bus = _resolve_bus("Music")
 	_music_player.stop()
 	_music_player.stream = stream
 	_music_player.volume_db = volume_db
 	_music_player.play()
+	_current_music_cue = cue_id
 	return true
 
 
 func stop_music() -> void:
 	_music_player.stop()
+	_current_music_cue = &""
+
+
+func play_ambience(cue_id: StringName, volume_db: float = 0.0, force_restart: bool = false) -> bool:
+	var stream: AudioStream = _load_stream_for_cue(String(cue_id))
+	if stream == null:
+		return false
+
+	if not force_restart and _current_ambience_cue == cue_id and _ambience_player.playing:
+		return true
+
+	_ambience_player.bus = _resolve_bus("Ambience")
+	_ambience_player.stop()
+	_ambience_player.stream = stream
+	_ambience_player.volume_db = volume_db
+	_ambience_player.play()
+	_current_ambience_cue = cue_id
+	return true
+
+
+func stop_ambience() -> void:
+	_ambience_player.stop()
+	_current_ambience_cue = &""
 
 
 func play_one_shot(

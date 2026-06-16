@@ -44,6 +44,44 @@ signal puzzle_completed
 # without actually solving anything. In normal play it starts false and gets
 # flipped by mark_puzzle_complete().
 @export var puzzle_complete: bool = false
+@export var ambience_cue: StringName = &""
+@export var music_cue: StringName = &""
+
+
+func _ready() -> void:
+	_apply_room_audio()
+
+
+func _apply_room_audio() -> void:
+	var selected_ambience: StringName = ambience_cue
+	var selected_music: StringName = music_cue
+
+	if selected_ambience == &"" or selected_music == &"":
+		var auto_audio: Dictionary = _auto_audio_cues_for_scene()
+		if selected_ambience == &"":
+			selected_ambience = auto_audio.get("ambience", &"")
+		if selected_music == &"":
+			selected_music = auto_audio.get("music", &"")
+
+	if selected_ambience != &"":
+		AudioManager.play_ambience(selected_ambience)
+	if selected_music != &"":
+		AudioManager.play_music(selected_music)
+
+
+func _auto_audio_cues_for_scene() -> Dictionary:
+	var scene_path: String = ""
+	if get_tree().current_scene != null:
+		scene_path = String(get_tree().current_scene.scene_file_path).to_lower()
+
+	if scene_path.contains("room_01"):
+		return {"ambience": &"amb.room01.loop", "music": &"music.room01.loop"}
+	if scene_path.contains("room_02"):
+		return {"ambience": &"amb.room02.loop", "music": &"music.room02.loop"}
+	if scene_path.contains("room_03"):
+		return {"ambience": &"amb.room03.loop", "music": &"music.room03.loop"}
+
+	return {}
 
 
 # -----------------------------------------------------------------------------
