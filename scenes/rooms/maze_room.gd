@@ -41,8 +41,6 @@ enum RoomKind { PLATFORM, DOOR }
 
 
 func _ready() -> void:
-	AudioManager.play_ambience(&"amb.maze.loop")
-	AudioManager.play_music(&"music.maze.loop")
 	# Make sure maze state is initialised (resets only on first maze room).
 	MazeState.ensure_started()
 	_place_player_at_random_spawn()
