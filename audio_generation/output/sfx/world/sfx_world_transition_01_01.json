@@ -1,0 +1,10 @@
+{
+  "job_id": "world_scene_transition",
+  "title": "Scene Transition",
+  "category": "sfx/world",
+  "output_stem": "sfx_world_transition_01",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\sfx\\world\\sfx_world_transition_01_01.mp3"
+}

@@ -1,0 +1,10 @@
+{
+  "job_id": "ui_trivia_wrong",
+  "title": "Trivia Wrong",
+  "category": "sfx/ui",
+  "output_stem": "sfx_ui_trivia_wrong_01",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\sfx\\ui\\sfx_ui_trivia_wrong_01_01.mp3"
+}

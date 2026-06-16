@@ -1,0 +1,10 @@
+{
+  "job_id": "ella_ending_lines",
+  "title": "Ella - Ending Lines",
+  "category": "voice/ella",
+  "output_stem": "vox_ella_ending_01",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\voice\\ella\\vox_ella_ending_01_01.mp3"
+}

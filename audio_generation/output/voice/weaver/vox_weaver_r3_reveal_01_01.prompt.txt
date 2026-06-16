@@ -1,0 +1,21 @@
+Job: weaver_room03_reveal
+Title: Weaver - Room 3 Reveal
+Category: voice/weaver
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 3 to 8 seconds unless line content requires shorter.
+- Keep delivery natural and close, no room effects or dramatic processing.
+- This is a one-shot, not a loop.
+
+Asset title: Weaver - Room 3 Reveal
+
+Speak as the Weaver during the final reveal. The voice should become warmer and softer, with clear tenderness and trust. The emotional center is not power; it is care.

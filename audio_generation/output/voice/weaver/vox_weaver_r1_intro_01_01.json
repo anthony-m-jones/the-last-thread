@@ -1,0 +1,10 @@
+{
+  "job_id": "weaver_room01_intro",
+  "title": "Weaver - Room 1 Intro",
+  "category": "voice/weaver",
+  "output_stem": "vox_weaver_r1_intro_01",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\voice\\weaver\\vox_weaver_r1_intro_01_01.mp3"
+}

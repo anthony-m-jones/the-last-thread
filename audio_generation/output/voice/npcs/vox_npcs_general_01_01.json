@@ -1,0 +1,10 @@
+{
+  "job_id": "npcs_general",
+  "title": "NPC Cats",
+  "category": "voice/npcs",
+  "output_stem": "vox_npcs_general_01",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\voice\\npcs\\vox_npcs_general_01_01.mp3"
+}

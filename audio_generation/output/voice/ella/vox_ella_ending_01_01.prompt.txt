@@ -1,0 +1,21 @@
+Job: ella_ending_lines
+Title: Ella - Ending Lines
+Category: voice/ella
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 3 to 8 seconds unless line content requires shorter.
+- Keep delivery natural and close, no room effects or dramatic processing.
+- This is a one-shot, not a loop.
+
+Asset title: Ella - Ending Lines
+
+Deliver the line as a young woman speaking off-screen in a warm, intimate, unforced way. The voice should feel real and close, like someone who has been waiting and is trying not to overwhelm the cat. It should be gentle, delighted, and full of relief. Do not make it sugary, theatrical, or overly polished.

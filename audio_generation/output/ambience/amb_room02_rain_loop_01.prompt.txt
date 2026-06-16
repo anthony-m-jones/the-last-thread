@@ -1,0 +1,29 @@
+Job: room2_greenhouse_rain_loop
+Title: Room 2 - Greenhouse Rain Loop
+Category: ambience
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed ambience.
+- Keep texture stable and non-distracting under dialogue.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Room 2 - Greenhouse Rain Loop
+
+Create a seamless looping ambient bed for an abandoned greenhouse at night during rain. Include heavy rain on glass, intermittent drips, old iron groans, and a distant low thunder presence. The mood is cold, striving, and lonely but not oppressive. It should feel wet, vertical, and unsettled, with a cool tonal palette and no warm instruments.
+
+Suggested tags:
+- seamless loop
+- rainy greenhouse
+- cold night
+- dripping water
+- iron creak
+- distant thunder

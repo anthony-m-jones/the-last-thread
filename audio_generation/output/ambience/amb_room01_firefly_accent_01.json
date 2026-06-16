@@ -1,0 +1,10 @@
+{
+  "job_id": "room1_firefly_accent",
+  "title": "Room 1 - Firefly Accent",
+  "category": "ambience",
+  "output_stem": "amb_room01_firefly_accent",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\ambience\\amb_room01_firefly_accent_01.mp3"
+}
