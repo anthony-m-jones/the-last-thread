@@ -45,6 +45,10 @@ Thumbs.db
 desktop.ini
 *~
 
+# --- Python cache artifacts ---
+__pycache__/
+*.pyc
+
 # =============================================================================
 # NOTE on export_presets.cfg (not present yet):
 #   When you set up exporting, Godot creates export_presets.cfg. It's normally
