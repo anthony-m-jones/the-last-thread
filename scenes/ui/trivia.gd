@@ -147,6 +147,7 @@ func _handle_correct_answer(question_data: Dictionary) -> void:
 	# double-clicked during the pause.
 	var reply: String = str(question_data.get("reply", ""))
 	_feedback_label.text = reply
+	AudioManager.play_one_shot(&"sfx.ui.trivia.correct", "UI")
 	for child in _answers_box.get_children():
 		child.disabled = true
 
@@ -168,6 +169,7 @@ func _handle_correct_answer(question_data: Dictionary) -> void:
 func _handle_wrong_answer(question_data: Dictionary) -> void:
 	var correction: String = str(question_data.get("correction", "Try again."))
 	_feedback_label.text = correction
+	AudioManager.play_one_shot(&"sfx.ui.trivia.wrong", "UI")
 
 
 # -----------------------------------------------------------------------------
@@ -185,6 +187,7 @@ func _finish() -> void:
 		child.queue_free()
 
 	print("[Trivia] Completed.")
+	AudioManager.play_one_shot(&"sfx.ui.trivia.complete", "UI")
 
 	# 1) Tell anyone listening via the signal.
 	trivia_completed.emit()

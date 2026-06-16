@@ -450,6 +450,7 @@ func _do_ground_jump() -> void:
 	velocity.y = jump_velocity
 	_jump_buffer_timer = 0.0
 	_coyote_timer = 0.0
+	AudioManager.play_one_shot(&"sfx.player.jump")
 	jumped.emit()
 
 
@@ -476,6 +477,7 @@ func _do_wall_jump() -> void:
 
 	# Spend the buffer so one press = one wall jump.
 	_jump_buffer_timer = 0.0
+	AudioManager.play_one_shot(&"sfx.player.jump")
 	jumped.emit()
 
 
@@ -524,6 +526,7 @@ func _handle_dash_start() -> void:
 	# dash_cooldown should be >= dash_duration; see its @export comment).
 	_dash_timer = dash_duration
 	_dash_cooldown_timer = dash_cooldown
+	AudioManager.play_one_shot(&"sfx.player.dash")
 
 
 # Returns true while a dash burst is in progress.
