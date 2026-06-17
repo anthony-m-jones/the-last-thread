@@ -10,15 +10,17 @@ class ClipJob:
 	category: str
 	output_stem: str
 	prompt: str
+	duration_seconds: float = 0.0  # 0 means use model default
 
 
-def _job(job_id: str, title: str, category: str, output_stem: str, prompt: str) -> ClipJob:
+def _job(job_id: str, title: str, category: str, output_stem: str, prompt: str, duration: float = 0.0) -> ClipJob:
 	return ClipJob(
 		job_id=job_id,
 		title=title,
 		category=category,
 		output_stem=output_stem,
 		prompt=prompt.strip(),
+		duration_seconds=duration,
 	)
 
 
@@ -159,6 +161,7 @@ Compose a light, wordless underscore for a maze interlude. It should feel uncert
 		"""
 Create a short jump sound for a small cat. It should be soft, quick, and springy, with a lightly organic paw push-off feel. It must not sound cartoony or exaggerated. The sound should be readable but gentle enough to hear many times during play.
 """,
+		duration=0.3,
 	),
 	_job(
 		"player_wall_jump",
@@ -168,6 +171,7 @@ Create a short jump sound for a small cat. It should be soft, quick, and springy
 		"""
 Create a short wall-jump sound for a cat pushing off stone or glass. The cue should start with a tiny surface scrape or claw contact and resolve into a soft jump burst. It should feel athletic and responsive without being harsh.
 """,
+		duration=0.4,
 	),
 	_job(
 		"player_dash",
@@ -177,6 +181,7 @@ Create a short wall-jump sound for a cat pushing off stone or glass. The cue sho
 		"""
 Create a short dash sound for a cat moving quickly through air. It should be a clean, slightly airy burst with a light whoosh and no heavy impact. Make it feel nimble and urgent, not superhero-like.
 """,
+		duration=0.3,
 	),
 	_job(
 		"player_landing",
@@ -186,6 +191,7 @@ Create a short dash sound for a cat moving quickly through air. It should be a c
 		"""
 Create a subtle landing sound for a cat touching down on the ground. It should be a soft paw tap or small body settle, with no hard stomp and no comedic bounce.
 """,
+		duration=0.2,
 	),
 	_job(
 		"world_ability_unlock_chime",
@@ -195,6 +201,7 @@ Create a subtle landing sound for a cat touching down on the ground. It should b
 		"""
 Create a brief unlock sound that feels warm and encouraging, like a small thread of magic completing itself. It should be a tiny confirmation, not a fanfare. It must fit a story about courage and gentleness.
 """,
+		duration=0.5,
 	),
 	_job(
 		"world_door_unlock",
@@ -204,6 +211,7 @@ Create a brief unlock sound that feels warm and encouraging, like a small thread
 		"""
 Create a short door unlock cue that feels woven, soft, and satisfying. It should suggest silk loosening or a latch releasing, with a small magical lift but no metallic slam.
 """,
+		duration=0.6,
 	),
 	_job(
 		"world_scene_transition",
@@ -213,6 +221,7 @@ Create a short door unlock cue that feels woven, soft, and satisfying. It should
 		"""
 Create a short transition whoosh or soft scene-change cue. It should feel like moving from one room to another in a storybook world, with no harsh swoosh and no big sci-fi energy.
 """,
+		duration=0.8,
 	),
 	_job(
 		"ui_trivia_correct",
@@ -222,6 +231,7 @@ Create a short transition whoosh or soft scene-change cue. It should feel like m
 		"""
 Create a gentle correct-answer cue for a quiet narrative trivia puzzle. It should feel warm, small, and affirming, like a kind nod from the game. Avoid casino chimes and victory music.
 """,
+		duration=0.6,
 	),
 	_job(
 		"ui_trivia_wrong",
@@ -231,6 +241,7 @@ Create a gentle correct-answer cue for a quiet narrative trivia puzzle. It shoul
 		"""
 Create a soft wrong-answer cue that is clearly readable but not harsh, accusatory, or comic. It should feel like a gentle nudge to try again, in the same emotional tone as a kind teacher.
 """,
+		duration=0.5,
 	),
 	_job(
 		"ui_trivia_complete",
@@ -240,6 +251,7 @@ Create a soft wrong-answer cue that is clearly readable but not harsh, accusator
 		"""
 Create a calm completion cue for finishing a story-driven trivia sequence. It should feel quietly satisfying and emotionally warm, with a little more lift than the regular correct-answer cue but still restrained.
 """,
+		duration=0.8,
 	),
 	_job(
 		"weaver_general_delivery",
@@ -249,6 +261,7 @@ Create a calm completion cue for finishing a story-driven trivia sequence. It sh
 		"""
 Deliver the line as the Weaver: an ancient but gentle spider presence. The voice should sound calm, dry, and thoughtful, with quiet authority and unexpected kindness. Avoid monster growls, villain delivery, or theatrical menace. The Weaver speaks like something old that has chosen tenderness on purpose.
 """,
+		duration=8.0,
 	),
 	_job(
 		"weaver_room01_intro",
@@ -258,6 +271,7 @@ Deliver the line as the Weaver: an ancient but gentle spider presence. The voice
 		"""
 Speak as the Weaver addressing a shy cat at dusk. The line should sound patient, observant, and a little amused, but never cruel. The feeling is: he already understands the cat better than the cat understands himself.
 """,
+		duration=8.0,
 	),
 	_job(
 		"weaver_room03_reveal",
@@ -267,6 +281,7 @@ Speak as the Weaver addressing a shy cat at dusk. The line should sound patient,
 		"""
 Speak as the Weaver during the final reveal. The voice should become warmer and softer, with clear tenderness and trust. The emotional center is not power; it is care.
 """,
+		duration=8.0,
 	),
 	_job(
 		"ella_ending_lines",
@@ -276,6 +291,7 @@ Speak as the Weaver during the final reveal. The voice should become warmer and 
 		"""
 Deliver the line as a young woman speaking off-screen in a warm, intimate, unforced way. The voice should feel real and close, like someone who has been waiting and is trying not to overwhelm the cat. It should be gentle, delighted, and full of relief. Do not make it sugary, theatrical, or overly polished.
 """,
+		duration=8.0,
 	),
 	_job(
 		"npcs_general",
@@ -285,5 +301,6 @@ Deliver the line as a young woman speaking off-screen in a warm, intimate, unfor
 		"""
 Deliver the line as a cat companion with a distinct personality, but keep it understated and readable. The line should sound like a small character with warmth and clarity, not like a cartoon animal.
 """,
+		duration=6.0,
 	),
 ]

@@ -50,6 +50,8 @@ size = Vector2(340, 80)
 
 [node name="Room" type="Node2D" unique_id=1136605692]
 script = ExtResource("room_script")
+ambience_cue = &"amb.room03.loop"
+music_cue = &"music.room03.loop"
 
 [node name="DuskTint" type="CanvasModulate" parent="." unique_id=1476024786]
 color = Color(1, 0.93, 0.82, 1)

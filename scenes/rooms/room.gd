@@ -45,6 +45,36 @@ signal puzzle_completed
 # flipped by mark_puzzle_complete().
 @export var puzzle_complete: bool = false
 
+# Audio cues for this room (set in the Inspector or leave empty to skip)
+@export var ambience_cue: StringName = &""
+@export var music_cue: StringName = &""
+
+
+func _ready() -> void:
+	# Start room audio if configured
+	if not ambience_cue.is_empty():
+		AudioManager.play_ambience(ambience_cue)
+	if not music_cue.is_empty():
+		AudioManager.play_music(music_cue)
+	
+	# Add debug ambience volume slider if in editor or debug mode
+	if Engine.is_editor_hint() or OS.is_debug_build():
+		_add_debug_volume_slider()
+
+
+func _add_debug_volume_slider() -> void:
+	# Avoid adding multiple sliders if this room reloads
+	if has_node("DebugAudioBuses"):
+		return
+	
+	var debug_scene: PackedScene = load("res://scenes/ui/debug_audio_buses.tscn")
+	if debug_scene:
+		var debug_ui: Node = debug_scene.instantiate()
+		add_child(debug_ui)
+		print("[Room] Added debug audio buses panel")
+	else:
+		print("[Room] WARNING: Could not load debug audio buses scene")
+
 
 # -----------------------------------------------------------------------------
 # mark_puzzle_complete: the ONE way the puzzle gets marked solved at runtime.

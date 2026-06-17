@@ -1,16 +1,27 @@
 # Audio Generation
 
-This folder contains the batch script for generating audio clips from the prompt pack in [docs/sound-generation-prompts.md](../docs/sound-generation-prompts.md).
+This folder contains batch scripts for generating audio:
+1. **`generate_clips.py`** — Generates SFX, music, and ambience using Gemini Lyria
+2. **`generate_voice_from_dialogue.py`** — Generates voice lines from `.dialogue` files using Gemini TTS
 
 ## What it does
-- Reads the prompt pack from the docs folder
-- Reads the job definitions in `audio_generation/clip_jobs.py`
-- Iterates through the requested clip prompts
-- Calls Gemini Lyria to generate each clip
-- Writes the outputs into `audio_generation/output/`
-- Saves a text copy of the prompt beside each clip for traceability
-- Skips clips that already exist by default (to avoid extra API calls)
-- If `--overwrite` is set, archives prior files before re-generating
+- Reads prompts and job definitions
+- Calls Gemini API to generate audio
+- Writes outputs into `audio_generation/output/`
+- Saves metadata and prompts for traceability
+
+### `generate_clips.py` (SFX/Music/Ambience)
+- Reads job definitions in `clip_jobs.py`
+- Iterates through requested clip prompts
+- Calls Gemini Lyria audio generation
+- Skips existing clips by default; use `--overwrite` to re-generate
+
+### `generate_voice_from_dialogue.py` (Voice Lines)
+- Parses all `.dialogue` files in `dialogue/` folder
+- Extracts lines with `[voice=vox.speaker.line]` tags
+- Generates TTS audio using Gemini's speech API
+- Maps character names to voice presets (Weaver→Fenrir, Ella→Aoede, etc.)
+- Saves audio with character-organized output structure
 
 ## Setup
 1. Install the dependency:

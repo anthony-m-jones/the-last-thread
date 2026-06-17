@@ -12,8 +12,7 @@ Follow these hard constraints:
 - Output one clean asset only, no alternatives in one response.
 
 Clip-specific constraints:
-- Target duration: approximately 0.3 to 2.0 seconds.
-- Keep transient readable but soft-edged.
+- Target duration: exactly 0.5 seconds.
 - This is a one-shot, not a loop.
 
 Asset title: Trivia Wrong

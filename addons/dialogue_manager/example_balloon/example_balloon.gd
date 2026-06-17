@@ -45,6 +45,7 @@ var dialogue_line: DialogueLine:
 			apply_dialogue_line()
 		else:
 			# The dialogue has finished so close the balloon
+			AudioManager.restore_from_dialogue()
 			if owner == null:
 				queue_free()
 			else:
@@ -117,6 +118,10 @@ func start(with_dialogue_resource: DialogueResource = null, title: String = "", 
 		dialogue_resource = with_dialogue_resource
 	if not title.is_empty():
 		start_from_title = title
+	
+	# Duck audio for dialogue
+	AudioManager.duck_for_dialogue()
+	
 	dialogue_line = await dialogue_resource.get_next_dialogue_line(start_from_title, temporary_game_states)
 	show()
 
@@ -150,9 +155,26 @@ func apply_dialogue_line() -> void:
 
 	# Wait for next line
 	if dialogue_line.has_tag("voice"):
-		audio_stream_player.stream = load(dialogue_line.get_tag_value("voice"))
-		audio_stream_player.play()
-		await audio_stream_player.finished
+		var voice_tag: String = dialogue_line.get_tag_value("voice")
+		
+		# Check if it's a cue ID (starts with "vox.") or a file path
+		if voice_tag.begins_with("vox.") or voice_tag.begins_with("res://"):
+			var is_cue_id: bool = voice_tag.begins_with("vox.")
+			
+			if is_cue_id:
+				# Play via AudioManager using cue ID
+				if AudioManager.has_cue(StringName(voice_tag)):
+					AudioManager.play_voice(StringName(voice_tag))
+					await AudioManager.get_voice_finished_signal()
+				else:
+					push_warning("[Dialogue] Voice cue not found: %s" % voice_tag)
+			else:
+				# Legacy: direct file path
+				audio_stream_player.stream = load(voice_tag)
+				if audio_stream_player.stream:
+					audio_stream_player.play()
+					await audio_stream_player.finished
+		
 		next(dialogue_line.next_id)
 	elif dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE

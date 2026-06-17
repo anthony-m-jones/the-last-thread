@@ -138,7 +138,9 @@ def infer_constraints(job: ClipJob) -> str:
 
     lines: list[str] = ["Clip-specific constraints:"]
 
-    if is_ambience:
+    if job.duration_seconds > 0:
+        lines.append(f"- Target duration: exactly {job.duration_seconds} seconds.")
+    elif is_ambience:
         lines.append("- Target duration: approximately 10 to 20 seconds for loop-seed ambience.")
         lines.append("- Keep texture stable and non-distracting under dialogue.")
     elif is_music:

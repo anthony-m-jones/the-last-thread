@@ -29,6 +29,8 @@ size = Vector2(64, 96)
 
 [node name="Room" type="Node2D"]
 script = ExtResource("room_script")
+ambience_cue = &"amb.maze.loop"
+music_cue = &"music.maze.loop"
 
 ; Dusk tint to match the garden's mood (tune to taste; deeper inside a hedge it
 ; could be darker/greener than the open garden).
