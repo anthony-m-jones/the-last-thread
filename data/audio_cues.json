@@ -60,23 +60,23 @@
       "duration": 6.0
     },
     "vox.weaver.r1_intro": {
-      "path": "res://audio_generation/output/voice/weaver/vox_weaver_r1_intro_01_01.mp3",
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_room_01_05.wav",
       "duration": 8.0
     },
     "vox.weaver.r3_reveal": {
-      "path": "res://audio_generation/output/voice/weaver/vox_weaver_r3_reveal_01_01.mp3",
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_room_03_40.wav",
       "duration": 8.0
     },
     "vox.npcs.general": {
-      "path": "res://audio_generation/output/voice/npcs/vox_npcs_general_01_01.mp3",
+      "path": "res://audio_generation/output/voice/pip/vox_pip_room_01_11.wav",
       "duration": 8.0
     },
     "vox.weaver.general": {
-      "path": "res://audio_generation/output/voice/weaver/vox_weaver_general_01_01.mp3",
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_ending_03.wav",
       "duration": 8.0
     },
     "vox.ella.ending": {
-      "path": "res://audio_generation/output/voice/ella/vox_ella_ending_01_01.mp3",
+      "path": "res://audio_generation/output/voice/ella/vox_ella_ending_01.wav",
       "duration": 8.0
     }
   }

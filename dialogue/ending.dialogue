@@ -8,12 +8,12 @@
 
 ~ ending
 The cat carries a strand of silk out into the dawn garden. The once-unreachable golden window is now a warm open door, at ground level at last. We see the cat from behind, small, facing the light.
-Ella: Oh... Hey. It's you. You came back. You always come back, and then you— [voice=vox.ella.ending]
+Ella: Oh... Hey. It's you. You came back. You always come back, and then you— [#voice=res://audio_generation/output/voice/ella/vox_ella_ending_01.wav]
 The cat does not run. He steps inside.
-Ella: ...Tobers. [voice=vox.ella.ending]
+Ella: ...Tobers. [#voice=res://audio_generation/output/voice/ella/vox_ella_ending_02.wav]
 This time he doesn't bolt. The screen holds on the open door, the warm light, the dawn. A chair creaks, a girl settles, a quiet "there you are." And then — for the first time — purring.
 The camera drifts up to the rafters, where a single long leg rests in the shadow, and eight small points of light watch, content. The little spiders gather around the Weaver.
 Little Spider: Did he do it, Grandfather? Did he stay?
-Weaver: He stayed. The last thread is spun. [voice=vox.weaver.general]
-Weaver: Come. We have a great deal of weeping in the rain ahead of us — there are always more frightened little embers in the world who've forgotten they're allowed. [voice=vox.weaver.general]
+Weaver: He stayed. The last thread is spun. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_ending_03.wav]
+Weaver: Come. We have a great deal of weeping in the rain ahead of us — there are always more frightened little embers in the world who've forgotten they're allowed. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_ending_04.wav]
 => END

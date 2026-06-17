@@ -48,9 +48,8 @@ def parse_dialogue_file(file_path: Path) -> list[DialogueLine]:
     if title_match:
         current_title = title_match.group(1)
     
-    # Match lines: Character: text [voice=vox.speaker.line]
-    # Pattern: word(s): text... [voice=vox.xxx.xxx]
-    pattern = r'^(\w+(?:\s+\w+)*?):\s+(.+?)\s*\[voice=([^\]]+)\]'
+    # Match lines: Character: text [#voice=vox.speaker.line] or [voice=vox.speaker.line]
+    pattern = r'^(\w+(?:\s+\w+)*?):\s+(.+?)\s*\[#?voice=([^\]]+)\]'
     
     for match in re.finditer(pattern, content, re.MULTILINE):
         character = match.group(1).strip()
