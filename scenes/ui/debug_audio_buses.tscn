@@ -18,14 +18,27 @@ offset_top = -310.0
 offset_right = 410.0
 offset_bottom = -10.0
 
-[node name="VBox" type="VBoxContainer" parent="Control"]
+[node name="MainVBox" type="VBoxContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="Header" type="HBoxContainer" parent="Control/MainVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CollapseButton" type="Button" parent="Control/MainVBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "▼ Audio"
+
+[node name="Content" type="VBoxContainer" parent="Control/MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
