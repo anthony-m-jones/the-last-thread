@@ -31,22 +31,46 @@
 [ext_resource type="PackedScene" uid="uid://c2i4l5848v56e" path="res://scenes/characters/weaver.tscn" id="weaver"]
 
 [sub_resource type="RectangleShape2D" id="shape_lg1"]
-size = Vector2(360, 24)
+size = Vector2(525, 24)
 
 [sub_resource type="RectangleShape2D" id="shape_lg2"]
-size = Vector2(340, 24)
+size = Vector2(235, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkpnu"]
+size = Vector2(40, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sq4p"]
+size = Vector2(434, 33)
 
 [sub_resource type="RectangleShape2D" id="shape_rg1"]
-size = Vector2(400, 24)
-
-[sub_resource type="RectangleShape2D" id="shape_rg2"]
-size = Vector2(360, 24)
+size = Vector2(32, 24)
 
 [sub_resource type="RectangleShape2D" id="shape_top"]
-size = Vector2(360, 24)
+size = Vector2(319, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cktnc"]
+size = Vector2(47.5, 275.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btdfv"]
+size = Vector2(197.5, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocw2y"]
+size = Vector2(197.5, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uf1d5"]
+size = Vector2(84, 449)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpnuw"]
+size = Vector2(194, 83)
+
+[sub_resource type="RectangleShape2D" id="shape_rg2"]
+size = Vector2(196, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0p06"]
+size = Vector2(223, 86)
 
 [sub_resource type="RectangleShape2D" id="shape_fall"]
-size = Vector2(340, 80)
+size = Vector2(3016, 80)
 
 [node name="Room" type="Node2D" unique_id=1136605692]
 script = ExtResource("room_script")
@@ -101,64 +125,96 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("tap_revealed")
 
 [node name="LG1" type="StaticBody2D" parent="." unique_id=781590989]
-position = Vector2(220, 624)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LG1" unique_id=1324663795]
-position = Vector2(0, 12)
-shape = SubResource("shape_lg1")
+position = Vector2(172, 627)
 
 [node name="Art" type="Sprite2D" parent="LG1" unique_id=618128873]
 position = Vector2(0, 95)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("plat01")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LG1" unique_id=1324663795]
+position = Vector2(-28.5, 82)
+shape = SubResource("shape_lg1")
+
 [node name="LG2" type="StaticBody2D" parent="." unique_id=1127897347]
 position = Vector2(520, 624)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LG2" unique_id=1611159344]
-position = Vector2(0, 12)
-shape = SubResource("shape_lg2")
 
 [node name="Art" type="Sprite2D" parent="LG2" unique_id=533266204]
 position = Vector2(0, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("plat02")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LG2" unique_id=1611159344]
+position = Vector2(-12.5, 56)
+shape = SubResource("shape_lg2")
+
 [node name="RG1" type="StaticBody2D" parent="." unique_id=2146835838]
 position = Vector2(1060, 624)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RG1" unique_id=1125891664]
-position = Vector2(0, 12)
-shape = SubResource("shape_rg1")
 
 [node name="Art" type="Sprite2D" parent="RG1" unique_id=1248960793]
 position = Vector2(0, 62)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("plat03")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RG1" unique_id=1125891664]
+position = Vector2(-194, 50)
+shape = SubResource("RectangleShape2D_vkpnu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RG1" unique_id=176451154]
+position = Vector2(8, 68.5)
+shape = SubResource("RectangleShape2D_8sq4p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RG1" unique_id=100312736]
+position = Vector2(210, 50)
+shape = SubResource("shape_rg1")
+
+[node name="TopLanding" type="StaticBody2D" parent="." unique_id=348679991]
+position = Vector2(1680, 420)
+
+[node name="Art" type="Sprite2D" parent="TopLanding" unique_id=1360070280]
+position = Vector2(0, 95)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("plat01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopLanding" unique_id=884248785]
+position = Vector2(20.5, 93.5)
+shape = SubResource("shape_top")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TopLanding" unique_id=362940292]
+position = Vector2(204.75, -16.25)
+shape = SubResource("RectangleShape2D_cktnc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TopLanding" unique_id=216846933]
+position = Vector2(129.75, -133)
+shape = SubResource("RectangleShape2D_btdfv")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TopLanding" unique_id=925992565]
+position = Vector2(-1779, 66)
+shape = SubResource("RectangleShape2D_ocw2y")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TopLanding" unique_id=153325512]
+position = Vector2(-1833, 76)
+shape = SubResource("RectangleShape2D_uf1d5")
+
 [node name="RG2" type="StaticBody2D" parent="." unique_id=167032986]
 position = Vector2(1400, 510)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RG2" unique_id=1789408855]
-position = Vector2(0, 12)
-shape = SubResource("shape_rg2")
 
 [node name="Art" type="Sprite2D" parent="RG2" unique_id=619957075]
 position = Vector2(0, 85)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("plat04")
 
-[node name="TopLanding" type="StaticBody2D" parent="." unique_id=348679991]
-position = Vector2(1680, 420)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RG2" unique_id=1789408855]
+position = Vector2(83, 51.5)
+shape = SubResource("RectangleShape2D_xpnuw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopLanding" unique_id=884248785]
-position = Vector2(0, 12)
-shape = SubResource("shape_top")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RG2" unique_id=5699725]
+position = Vector2(9, 131)
+shape = SubResource("shape_rg2")
 
-[node name="Art" type="Sprite2D" parent="TopLanding" unique_id=1360070280]
-position = Vector2(0, 95)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("plat01")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RG2" unique_id=751023243]
+position = Vector2(-4.5, 156)
+shape = SubResource("RectangleShape2D_f0p06")
 
 [node name="FallZone" type="Area2D" parent="." unique_id=1543379671]
 position = Vector2(775, 820)
@@ -166,6 +222,7 @@ script = ExtResource("fall_script")
 respawn_position = Vector2(450, 560)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallZone" unique_id=1886808545]
+position = Vector2(319, 0)
 shape = SubResource("shape_fall")
 
 [node name="Visual" type="ColorRect" parent="FallZone" unique_id=1949624656]
@@ -178,52 +235,52 @@ mouse_filter = 2
 color = Color(0.5, 0.1, 0.1, 0.25)
 
 [node name="IntroZone" parent="." unique_id=1708522196 instance=ExtResource("interactable")]
-position = Vector2(180, 560)
+position = Vector2(306, 665)
 dialogue_file = ExtResource("dlg03")
 dialogue_title = "intro"
 requires_button_press = false
 
 [node name="DashCat" parent="." unique_id=62729796 instance=ExtResource("interactable")]
-position = Vector2(400, 584)
+position = Vector2(505, 606)
 dialogue_file = ExtResource("dlg03")
 dialogue_title = "cat"
 ability_to_unlock = 3
 
 [node name="Marigold" parent="DashCat" unique_id=1018188363 instance=ExtResource("marigold")]
-position = Vector2(0, 6)
+position = Vector2(-23, -12)
 
 [node name="TriviaTrigger" parent="." unique_id=1101410849 instance=ExtResource("interactable")]
-position = Vector2(1620, 380)
+position = Vector2(1701, 457)
 dialogue_file = ExtResource("dlg03")
 dialogue_title = "before_trivia"
 scene_to_open = ExtResource("trivia")
 
 [node name="SmallSpider1" parent="." unique_id=176618141 instance=ExtResource("spider")]
-position = Vector2(1540, 400)
+position = Vector2(1583, 470)
 
 [node name="SmallSpider2" parent="." unique_id=1998471682 instance=ExtResource("spider")]
-position = Vector2(1640, 405)
+position = Vector2(1621, 469)
 static_facing = 1
 
 [node name="SmallSpider3" parent="." unique_id=500042137 instance=ExtResource("spider")]
-position = Vector2(1760, 398)
+position = Vector2(1804, 472)
 static_facing = 1
 
 [node name="WeaverIntro" parent="." unique_id=1709822845 instance=ExtResource("weaver")]
 position = Vector2(300, 540)
 
 [node name="WeaverTapestry" parent="." unique_id=878652754 instance=ExtResource("weaver")]
-position = Vector2(1700, 360)
+position = Vector2(1608, 298)
 weaver_titles = PackedStringArray("before_trivia", "complete")
 
 [node name="Door" parent="." unique_id=1344388953 instance=ExtResource("door")]
-position = Vector2(1810, 372)
+position = Vector2(1833, 440)
 next_room_path = "res://scenes/rooms/ending.tscn"
 require_press = true
 prompt_text = "Press E to step into the dawn"
 
 [node name="Player" parent="." unique_id=1974345184 instance=ExtResource("player")]
-position = Vector2(120, 560)
+position = Vector2(67, 677)
 
 [node name="WeaverOnComplete" type="Node" parent="." unique_id=755539620]
 script = ExtResource("on_complete")
@@ -259,7 +316,7 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("fg_brightsack")
 
 [node name="TreeStump" type="Sprite2D" parent="Foreground" unique_id=1904043257]
-position = Vector2(720, 600)
+position = Vector2(709, 798)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("fg_treestump")
 
