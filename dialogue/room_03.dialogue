@@ -13,7 +13,7 @@
 The cat steps in and stops dead at the beauty of it. For the first time the Weaver is nearly visible — a great shape settled among the lanterns, lit warm, no longer menacing.
 Weaver: Welcome, little ember. To the place we hid the thing we made. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_30.wav]
 Weaver: You were afraid of us. From the first dusk. I let you be — fear is a fine teacher, in small doses. But look around you now. Tell me: what is so frightening here? [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_31.wav]
-Cat: ...Nothing. It's beautiful.
+Cat: ...Nothing. It's beautiful. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_01.wav]
 Weaver: Yes. We are the thing in the dark that everyone runs from. And we spend our lives making beauty no one stays long enough to see. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_32.wav]
 Weaver: Does that remind you of anyone, ember? Some small orange creature who is gentle and good and runs the moment a kind hand reaches for him? [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_33.wav]
 The cat gives no answer — which is an answer.
@@ -26,10 +26,10 @@ Weaver: And it is the courage I am asking of YOU now. Not toward me. Toward her.
 ~ cat
 An old, elegant cat sits perfectly still on a high silk platform, watching the dew. She speaks slowly, kindly, and it lands like a quiet gut-punch.
 Marigold: Come, little one. Sit a moment with me. There's time. ...That's the lie, you know. "There's time." I told it to myself for sixteen years. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_36.wav]
-Cat: What do you mean?
+Cat: What do you mean? [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_02.wav]
 Marigold: I had a person. A good one. I loved her from the windowsill across the room. Every day I told myself — tomorrow I'll cross. Tomorrow I'll curl up in her lap. I had a thousand tomorrows and I spent every one of them being almost-brave. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_37.wav]
 Marigold: And then one day there were no more tomorrows, and I had loved her perfectly, from exactly far enough away to never be loved back.
-Cat: ...Oh.
+Cat: ...Oh. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_03.wav]
 Marigold: So I'll give you the only thing I have worth giving. Dash. The art of crossing the room before you can talk yourself out of it. Not a slow brave walk — there's too much time in a walk to turn around. A DASH. You see the lap. You go. You arrive before the fear catches up. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_38.wav]
 Marigold: Now. Cross to me. Don't think. Go. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_39.wav]
 => END
@@ -47,7 +47,7 @@ Weaver: Love is only attention that lasted. So tell me, ember — these long dus
 ~ complete
 Weaver: Tobers. ...You knew it all along. You ran every time, not because you didn't want it — but because once she finished saying it, you'd be hers, and there would be no more running. You've been afraid of being HOME. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_42.wav]
 The silk falls away. The tapestry is a portrait, woven in shining thread: Ella in her chair by the open window — with the orange cat asleep in her lap. But the cat's shape is woven only in faint, unfinished outline.
-Cat: That's... that hasn't happened. I've never— I always run before—
+Cat: That's... that hasn't happened. I've never— I always run before— [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_04.wav]
 Weaver: I know. That is why your part is only outline. We can weave everything but the one thread that matters. We cannot make you stay in her lap. Only you can spin that. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_43.wav]
 Weaver: The gift was never finished, ember — because the gift is YOU, choosing to be brave once, all the way. Take it to her. And this time — don't run. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_44.wav]
 => END

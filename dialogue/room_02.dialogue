@@ -11,11 +11,11 @@
 ~ intro
 The cat shelters under a leaf from the rain, soaked, discouraged. The Weaver's eyes appear in the dark above, upside-down.
 Weaver: You're wet, and you're doubting. Good. Doubt means you understand what's being asked. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_17.wav]
-Cat: I can't reach it. Whatever it is. It's too high. There's a wall.
+Cat: I can't reach it. Whatever it is. It's too high. There's a wall. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_02_01.wav]
 Weaver: There is ALWAYS a wall. I have spent my whole long life among walls. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_18.wav]
 Weaver: Here is the secret no spider tells: a wall is only a barrier if you push AGAINST it. Push OFF it, and it throws you higher than open air ever could. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_19.wav]
 Weaver: The girl you love is a wall, too, ember. Skittish thing — you keep hurling yourself at her and bouncing off and calling it failure. It isn't. It's the climb. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_20.wav]
-Cat: ...How do you know about her.
+Cat: ...How do you know about her. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_02_02.wav]
 Weaver: I told you. We watch the window. She carries my children outside on a leaf, you know. When the others would crush them. She has never once been afraid of the right things. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_21.wav]
 Weaver: Now climb. The one who taught me about walls is here. He learned it the hard way, as the best ones do. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_02_22.wav]
 => END
@@ -25,11 +25,11 @@ Weaver: Now climb. The one who taught me about walls is here. He learned it the 
 ~ cat
 A battered alley cat sits on a high ledge, watching the rain through his one good eye. He doesn't turn around.
 Patch: You're the one the spider's running errands for. Heard about you. [#voice=res://audio_generation/output/voice/patch/vox_patch_room_02_23.wav]
-Cat: Everyone's heard about me but me, apparently.
+Cat: Everyone's heard about me but me, apparently. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_02_03.wav]
 Patch: Funny. Most cats your size don't have a sense of humor. Too busy being scared. [#voice=res://audio_generation/output/voice/patch/vox_patch_room_02_24.wav]
 Patch: You want to get up there? You gotta stop seeing walls as the end of the road. I got every one of these scars falling OFF things. Then one day I figured out the wall was the only friend I had — push off it, you go up. Hit it, kick away, hit the next one. [#voice=res://audio_generation/output/voice/patch/vox_patch_room_02_25.wav]
 Patch: You don't have to make it all the way in one go. You just can't stop bouncing. [#voice=res://audio_generation/output/voice/patch/vox_patch_room_02_26.wav]
-Cat: And if I fall?
+Cat: And if I fall? [#voice=res://audio_generation/output/voice/cat/vox_cat_room_02_04.wav]
 Patch: Then you fall, and you climb again, and nobody up there's keeping score but you. Quit keeping score. Climb. [#voice=res://audio_generation/output/voice/patch/vox_patch_room_02_27.wav]
 => END
 
