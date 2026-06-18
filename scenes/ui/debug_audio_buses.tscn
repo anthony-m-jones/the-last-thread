@@ -50,22 +50,3 @@ text = "▼ Audio"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextSection" type="PanelContainer" parent="Control/MainVBox"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TextVBox" type="VBoxContainer" parent="Control/MainVBox/TextSection"]
-layout_mode = 2
-
-[node name="TextHeader" type="HBoxContainer" parent="Control/MainVBox/TextSection/TextVBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextCollapseButton" type="Button" parent="Control/MainVBox/TextSection/TextVBox/TextHeader"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "▼ Text"
-
-[node name="TextContent" type="VBoxContainer" parent="Control/MainVBox/TextSection/TextVBox"]
-layout_mode = 2
-size_flags_vertical = 3
