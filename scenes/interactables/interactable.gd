@@ -188,6 +188,10 @@ func _on_conversation_finished() -> void:
 	_has_fired = true
 
 	_grant_selected_ability()
+	if ability_to_unlock != Ability.NONE:
+		AudioManager.play_one_shot(&"sfx.world.unlock")
+	elif scene_to_open != null:
+		AudioManager.play_one_shot(&"sfx.world.transition")
 	_open_scene_if_any()
 
 	# For one-shot interactables, stop listening so it can never fire again.

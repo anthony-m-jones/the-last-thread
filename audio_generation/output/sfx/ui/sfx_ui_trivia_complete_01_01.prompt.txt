@@ -1,0 +1,20 @@
+Job: ui_trivia_complete
+Title: Trivia Complete
+Category: sfx/ui
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: exactly 0.8 seconds.
+- This is a one-shot, not a loop.
+
+Asset title: Trivia Complete
+
+Create a calm completion cue for finishing a story-driven trivia sequence. It should feel quietly satisfying and emotionally warm, with a little more lift than the regular correct-answer cue but still restrained.

@@ -11,43 +11,43 @@
 # --- OPENING CUTSCENE: The Cat & The Weaver --------------------------------
 ~ intro
 The cat steps in and stops dead at the beauty of it. For the first time the Weaver is nearly visible — a great shape settled among the lanterns, lit warm, no longer menacing.
-Weaver: Welcome, little ember. To the place we hid the thing we made.
-Weaver: You were afraid of us. From the first dusk. I let you be — fear is a fine teacher, in small doses. But look around you now. Tell me: what is so frightening here?
-Cat: ...Nothing. It's beautiful.
-Weaver: Yes. We are the thing in the dark that everyone runs from. And we spend our lives making beauty no one stays long enough to see.
-Weaver: Does that remind you of anyone, ember? Some small orange creature who is gentle and good and runs the moment a kind hand reaches for him?
+Weaver: Welcome, little ember. To the place we hid the thing we made. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_30.wav]
+Weaver: You were afraid of us. From the first dusk. I let you be — fear is a fine teacher, in small doses. But look around you now. Tell me: what is so frightening here? [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_31.wav]
+Cat: ...Nothing. It's beautiful. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_40.wav]
+Weaver: Yes. We are the thing in the dark that everyone runs from. And we spend our lives making beauty no one stays long enough to see. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_32.wav]
+Weaver: Does that remind you of anyone, ember? Some small orange creature who is gentle and good and runs the moment a kind hand reaches for him? [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_33.wav]
 The cat gives no answer — which is an answer.
-Weaver: The girl is not afraid of us. She is the one soul who kneels down to the frightening thing and is kind to it anyway. That is the rarest courage there is.
-Weaver: And it is the courage I am asking of YOU now. Not toward me. Toward her. But first — one last thread to teach you.
+Weaver: The girl is not afraid of us. She is the one soul who kneels down to the frightening thing and is kind to it anyway. That is the rarest courage there is. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_34.wav]
+Weaver: And it is the courage I am asking of YOU now. Not toward me. Toward her. But first — one last thread to teach you. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_35.wav]
 => END
 
 
 # --- ABILITY CAT: Marigold (grants DASH) -----------------------------------
 ~ cat
 An old, elegant cat sits perfectly still on a high silk platform, watching the dew. She speaks slowly, kindly, and it lands like a quiet gut-punch.
-Marigold: Come, little one. Sit a moment with me. There's time. ...That's the lie, you know. "There's time." I told it to myself for sixteen years.
-Cat: What do you mean?
-Marigold: I had a person. A good one. I loved her from the windowsill across the room. Every day I told myself — tomorrow I'll cross. Tomorrow I'll curl up in her lap. I had a thousand tomorrows and I spent every one of them being almost-brave.
+Marigold: Come, little one. Sit a moment with me. There's time. ...That's the lie, you know. "There's time." I told it to myself for sixteen years. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_36.wav]
+Cat: What do you mean? [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_46.wav]
+Marigold: I had a person. A good one. I loved her from the windowsill across the room. Every day I told myself — tomorrow I'll cross. Tomorrow I'll curl up in her lap. I had a thousand tomorrows and I spent every one of them being almost-brave. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_37.wav]
 Marigold: And then one day there were no more tomorrows, and I had loved her perfectly, from exactly far enough away to never be loved back.
-Cat: ...Oh.
-Marigold: So I'll give you the only thing I have worth giving. Dash. The art of crossing the room before you can talk yourself out of it. Not a slow brave walk — there's too much time in a walk to turn around. A DASH. You see the lap. You go. You arrive before the fear catches up.
-Marigold: Now. Cross to me. Don't think. Go.
+Cat: ...Oh. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_48.wav]
+Marigold: So I'll give you the only thing I have worth giving. Dash. The art of crossing the room before you can talk yourself out of it. Not a slow brave walk — there's too much time in a walk to turn around. A DASH. You see the lap. You go. You arrive before the fear catches up. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_38.wav]
+Marigold: Now. Cross to me. Don't think. Go. [#voice=res://audio_generation/output/voice/marigold/vox_marigold_room_03_39.wav]
 => END
 
 
 # --- TRIVIA LEAD-IN: the Weaver's challenge, before the puzzle -------------
 ~ before_trivia
 The cat dashes up to the tapestry. The Weaver stands beside it, still draped so the image is hidden.
-Weaver: Here it is. The thing of thread and patience. But I will not let you carry it to her on love alone. Plenty of creatures WANT someone. Few have ever truly SEEN them.
-Weaver: Love is only attention that lasted. So tell me, ember — these long dusks at the window. Were you watching her? Or only watching the warm light she happened to stand in?
+Weaver: Here it is. The thing of thread and patience. But I will not let you carry it to her on love alone. Plenty of creatures WANT someone. Few have ever truly SEEN them. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_40.wav]
+Weaver: Love is only attention that lasted. So tell me, ember — these long dusks at the window. Were you watching her? Or only watching the warm light she happened to stand in? [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_41.wav]
 => END
 
 
 # --- THE REVEAL: played after the trivia is solved -------------------------
 ~ complete
-Weaver: Tobers. ...You knew it all along. You ran every time, not because you didn't want it — but because once she finished saying it, you'd be hers, and there would be no more running. You've been afraid of being HOME.
+Weaver: Tobers. ...You knew it all along. You ran every time, not because you didn't want it — but because once she finished saying it, you'd be hers, and there would be no more running. You've been afraid of being HOME. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_42.wav]
 The silk falls away. The tapestry is a portrait, woven in shining thread: Ella in her chair by the open window — with the orange cat asleep in her lap. But the cat's shape is woven only in faint, unfinished outline.
-Cat: That's... that hasn't happened. I've never— I always run before—
-Weaver: I know. That is why your part is only outline. We can weave everything but the one thread that matters. We cannot make you stay in her lap. Only you can spin that.
-Weaver: The gift was never finished, ember — because the gift is YOU, choosing to be brave once, all the way. Take it to her. And this time — don't run.
+Cat: That's... that hasn't happened. I've never— I always run before— [#voice=res://audio_generation/output/voice/cat/vox_cat_room_03_54.wav]
+Weaver: I know. That is why your part is only outline. We can weave everything but the one thread that matters. We cannot make you stay in her lap. Only you can spin that. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_43.wav]
+Weaver: The gift was never finished, ember — because the gift is YOU, choosing to be brave once, all the way. Take it to her. And this time — don't run. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_03_44.wav]
 => END

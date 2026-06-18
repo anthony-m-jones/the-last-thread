@@ -1,0 +1,10 @@
+{
+  "job_id": "ending_dawn_return_loop",
+  "title": "Ending - Dawn Return Loop",
+  "category": "ambience",
+  "output_stem": "amb_ending_dawn_return_loop",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\ambience\\amb_ending_dawn_return_loop_01.mp3"
+}

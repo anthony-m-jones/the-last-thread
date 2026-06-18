@@ -1,0 +1,29 @@
+Job: room3_heart_of_the_oak_loop
+Title: Room 3 - Heart of the Oak Loop
+Category: ambience
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed ambience.
+- Keep texture stable and non-distracting under dialogue.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Room 3 - Heart of the Oak Loop
+
+Create a seamless looping ambient bed for the hollow heart of an ancient oak, filled with silk, tiny spiders at work, and warm glowing lanterns. The mood is awe, homecoming, and gentle wonder. Include soft resonant hum, delicate organic shimmer, and the feeling of silk lightly vibrating through a wooden cathedral space. This should be the first truly warm ambient space in the game.
+
+Suggested tags:
+- seamless loop
+- warm magical interior
+- silk resonance
+- gentle shimmer
+- organic hum
+- awe

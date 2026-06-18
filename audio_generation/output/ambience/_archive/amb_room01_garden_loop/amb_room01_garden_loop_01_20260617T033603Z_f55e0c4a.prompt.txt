@@ -1,0 +1,29 @@
+Job: room1_garden_dusk_loop
+Title: Room 1 - Garden at Dusk Loop
+Category: ambience
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed ambience.
+- Keep texture stable and non-distracting under dialogue.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Room 1 - Garden at Dusk Loop
+
+Create a seamless looping ambient bed for an autumn garden at dusk. Include soft crickets, a faint wind chime, occasional grass rustle, and a distant sense of a house nearby. The mood is warm, wistful, and gently melancholy. It should feel like the end of a long day, with no sudden events, no melody that steals focus, and no horror tone. The loop should be natural, subtle, and comfortable under dialogue.
+
+Suggested tags:
+- seamless loop
+- quiet outdoor ambience
+- dusk
+- crickets
+- wind chime
+- subtle distant home tone

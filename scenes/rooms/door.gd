@@ -143,6 +143,7 @@ func _on_room_puzzle_completed() -> void:
 	_is_unlocked = true
 	_refresh_visual()
 	_update_prompt()
+	AudioManager.play_one_shot(&"sfx.world.door_unlock")
 	print("[Door] Unlocked: ", name)
 
 # Runs when ANY body enters the area. We only care about the player.
@@ -181,6 +182,7 @@ func _update_prompt() -> void:
 # _go_to_next_room: the actual scene change.
 # -----------------------------------------------------------------------------
 func _go_to_next_room() -> void:
+	AudioManager.play_one_shot(&"sfx.world.transition")
 	# WHY ABILITIES CARRY OVER: changing scenes destroys this room and the player
 	# inside it and builds the next room fresh. But the GameState autoload lives
 	# OUTSIDE the current scene, so it is NOT destroyed — every unlocked ability

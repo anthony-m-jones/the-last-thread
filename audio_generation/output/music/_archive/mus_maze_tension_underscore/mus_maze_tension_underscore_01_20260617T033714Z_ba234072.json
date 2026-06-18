@@ -1,0 +1,10 @@
+{
+  "job_id": "maze_tension_underscore",
+  "title": "Maze Tension Underscore",
+  "category": "music",
+  "output_stem": "mus_maze_tension_underscore",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\music\\mus_maze_tension_underscore_01.mp3"
+}

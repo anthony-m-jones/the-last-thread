@@ -1,0 +1,20 @@
+Job: player_wall_jump
+Title: Player Wall Jump
+Category: sfx/player
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: exactly 0.4 seconds.
+- This is a one-shot, not a loop.
+
+Asset title: Player Wall Jump
+
+Create a short wall-jump sound for a cat pushing off stone or glass. The cue should start with a tiny surface scrape or claw contact and resolve into a soft jump burst. It should feel athletic and responsive without being harsh.

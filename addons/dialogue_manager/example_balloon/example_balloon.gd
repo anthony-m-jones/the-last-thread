@@ -45,6 +45,7 @@ var dialogue_line: DialogueLine:
 			apply_dialogue_line()
 		else:
 			# The dialogue has finished so close the balloon
+			AudioManager.restore_from_dialogue()
 			if owner == null:
 				queue_free()
 			else:
@@ -74,6 +75,11 @@ var mutation_cooldown: Timer = Timer.new()
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
+
+	# Legacy path-based voice playback uses this local player; keep it on Dialogue bus
+	# so the dialogue bus slider controls all dialogue audio sources consistently.
+	if AudioServer.get_bus_index("Dialogue") >= 0:
+		audio_stream_player.bus = "Dialogue"
 
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():
@@ -117,6 +123,10 @@ func start(with_dialogue_resource: DialogueResource = null, title: String = "", 
 		dialogue_resource = with_dialogue_resource
 	if not title.is_empty():
 		start_from_title = title
+	
+	# Duck audio for dialogue
+	AudioManager.duck_for_dialogue()
+	
 	dialogue_line = await dialogue_resource.get_next_dialogue_line(start_from_title, temporary_game_states)
 	show()
 
@@ -143,17 +153,56 @@ func apply_dialogue_line() -> void:
 	balloon.show()
 	will_hide_balloon = false
 
+	# Start voice playback as soon as the line appears (not after typing finishes).
+	var has_voice_tag: bool = dialogue_line.has_tag("voice")
+	var used_audio_manager_voice: bool = false
+	var voice_started: bool = false
+	if has_voice_tag:
+		var voice_tag: String = dialogue_line.get_tag_value("voice")
+
+		# Check if it's a cue ID (starts with "vox.") or a file path.
+		if voice_tag.begins_with("vox.") or voice_tag.begins_with("res://"):
+			var is_cue_id: bool = voice_tag.begins_with("vox.")
+
+			if is_cue_id:
+				# Play via AudioManager using cue ID.
+				if AudioManager.has_cue(StringName(voice_tag)):
+					used_audio_manager_voice = true
+					voice_started = AudioManager.play_voice(StringName(voice_tag))
+				else:
+					push_warning("[Dialogue] Voice cue not found: %s" % voice_tag)
+			else:
+				# Legacy: direct file path.
+				audio_stream_player.stream = load(voice_tag)
+				if audio_stream_player.stream:
+					audio_stream_player.play()
+					voice_started = true
+
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()
 		await dialogue_label.finished_typing
 
 	# Wait for next line
-	if dialogue_line.has_tag("voice"):
-		audio_stream_player.stream = load(dialogue_line.get_tag_value("voice"))
-		audio_stream_player.play()
-		await audio_stream_player.finished
-		next(dialogue_line.next_id)
+	if has_voice_tag:
+		if voice_started:
+			# Allow player to skip while voice is playing.
+			is_waiting_for_input = true
+			balloon.focus_mode = Control.FOCUS_ALL
+			balloon.grab_focus()
+
+			var line_id_at_wait: String = dialogue_line.id
+			if used_audio_manager_voice:
+				await AudioManager.get_voice_finished_signal()
+			else:
+				await audio_stream_player.finished
+
+			# Auto-advance only if we are still on the same line and user hasn't skipped.
+			if is_instance_valid(dialogue_line) and dialogue_line.id == line_id_at_wait and is_waiting_for_input:
+				is_waiting_for_input = false
+				next(dialogue_line.next_id)
+		else:
+			next(dialogue_line.next_id)
 	elif dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
@@ -205,8 +254,14 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	get_viewport().set_input_as_handled()
 
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		if dialogue_line.has_tag("voice"):
+			AudioManager.stop_voice()
+			audio_stream_player.stop()
 		next(dialogue_line.next_id)
 	elif event.is_action_pressed(next_action) and get_viewport().gui_get_focus_owner() == balloon:
+		if dialogue_line.has_tag("voice"):
+			AudioManager.stop_voice()
+			audio_stream_player.stop()
 		next(dialogue_line.next_id)
 
 

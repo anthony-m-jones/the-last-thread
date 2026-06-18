@@ -1,0 +1,28 @@
+Job: early_game_sparse_theme
+Title: Early Game Sparse Theme
+Category: music
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed music.
+- Keep arrangement sparse enough for gameplay layering.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Early Game Sparse Theme
+
+Compose a sparse, intimate theme for a shy cat wandering through dusk and rain. Keep the arrangement minimal and restrained: a few warm notes, gentle harmony, and a lot of space. The music should support loneliness and persistence without telling the player what to feel too hard. It should be easy to loop and stay out of the way of dialogue.
+
+Suggested tags:
+- sparse theme
+- emotional restraint
+- minimal arrangement
+- looping underscore
+- room 1 and room 2 compatible

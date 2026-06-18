@@ -1,0 +1,6 @@
+!output/_archive/
+!output/_archive/**
+!output/voice/
+!output/voice/**
+__pycache__/
+*.pyc

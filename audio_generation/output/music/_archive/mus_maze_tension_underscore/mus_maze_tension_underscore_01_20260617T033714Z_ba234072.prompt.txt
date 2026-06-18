@@ -1,0 +1,21 @@
+Job: maze_tension_underscore
+Title: Maze Tension Underscore
+Category: music
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed music.
+- Keep arrangement sparse enough for gameplay layering.
+- This is a one-shot, not a loop.
+
+Asset title: Maze Tension Underscore
+
+Compose a light, wordless underscore for a maze interlude. It should feel uncertain and a little disorienting, but not scary. Keep it movement-focused, with subtle rhythmic pulses or sparse textures that support exploration and the feeling of being lost without punishing the player emotionally.

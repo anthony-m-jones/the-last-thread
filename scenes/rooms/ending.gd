@@ -18,6 +18,7 @@ func _ready() -> void:
 	if dialogue_file == null:
 		push_warning("Ending: no dialogue_file set.")
 		return
+	AudioManager.play_music(&"music.ending.cue")
 	# call_deferred so the scene is fully in the tree before the balloon opens.
 	_play.call_deferred()
 

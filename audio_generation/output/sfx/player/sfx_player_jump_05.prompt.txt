@@ -1,0 +1,24 @@
+Job: player_jump
+Title: Player Jump
+Category: sfx/player
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: exactly 0.3 seconds.
+- Start immediately with the event; no intro pad or lead-in.
+- Use one clear attack and short decay; avoid long evolving tails.
+- Forbidden: melody, chord progression, beat loop, drone, ambience bed, cinematic riser.
+- Return a concise foley-style cue that sits under gameplay.
+- This is a one-shot, not a loop.
+
+Asset title: Player Jump
+
+Create a short jump sound for a small cat. It should be soft, quick, and springy, with a lightly organic paw push-off feel. It must not sound cartoony or exaggerated. The sound should be readable but gentle enough to hear many times during play.

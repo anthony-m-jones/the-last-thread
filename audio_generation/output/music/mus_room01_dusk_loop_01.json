@@ -1,0 +1,10 @@
+{
+  "job_id": "early_game_sparse_theme",
+  "title": "Early Game Sparse Theme",
+  "category": "music",
+  "output_stem": "mus_room01_dusk_loop",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\music\\mus_room01_dusk_loop_01.mp3"
+}

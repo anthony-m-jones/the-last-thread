@@ -1,0 +1,20 @@
+Job: ui_trivia_wrong
+Title: Trivia Wrong
+Category: sfx/ui
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: exactly 0.5 seconds.
+- This is a one-shot, not a loop.
+
+Asset title: Trivia Wrong
+
+Create a soft wrong-answer cue that is clearly readable but not harsh, accusatory, or comic. It should feel like a gentle nudge to try again, in the same emotional tone as a kind teacher.

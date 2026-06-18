@@ -113,16 +113,19 @@ func is_cutscene_active() -> bool:
 func unlock_jump() -> void:
 	has_jump = true
 	print("[GameState] Jump unlocked.")  # print() writes to the Output panel.
+	AudioManager.play_one_shot(&"sfx.world.unlock")
 
 # Unlocks the wall-jump ability. Called by the Room 2 cat.
 func unlock_wall_jump() -> void:
 	has_wall_jump = true
 	print("[GameState] Wall-jump unlocked.")
+	AudioManager.play_one_shot(&"sfx.world.unlock")
 
 # Unlocks the dash ability. Called by the Room 3 cat.
 func unlock_dash() -> void:
 	has_dash = true
 	print("[GameState] Dash unlocked.")
+	AudioManager.play_one_shot(&"sfx.world.unlock")
 
 
 # Convenience for testing only (see debug_unlock_everything above). Turns on

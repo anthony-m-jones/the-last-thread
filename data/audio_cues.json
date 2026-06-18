@@ -1,0 +1,83 @@
+{
+  "_comment": "Cue ID to file path registry with optional duration (in seconds) for runtime audio lookups.",
+  "cues": {
+    "music.room01.loop": "res://audio/music/mus_room01_dusk_loop.mp3",
+    "music.room02.loop": "res://audio/music/mus_room02_rain_loop.mp3",
+    "music.room03.loop": "res://audio/music/mus_room03_oak_loop.mp3",
+    "music.maze.loop": "res://audio/music/mus_maze_tension_underscore.mp3",
+    "music.ending.cue": "res://audio/music/mus_ending_bloom_cue.mp3",
+    "amb.room01.loop": "res://audio/ambience/amb_room01_garden_loop.mp3",
+    "amb.maze.loop": "res://audio/ambience/amb_maze_loop.mp3",
+    "amb.room02.loop": "res://audio/ambience/amb_room02_rain_loop.mp3",
+    "amb.room03.loop": "res://audio/ambience/amb_room03_oak_loop.mp3",
+    "amb.ending.loop": "res://audio/ambience/amb_ending_dawn_loop.mp3",
+    "sfx.player.jump": {
+      "path": "res://audio/sfx/player/sfx_player_jump_01.mp3",
+      "duration": 0.3
+    },
+    "sfx.player.wall_jump": {
+      "path": "res://audio/sfx/player/sfx_player_wall_jump_01.mp3",
+      "duration": 0.4
+    },
+    "sfx.player.land": {
+      "path": "res://audio/sfx/player/sfx_player_land_01.mp3",
+      "duration": 0.2
+    },
+    "sfx.player.dash": {
+      "path": "res://audio/sfx/player/sfx_player_dash_01.mp3",
+      "duration": 0.3
+    },
+    "sfx.world.unlock": {
+      "path": "res://audio/sfx/world/sfx_world_unlock_01.mp3",
+      "duration": 0.5
+    },
+    "sfx.world.door_unlock": {
+      "path": "res://audio/sfx/world/sfx_world_door_unlock_01.mp3",
+      "duration": 0.6
+    },
+    "sfx.world.transition": {
+      "path": "res://audio/sfx/world/sfx_world_transition_01.mp3",
+      "duration": 0.8
+    },
+    "sfx.ui.trivia.correct": {
+      "path": "res://audio/sfx/ui/sfx_ui_trivia_correct_01.mp3",
+      "duration": 0.6
+    },
+    "sfx.ui.trivia.wrong": {
+      "path": "res://audio/sfx/ui/sfx_ui_trivia_wrong_01.mp3",
+      "duration": 0.5
+    },
+    "sfx.ui.trivia.complete": {
+      "path": "res://audio/sfx/ui/sfx_ui_trivia_complete_01.mp3",
+      "duration": 0.8
+    },
+    "vox.weaver.r3.intro": {
+      "path": "res://audio/voice/weaver/vox_weaver_r3_intro_01.mp3",
+      "duration": 7.0
+    },
+    "vox.ella.ending.01": {
+      "path": "res://audio/voice/ella/vox_ella_ending_01.mp3",
+      "duration": 6.0
+    },
+    "vox.weaver.r1_intro": {
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_room_01_05.wav",
+      "duration": 8.0
+    },
+    "vox.weaver.r3_reveal": {
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_room_03_40.wav",
+      "duration": 8.0
+    },
+    "vox.npcs.general": {
+      "path": "res://audio_generation/output/voice/pip/vox_pip_room_01_11.wav",
+      "duration": 8.0
+    },
+    "vox.weaver.general": {
+      "path": "res://audio_generation/output/voice/weaver/vox_weaver_ending_03.wav",
+      "duration": 8.0
+    },
+    "vox.ella.ending": {
+      "path": "res://audio_generation/output/voice/ella/vox_ella_ending_01.wav",
+      "duration": 8.0
+    }
+  }
+}

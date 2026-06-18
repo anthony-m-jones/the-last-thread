@@ -1,0 +1,21 @@
+Job: room2_lightning_silhouette_hit
+Title: Room 2 - Lightning Silhouette Hit
+Category: ambience
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed ambience.
+- Keep texture stable and non-distracting under dialogue.
+- This is a one-shot, not a loop.
+
+Asset title: Room 2 - Lightning Silhouette Hit
+
+Create a tiny, abrupt lightning flash sound that lasts less than one second and feels like a far-off storm striking glass and metal. It should be subtle and sharp, not explosive, because it is only used to briefly silhouette a hidden figure in a greenhouse.

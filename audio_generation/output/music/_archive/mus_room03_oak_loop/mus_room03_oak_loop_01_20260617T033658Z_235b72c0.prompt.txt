@@ -1,0 +1,28 @@
+Job: room3_warm_resolution_theme
+Title: Room 3 Warm Resolution Theme
+Category: music
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed music.
+- Keep arrangement sparse enough for gameplay layering.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Room 3 Warm Resolution Theme
+
+Compose a warm, magical theme for entering the heart of an ancient oak. The music should bloom softly into resolution and wonder, with a sense of homecoming and tenderness. It should still remain playable as background music, but it may feel more harmonically complete than the earlier rooms. Avoid bombast; this is a warm arrival, not a victory march.
+
+Suggested tags:
+- warm resolution
+- magical homecoming
+- gentle bloom
+- tender harmony
+- emotional payoff

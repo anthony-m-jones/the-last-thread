@@ -1,0 +1,10 @@
+{
+  "job_id": "room3_heart_of_the_oak_loop",
+  "title": "Room 3 - Heart of the Oak Loop",
+  "category": "ambience",
+  "output_stem": "amb_room03_oak_loop",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\ambience\\amb_room03_oak_loop_01.mp3"
+}
