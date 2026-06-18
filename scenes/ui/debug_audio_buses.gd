@@ -52,6 +52,3 @@ func _toggle_audio_collapse() -> void:
 	
 	audio_content.visible = not _audio_collapsed
 	audio_btn.text = "▼ Audio" if not _audio_collapsed else "▶ Audio"
-
-
-
