@@ -76,6 +76,11 @@ func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
+	# Legacy path-based voice playback uses this local player; keep it on Dialogue bus
+	# so the dialogue bus slider controls all dialogue audio sources consistently.
+	if AudioServer.get_bus_index("Dialogue") >= 0:
+		audio_stream_player.bus = "Dialogue"
+
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():
 		responses_menu.next_action = next_action
