@@ -87,9 +87,7 @@ func _apply_font_size_to_dialogue(font_size: int) -> void:
 
 func _update_label_font_sizes(node: Node, font_size: int) -> void:
 	if node is Label:
-		if node.label_settings == null:
-			node.label_settings = LabelSettings.new()
-		node.label_settings.font_sizes[TextServer.HORIZONTAL_ALIGNMENT_LEFT] = font_size
+		node.add_theme_font_size_override("font_size", font_size)
 	
 	for child in node.get_children():
 		_update_label_font_sizes(child, font_size)
