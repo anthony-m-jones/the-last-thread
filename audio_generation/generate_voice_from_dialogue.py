@@ -71,6 +71,52 @@ def parse_dialogue_file(file_path: Path) -> list[DialogueLine]:
     return lines
 
 
+def update_dialogue_files_with_generated_paths(
+    project_root: Path,
+    all_lines: list[DialogueLine],
+    output_dir: Path,
+    generated_mapping: dict[tuple[str, str, str], str],  # (file, character, text) -> generated_path
+) -> None:
+    """Update .dialogue files with correct generated voice file paths.
+    
+    This ensures voice tags always match the actual generated files, making the
+    system durable against script changes or re-generation with different counters.
+    """
+    dialogue_files = find_dialogue_files(project_root)
+    
+    for dialogue_file in dialogue_files:
+        content = dialogue_file.read_text(encoding="utf-8")
+        updated = False
+        
+        # For each extracted dialogue line, find and replace the voice tag
+        for i, line in enumerate(all_lines):
+            if line.file != dialogue_file.stem:
+                continue
+                
+            # Generate the expected output path
+            expected_path = f"vox_{line.character.lower()}_{line.file}_{i+1:02d}.wav"
+            expected_full_path = f"res://audio_generation/output/voice/{line.character.lower()}/{expected_path}"
+            
+            # Look for the dialogue line and its current voice tag
+            # Pattern: "Character: text [#voice=something]"
+            old_pattern = re.escape(line.text)
+            match = re.search(f"{old_pattern}\\s*\\[#?voice=([^\\]]+)\\]", content)
+            
+            if match:
+                old_voice_tag = match.group(1)
+                old_full_line = match.group(0)
+                new_full_line = f"{line.text} [#voice={expected_full_path}]"
+                
+                if old_voice_tag != expected_full_path:
+                    content = content.replace(old_full_line, new_full_line)
+                    updated = True
+                    print(f"  Updated {dialogue_file.stem}: {line.text[:40]}... → {expected_path}")
+        
+        if updated:
+            dialogue_file.write_text(content, encoding="utf-8")
+            print(f"  Committed updates to {dialogue_file.name}")
+
+
 def find_dialogue_files(project_root: Path) -> list[Path]:
     """Find all .dialogue files in the project."""
     dialogue_dir = project_root / "dialogue"
@@ -301,6 +347,16 @@ def main():
         
         except Exception as e:
             print(f"  [ERROR] {e}")
+    
+    # Auto-update dialogue files with correct generated paths for durability
+    print("\nUpdating dialogue files with correct voice paths...")
+    generated_mapping = {}
+    for i, line in enumerate(all_lines, 1):
+        expected_path = f"vox_{line.character.lower()}_{line.file}_{i:02d}.wav"
+        expected_full_path = f"res://audio_generation/output/voice/{line.character.lower()}/{expected_path}"
+        generated_mapping[(line.file, line.character, line.text)] = expected_full_path
+    
+    update_dialogue_files_with_generated_paths(project_root, all_lines, output_dir, generated_mapping)
     
     print(f"\nGenerated {success_count}/{len(all_lines)} voice clips successfully.")
 

@@ -13,13 +13,13 @@
 ~ intro
 The cat creeps in, chasing a single drifting strand of silk. It leads to the dark heart of the hedge. Something enormous shifts there. Only one long leg emerges into the light.
 Weaver: ...So. The little ember comes. Closer. No — not too close. I am easier to bear in pieces. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_05.wav]
-Cat: You're the one the others whisper about. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_01.wav]
+Cat: You're the one the others whisper about. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_06.wav]
 Weaver: I am the one the others whisper TO. There is a difference, though I'll not waste dusk explaining it. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_06.wav]
 Weaver: You watch that window. Every evening. From exactly this far. [#highlight_window] [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_07.wav]
 The cat says nothing.
 Weaver: We watch it too. The girl there is kind to small frightened things — kinder than the world taught her to be. We have made her something. A thing of thread and patience. We hid it deep, where it would be safe. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_08.wav]
 Weaver: Bring it back to her. You needn't know yet what it is. You need only know you're the right one to carry it. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_09.wav]
-Cat: Why me? [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_02.wav]
+Cat: Why me? [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_11.wav]
 Weaver: ...You'll answer that yourself, by the end. Now. You've forgotten how to leave the ground. Someone here will remind you. [#voice=res://audio_generation/output/voice/weaver/vox_weaver_room_01_10.wav]
 => END
 
@@ -28,9 +28,9 @@ Weaver: ...You'll answer that yourself, by the end. Now. You've forgotten how to
 ~ cat
 A kitten is bouncing off a mushroom for no reason at all, delighted every single time.
 Pip: Hi hi hi! Did you SEE that?! I did it again! Watch — (boing) — AGAIN! [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_11.wav]
-Cat: I don't jump. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_03.wav]
+Cat: I don't jump. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_14.wav]
 Pip: What? Everybody jumps. You're BUILT for it. Look at your legs! Those are jumping legs! [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_12.wav]
-Cat: It's a long way down. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_04.wav]
+Cat: It's a long way down. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_16.wav]
 Pip: Sure, but the good stuff's UP. You're not scared of falling. You're scared of being ALLOWED. It's okay. You're allowed. [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_13.wav]
 Pip: Watch me, then copy me. The first one's the only hard one. [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_14.wav]
 => END
