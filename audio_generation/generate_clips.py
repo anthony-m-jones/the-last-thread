@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import mimetypes
 import os
 import shutil
 import time
+import wave
 import sys
 from datetime import datetime, UTC
 from pathlib import Path
@@ -152,6 +154,13 @@ def infer_constraints(job: ClipJob) -> str:
     elif is_sfx:
         lines.append("- Target duration: approximately 0.3 to 2.0 seconds.")
         lines.append("- Keep transient readable but soft-edged.")
+        lines.append("- This must read as a single one-shot game SFX, not music or ambience.")
+
+    if is_sfx:
+        lines.append("- Start immediately with the event; no intro pad or lead-in.")
+        lines.append("- Use one clear attack and short decay; avoid long evolving tails.")
+        lines.append("- Forbidden: melody, chord progression, beat loop, drone, ambience bed, cinematic riser.")
+        lines.append("- Return a concise foley-style cue that sits under gameplay.")
 
     if is_loop:
         lines.append("- Must be loop-friendly: ending should connect naturally back to the beginning.")
@@ -168,6 +177,45 @@ def build_prompt(job: ClipJob) -> str:
         f"Asset title: {job.title}",
         job.prompt.strip(),
     ])
+
+
+def estimate_audio_duration_seconds(audio_data: bytes, mime_type: str | None) -> float | None:
+    if not audio_data:
+        return None
+
+    mime_lower = (mime_type or "").lower()
+    likely_wav = "wav" in mime_lower or mime_lower in {"", "audio/x-wav", "audio/wav", "audio/wave"}
+    if not likely_wav:
+        return None
+
+    try:
+        with wave.open(io.BytesIO(audio_data), "rb") as wav_reader:
+            frame_rate = wav_reader.getframerate()
+            if frame_rate <= 0:
+                return None
+            return wav_reader.getnframes() / float(frame_rate)
+    except wave.Error:
+        return None
+
+
+def expected_sfx_max_duration_seconds(job: ClipJob) -> float | None:
+    if not job.category.startswith("sfx/"):
+        return None
+
+    # Keep one-shots short and gameplay-readable.
+    if job.duration_seconds > 0:
+        return max(0.20, job.duration_seconds + 0.15)
+
+    return 1.00
+
+
+def add_retry_directive_for_sfx(prompt_text: str, max_duration_seconds: float) -> str:
+    retry_directive = (
+        "RETRY DIRECTIVE FOR THIS TAKE: The previous output was too long. "
+        f"Generate exactly one short one-shot sound effect under {max_duration_seconds:.2f} seconds. "
+        "No melody, no beat, no ambience bed, and no cinematic tail."
+    )
+    return "\n\n".join([prompt_text, retry_directive])
 
 
 def filter_jobs(jobs: Iterable[ClipJob], filters: list[str]) -> list[ClipJob]:
@@ -286,15 +334,32 @@ def generate_clip_with_retries(
     client: genai.Client,
     model: str,
     prompt_text: str,
+    job: ClipJob,
     max_retries: int,
     retry_delay: float,
 ) -> tuple[bytes, str | None]:
     attempts = max(1, max_retries + 1)
     last_mime_type: str | None = None
+    attempt_prompt = prompt_text
+    max_sfx_duration = expected_sfx_max_duration_seconds(job)
 
     for attempt in range(1, attempts + 1):
-        audio_data, mime_type = generate_clip(client, model, prompt_text)
+        audio_data, mime_type = generate_clip(client, model, attempt_prompt)
         if audio_data:
+            clip_duration = estimate_audio_duration_seconds(audio_data, mime_type)
+            if max_sfx_duration is not None and clip_duration is not None and clip_duration > max_sfx_duration:
+                last_mime_type = mime_type
+                print(
+                    (
+                        "Generated clip is too long for SFX "
+                        f"({clip_duration:.2f}s > {max_sfx_duration:.2f}s, attempt {attempt}/{attempts})."
+                    )
+                )
+                if attempt < attempts:
+                    attempt_prompt = add_retry_directive_for_sfx(prompt_text, max_sfx_duration)
+                    time.sleep(max(0.0, retry_delay))
+                    continue
+                return b"", mime_type
             return audio_data, mime_type
 
         last_mime_type = mime_type
@@ -405,6 +470,7 @@ def main(argv: Iterable[str] | None = None) -> None:
                     client=client,
                     model=args.model,
                     prompt_text=prompt_text,
+                    job=job,
                     max_retries=args.max_retries,
                     retry_delay=args.retry_delay,
                 )

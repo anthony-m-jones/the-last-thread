@@ -1,0 +1,10 @@
+{
+  "job_id": "room2_lightning_silhouette_hit",
+  "title": "Room 2 - Lightning Silhouette Hit",
+  "category": "ambience",
+  "output_stem": "amb_room02_lightning_silhouette_hit",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\ambience\\amb_room02_lightning_silhouette_hit_01.mp3"
+}

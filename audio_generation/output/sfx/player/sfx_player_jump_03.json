@@ -1,0 +1,10 @@
+{
+  "job_id": "player_jump",
+  "title": "Player Jump",
+  "category": "sfx/player",
+  "output_stem": "sfx_player_jump",
+  "variant_index": 3,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\sfx\\player\\sfx_player_jump_03.mp3"
+}

@@ -1,4 +1,3 @@
-output/*
 !output/_archive/
 !output/_archive/**
 !output/voice/

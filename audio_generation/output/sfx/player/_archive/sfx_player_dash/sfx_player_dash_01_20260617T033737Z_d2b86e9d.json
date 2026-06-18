@@ -1,0 +1,10 @@
+{
+  "job_id": "player_dash",
+  "title": "Player Dash",
+  "category": "sfx/player",
+  "output_stem": "sfx_player_dash",
+  "variant_index": 1,
+  "model": "lyria-3-clip-preview",
+  "mime_type": "audio/mpeg",
+  "output_path": "C:\\Users\\Doug\\source\\repos\\the-last-thread\\audio_generation\\output\\sfx\\player\\sfx_player_dash_01.mp3"
+}

@@ -1,0 +1,21 @@
+Job: ending_theme_cue
+Title: Ending Theme Cue
+Category: music
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed music.
+- Keep arrangement sparse enough for gameplay layering.
+- This is a one-shot, not a loop.
+
+Asset title: Ending Theme Cue
+
+Compose a very gentle ending cue that blooms over the final scene without overpowering the off-screen voice and the purring. It should feel like the whole story has exhaled. Use soft warmth, minimal motion, and a sense of earned closure. The cue should support stillness and the feeling of being safely home.

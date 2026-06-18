@@ -13,10 +13,6 @@ Follow these hard constraints:
 
 Clip-specific constraints:
 - Target duration: exactly 0.3 seconds.
-- Start immediately with the event; no intro pad or lead-in.
-- Use one clear attack and short decay; avoid long evolving tails.
-- Forbidden: melody, chord progression, beat loop, drone, ambience bed, cinematic riser.
-- Return a concise foley-style cue that sits under gameplay.
 - This is a one-shot, not a loop.
 
 Asset title: Player Jump

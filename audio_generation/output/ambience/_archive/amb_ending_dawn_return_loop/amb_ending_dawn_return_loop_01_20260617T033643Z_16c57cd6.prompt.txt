@@ -1,0 +1,21 @@
+Job: ending_dawn_return_loop
+Title: Ending - Dawn Return Loop
+Category: ambience
+Model: lyria-3-clip-preview
+
+Prompt:
+You are generating exactly one production-ready game audio clip for The Last Thread.
+Follow these hard constraints:
+- Keep the tone intimate, hand-made, and story-first.
+- Avoid trailer style, comedy tone, and overly synthetic timbres.
+- Avoid clipping, harsh transients, and heavy mastering.
+- Output one clean asset only, no alternatives in one response.
+
+Clip-specific constraints:
+- Target duration: approximately 10 to 20 seconds for loop-seed ambience.
+- Keep texture stable and non-distracting under dialogue.
+- Must be loop-friendly: ending should connect naturally back to the beginning.
+
+Asset title: Ending - Dawn Return Loop
+
+Create a gentle dawn ambient loop for a garden return scene. It should feel like the world has opened back up after a long emotional journey. Keep it soft, tender, and calm, with only a slight sense of morning air and stillness. No grandeur, no suspense, just resolved warmth and room to breathe.
