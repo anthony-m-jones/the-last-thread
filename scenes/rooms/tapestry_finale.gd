@@ -3,14 +3,13 @@
 # -----------------------------------------------------------------------------
 # WHAT THIS FILE IS
 #   The little cinematic that plays AFTER the Room 3 trivia is solved and the
-#   Weaver's "complete" dialogue finishes. Instead of just handing control back,
-#   we:
+#   Weaver's "complete" dialogue finishes. It ENDS the game:
 #       1. keep the player held still,
 #       2. pan the camera UP to the silk tapestry,
 #       3. crossfade the revealed (unfinished) tapestry into the FINISHED one
 #          (Tobers woven in at last),
-#       4. linger a moment,
-#       5. pan back to the player and return control.
+#       4. linger on it,
+#       5. transition to the credits screen (no pan back — this is the ending).
 #
 # HOW IT FITS THE EXISTING PIECES
 #   - reveal_on_complete.gd already does the FIRST reveal (covered -> revealed)
@@ -41,12 +40,15 @@ extends Node
 @export var pan_up_time: float = 1.6          # how long the pan up takes
 @export var hold_before_transform: float = 0.6  # beat before the tapestry changes
 @export var transform_time: float = 2.0       # the revealed -> finished crossfade
-@export var hold_after_transform: float = 1.8  # let the finished image land
-@export var pan_back_time: float = 1.4        # pan back down to the player
+@export var hold_after_transform: float = 2.5  # linger on the finished tapestry
 
 @export_group("Framing")
 # Nudge the framed view (e.g. Vector2(0, -40) to sit a little higher on the art).
 @export var camera_offset: Vector2 = Vector2.ZERO
+
+@export_group("Ending")
+# The scene to load once the finished tapestry has lingered (the credits).
+@export_file("*.tscn") var end_scene_path: String = "res://scenes/ui/credits.tscn"
 
 
 var _armed: bool = false    # true once the puzzle is solved (ignore earlier dialogue)
@@ -88,11 +90,9 @@ func _run_finale() -> void:
 	GameState.begin_cutscene_hold()
 
 	var cam: Camera2D = get_viewport().get_camera_2d()
-	var cam_home: Vector2 = Vector2.ZERO  # the camera's resting local position
 
-	# --- Step 1: pan UP to the tapestry ---
+	# --- Step 1: pan UP to the tapestry (and stay there — this is the ending) ---
 	if cam != null:
-		cam_home = cam.position
 		var target: Node2D = _node2d(camera_target_path)
 		if target != null:
 			# Shift the camera by the world-space delta needed to centre on the
@@ -115,17 +115,16 @@ func _run_finale() -> void:
 		fade.tween_property(rev, "modulate:a", 0.0, transform_time)
 	await fade.finished
 
+	# --- Step 3: linger on the finished tapestry, then roll credits ---
 	if hold_after_transform > 0.0:
 		await get_tree().create_timer(hold_after_transform).timeout
 
-	# --- Step 3: pan back down to the player ---
-	if cam != null:
-		var back: Tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-		back.tween_property(cam, "position", cam_home, pan_back_time)
-		await back.finished
-
-	# Hand control back to the player so they can reach the exit door.
+	# Release the lock for tidiness (so GameState is clean if you ever wire a
+	# "play again"), then leave Room 3 for the credits. The player never regains
+	# control here — the game is over.
 	GameState.end_cutscene_hold()
+	if not end_scene_path.is_empty():
+		get_tree().change_scene_to_file.call_deferred(end_scene_path)
 
 
 # --- small helpers (same patterns as reveal_on_complete.gd) ---
