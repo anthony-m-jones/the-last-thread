@@ -51,9 +51,18 @@ signal trivia_completed
 var _questions: Array = []          # the list parsed from JSON
 var _current_index: int = 0         # which question we're on (0-based)
 var _is_finished: bool = false      # guards against double-completion
+var _holding_lock: bool = false     # true while we hold the player's control lock
 
 
 func _ready() -> void:
+	# Freeze the player while the quiz is up. The trivia is a separate UI scene
+	# (not a dialogue), so it doesn't trip the dialogue lock on its own — without
+	# this, Tobers can still run/jump/dash behind the quiz. We reuse GameState's
+	# cutscene-hold counter, which player.gd already checks via _is_controllable().
+	# Released in _finish() (and the complete-dialogue lock takes over right after).
+	GameState.begin_cutscene_hold()
+	_holding_lock = true
+
 	_load_questions()
 	if _questions.is_empty():
 		# Nothing to ask — fail safe by completing immediately so we never trap
@@ -192,14 +201,27 @@ func _finish() -> void:
 	# 1) Tell anyone listening via the signal.
 	trivia_completed.emit()
 
-	# 2) If we're inside a Room, mark its puzzle complete automatically.
+	# 2) If we're inside a Room, mark its puzzle complete automatically. This also
+	# kicks off the Weaver's "complete" dialogue, which raises its OWN control
+	# lock — so releasing ours just below leaves no gap where the player is free.
 	var room: Room = _find_room()
 	if room != null:
 		room.mark_puzzle_complete()
 
+	# Hand control back: release the lock we took in _ready().
+	_release_lock()
+
 	# Hide the trivia UI so the player is back in the room. (We hide rather than
 	# free so the signal connection above isn't torn down mid-call.)
 	hide()
+
+
+# Releases the player-control lock we took in _ready(), exactly once.
+func _release_lock() -> void:
+	if not _holding_lock:
+		return
+	_holding_lock = false
+	GameState.end_cutscene_hold()
 
 
 # Walk up the parent chain to find the Room this trivia belongs to (same helper
