@@ -60,7 +60,7 @@ var has_dash: bool = false          # Unlocked by the cat in Room 3.
 # The three rooms gate progress on abilities, so leaving it true would let the
 # cat start with every move and break the metroidvania progression. Flip it to
 # true any time you just want to playtest movement in isolation, then back.
-@export var debug_unlock_everything: bool = true
+@export var debug_unlock_everything: bool = false
 
 
 # `_ready()` is a built-in Godot callback (the leading underscore marks engine

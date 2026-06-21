@@ -47,10 +47,13 @@ func _ready() -> void:
 	
 	# Set default bus volumes
 	var music_bus_index: int = AudioServer.get_bus_index("Music")
-	AudioServer.set_bus_volume_db(music_bus_index, -24.0)
-	
+	AudioServer.set_bus_volume_db(music_bus_index, -10.0)
+
 	var ambience_bus_index: int = AudioServer.get_bus_index("Ambience")
 	AudioServer.set_bus_volume_db(ambience_bus_index, -24.0)
+
+	var sfx_bus_index: int = AudioServer.get_bus_index("SFX")
+	AudioServer.set_bus_volume_db(sfx_bus_index, -20.0)
 
 	reload_cues()
 

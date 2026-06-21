@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://nuy8fg566538" path="res://assets/room_03/Foreground/Foreground_Branch.PNG" id="fg_branch"]
 [ext_resource type="Texture2D" uid="uid://d2p3o362fukp" path="res://assets/room_03/Foreground/Foreground_BrightSack.PNG" id="fg_brightsack"]
 [ext_resource type="Texture2D" uid="uid://db7ckjjjxqf2h" path="res://assets/room_03/Foreground/Foreground_TreeStump.PNG" id="fg_treestump"]
+[ext_resource type="Script" uid="uid://bhflyl5hr6q2p" path="res://scenes/rooms/tapestry_finale.gd" id="finale_script"]
 [ext_resource type="PackedScene" uid="uid://bg1rsdg8g4xpm" path="res://scenes/interactables/interactable.tscn" id="interactable"]
 [ext_resource type="PackedScene" uid="uid://cxn2qnukdhggq" path="res://scenes/characters/marigold.tscn" id="marigold"]
 [ext_resource type="Texture2D" uid="uid://dogwwyakq4d6s" path="res://assets/room_03/Midground/Room3_Midground_Beads.PNG" id="mid_beads"]
@@ -26,10 +27,9 @@
 [ext_resource type="Script" uid="uid://bwxrvl64d785g" path="res://scenes/rooms/reveal_on_complete.gd" id="reveal_script"]
 [ext_resource type="Script" uid="uid://dxliboi2f7rip" path="res://scenes/rooms/room.gd" id="room_script"]
 [ext_resource type="PackedScene" uid="uid://c82le7s75oyac" path="res://scenes/characters/smallspider.tscn" id="spider"]
+[ext_resource type="Texture2D" uid="uid://d2salkkw65u3i" path="res://assets/room_03/Tapestry/Room3_Complete_Tapestry.PNG" id="tap_complete"]
 [ext_resource type="Texture2D" uid="uid://5duoh04ue2x7" path="res://assets/room_03/Tapestry/Room3_Hidden_Tapestry.PNG" id="tap_hidden"]
 [ext_resource type="Texture2D" uid="uid://chrjvgbtxwtiw" path="res://assets/room_03/Tapestry/Room3_Revealed_Tapestry.PNG" id="tap_revealed"]
-[ext_resource type="Texture2D" uid="uid://d2salkkw65u3i" path="res://assets/room_03/Tapestry/Room3_Complete_Tapestry.PNG" id="tap_complete"]
-[ext_resource type="Script" path="res://scenes/rooms/tapestry_finale.gd" id="finale_script"]
 [ext_resource type="PackedScene" path="res://scenes/ui/trivia.tscn" id="trivia"]
 [ext_resource type="PackedScene" uid="uid://c2i4l5848v56e" path="res://scenes/characters/weaver.tscn" id="weaver"]
 
@@ -129,10 +129,7 @@ position = Vector2(1690, 360)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("tap_revealed")
 
-; The FINISHED tapestry — kept invisible (alpha 0, set by TapestryFinale) until
-; the post-dialogue cinematic crossfades the revealed one into this. Keep its
-; transform identical to the other two tapestry sprites if you re-tune their spot.
-[node name="TapestryComplete" type="Sprite2D" parent="." groups=["cutscene_focus"]]
+[node name="TapestryComplete" type="Sprite2D" parent="." unique_id=2038949418 groups=["cutscene_focus"]]
 position = Vector2(1690, 360)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("tap_complete")
@@ -400,9 +397,7 @@ script = ExtResource("reveal_script")
 covered_path = NodePath("../TapestryCovered")
 revealed_path = NodePath("../TapestryRevealed")
 
-; After the "complete" dialogue ends: pan the camera up to the tapestry, crossfade
-; the revealed version into the finished one, then pan back and return control.
-[node name="TapestryFinale" type="Node" parent="."]
+[node name="TapestryFinale" type="Node" parent="." unique_id=1786264525]
 script = ExtResource("finale_script")
 revealed_path = NodePath("../TapestryRevealed")
 complete_path = NodePath("../TapestryComplete")
