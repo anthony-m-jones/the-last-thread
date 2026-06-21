@@ -9,11 +9,11 @@
 			"correction": "No, ember. She is gentler than that. Think of the kindest thing a person could do. Try again."
 		},
 		{
-			"question": "What does she hum when she thinks no one is listening?",
-			"answers": ["A perfect, practiced melody.", "No real tune — just whatever's in her head.", "Nothing; she is always silent."],
+			"question": "What is the very first thing she does every morning?",
+			"answers": ["Goes for a run before sunrise.", "Makes a cup of coffee.", "Pours herself a tall glass of water.", "Writes in a journal while it's still quiet."],
 			"correct_index": 1,
-			"reply": "Off-key. Constantly. It's perfect.",
-			"correction": "Not quite. She is not a performer, ember. Listen again to how she really sounds. Try again."
+			"reply": "Coffee. Before anything, before anyone. The day doesn't start until it's in her hands.",
+			"correction": "No, ember. Picture her kitchen at first light — the very first thing, the one she can't do without. Try again."
 		},
 		{
 			"question": "Why does she leave the garden window open even in the cold?",
