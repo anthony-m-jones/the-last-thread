@@ -28,6 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://c82le7s75oyac" path="res://scenes/characters/smallspider.tscn" id="spider"]
 [ext_resource type="Texture2D" uid="uid://5duoh04ue2x7" path="res://assets/room_03/Tapestry/Room3_Hidden_Tapestry.PNG" id="tap_hidden"]
 [ext_resource type="Texture2D" uid="uid://chrjvgbtxwtiw" path="res://assets/room_03/Tapestry/Room3_Revealed_Tapestry.PNG" id="tap_revealed"]
+[ext_resource type="Texture2D" uid="uid://d2salkkw65u3i" path="res://assets/room_03/Tapestry/Room3_Complete_Tapestry.PNG" id="tap_complete"]
+[ext_resource type="Script" path="res://scenes/rooms/tapestry_finale.gd" id="finale_script"]
 [ext_resource type="PackedScene" path="res://scenes/ui/trivia.tscn" id="trivia"]
 [ext_resource type="PackedScene" uid="uid://c2i4l5848v56e" path="res://scenes/characters/weaver.tscn" id="weaver"]
 
@@ -126,6 +128,14 @@ texture = ExtResource("tap_hidden")
 position = Vector2(1690, 360)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("tap_revealed")
+
+; The FINISHED tapestry — kept invisible (alpha 0, set by TapestryFinale) until
+; the post-dialogue cinematic crossfades the revealed one into this. Keep its
+; transform identical to the other two tapestry sprites if you re-tune their spot.
+[node name="TapestryComplete" type="Sprite2D" parent="." groups=["cutscene_focus"]]
+position = Vector2(1690, 360)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("tap_complete")
 
 [node name="IntroZone" parent="." unique_id=1708522196 instance=ExtResource("interactable")]
 position = Vector2(306, 665)
@@ -389,6 +399,14 @@ dialogue_file = ExtResource("dlg03")
 script = ExtResource("reveal_script")
 covered_path = NodePath("../TapestryCovered")
 revealed_path = NodePath("../TapestryRevealed")
+
+; After the "complete" dialogue ends: pan the camera up to the tapestry, crossfade
+; the revealed version into the finished one, then pan back and return control.
+[node name="TapestryFinale" type="Node" parent="."]
+script = ExtResource("finale_script")
+revealed_path = NodePath("../TapestryRevealed")
+complete_path = NodePath("../TapestryComplete")
+camera_target_path = NodePath("../TapestryComplete")
 
 [node name="CameraBounds" parent="." unique_id=996065391 instance=ExtResource("cam_bounds")]
 right_limit = 1860.0
