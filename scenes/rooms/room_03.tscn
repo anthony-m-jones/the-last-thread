@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bc7ut1m1eehpe"]
 
+[ext_resource type="Texture2D" uid="uid://b5qiwb4do652d" path="res://assets/room_01/Paint Layer 1.PNG" id="12_8sq4p"]
 [ext_resource type="Texture2D" uid="uid://ucvbvxtbdo2y" path="res://assets/room_03/Background/Room3_Background.png" id="bg"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/camera_bounds.tscn" id="cam_bounds"]
 [ext_resource type="Resource" uid="uid://vddhoklpytgc" path="res://dialogue/room_03.dialogue" id="dlg03"]
@@ -126,6 +127,114 @@ position = Vector2(1690, 360)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("tap_revealed")
 
+[node name="IntroZone" parent="." unique_id=1708522196 instance=ExtResource("interactable")]
+position = Vector2(306, 665)
+dialogue_file = ExtResource("dlg03")
+dialogue_title = "intro"
+requires_button_press = false
+
+[node name="Room3MidgroundTreeWall4" type="Sprite2D" parent="IntroZone" unique_id=400563853]
+position = Vector2(-30, -36)
+scale = Vector2(1.535, 1.535)
+texture = ExtResource("12_8sq4p")
+
+[node name="Room3MidgroundTreeWall" type="Sprite2D" parent="IntroZone" unique_id=1158482297]
+position = Vector2(3, -29)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall5" type="Sprite2D" parent="IntroZone" unique_id=249684327]
+position = Vector2(16, -29)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall6" type="Sprite2D" parent="IntroZone" unique_id=470375001]
+position = Vector2(38, -29)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall3" type="Sprite2D" parent="IntroZone" unique_id=1165093727]
+position = Vector2(-9.999998, -113)
+rotation = -0.51487213
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("fg_branch")
+
+[node name="Room3MidgroundTreeWall2" type="Sprite2D" parent="IntroZone" unique_id=1708517259]
+position = Vector2(-82, -29)
+scale = Vector2(-0.25, -0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall7" type="Sprite2D" parent="IntroZone" unique_id=720221773]
+position = Vector2(-100, -29)
+scale = Vector2(-0.25, -0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall8" type="Sprite2D" parent="IntroZone" unique_id=1407447522]
+position = Vector2(-113, -29)
+scale = Vector2(-0.25, -0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall9" type="Sprite2D" parent="IntroZone" unique_id=1529297439]
+position = Vector2(-123, -29)
+scale = Vector2(-0.25, -0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="TriviaTrigger" parent="." unique_id=1101410849 instance=ExtResource("interactable")]
+position = Vector2(1701, 457)
+dialogue_file = ExtResource("dlg03")
+dialogue_title = "before_trivia"
+scene_to_open = ExtResource("trivia")
+
+[node name="Room3MidgroundTreeWall10" type="Sprite2D" parent="TriviaTrigger" unique_id=207801219]
+position = Vector2(-241.75012, 10.156628)
+scale = Vector2(1.535, 1.535)
+texture = ExtResource("12_8sq4p")
+
+[node name="Room3MidgroundTreeWall11" type="Sprite2D" parent="TriviaTrigger" unique_id=664904698]
+position = Vector2(-208.75, 17.156616)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall12" type="Sprite2D" parent="TriviaTrigger" unique_id=1624613179]
+position = Vector2(-195.75, 17.156616)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall13" type="Sprite2D" parent="TriviaTrigger" unique_id=983260283]
+position = Vector2(-173.75, 17.156616)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall14" type="Sprite2D" parent="TriviaTrigger" unique_id=284665137]
+position = Vector2(-221.75, -66.84338)
+rotation = -0.51487213
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("fg_branch")
+
+[node name="Room3MidgroundTreeWall15" type="Sprite2D" parent="TriviaTrigger" unique_id=1351044887]
+position = Vector2(-293.75, 17.156616)
+rotation = 3.1415927
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall16" type="Sprite2D" parent="TriviaTrigger" unique_id=234952160]
+position = Vector2(-311.75, 17.156616)
+rotation = 3.1415927
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall17" type="Sprite2D" parent="TriviaTrigger" unique_id=1773833527]
+position = Vector2(-324.75, 17.156616)
+rotation = 3.1415927
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
+[node name="Room3MidgroundTreeWall18" type="Sprite2D" parent="TriviaTrigger" unique_id=1820215929]
+position = Vector2(-334.75, 17.156616)
+rotation = 3.1415927
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("mid_treewall")
+
 [node name="LG1" type="StaticBody2D" parent="." unique_id=781590989]
 position = Vector2(172, 627)
 
@@ -236,12 +345,6 @@ offset_bottom = 40.0
 mouse_filter = 2
 color = Color(0.5, 0.1, 0.1, 0.25)
 
-[node name="IntroZone" parent="." unique_id=1708522196 instance=ExtResource("interactable")]
-position = Vector2(306, 665)
-dialogue_file = ExtResource("dlg03")
-dialogue_title = "intro"
-requires_button_press = false
-
 [node name="DashCat" parent="." unique_id=62729796 instance=ExtResource("interactable")]
 position = Vector2(505, 606)
 dialogue_file = ExtResource("dlg03")
@@ -250,12 +353,6 @@ ability_to_unlock = 3
 
 [node name="Marigold" parent="DashCat" unique_id=1018188363 instance=ExtResource("marigold")]
 position = Vector2(-23, -12)
-
-[node name="TriviaTrigger" parent="." unique_id=1101410849 instance=ExtResource("interactable")]
-position = Vector2(1701, 457)
-dialogue_file = ExtResource("dlg03")
-dialogue_title = "before_trivia"
-scene_to_open = ExtResource("trivia")
 
 [node name="SmallSpider1" parent="." unique_id=176618141 instance=ExtResource("spider")]
 position = Vector2(1583, 470)
@@ -269,10 +366,10 @@ position = Vector2(1804, 472)
 static_facing = 1
 
 [node name="WeaverIntro" parent="." unique_id=1709822845 instance=ExtResource("weaver")]
-position = Vector2(300, 540)
+position = Vector2(264, 629)
 
 [node name="WeaverTapestry" parent="." unique_id=878652754 instance=ExtResource("weaver")]
-position = Vector2(1608, 298)
+position = Vector2(1445, 468)
 weaver_titles = PackedStringArray("before_trivia", "complete")
 
 [node name="Door" parent="." unique_id=1344388953 instance=ExtResource("door")]

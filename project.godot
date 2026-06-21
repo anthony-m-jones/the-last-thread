@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Last Thread"
-run/main_scene="uid://djn6nyhssvt8k"
+run/main_scene="uid://bc7ut1m1eehpe"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -337,7 +337,6 @@ ability_to_unlock = 2
 
 [node name="Patch" parent="WallJumpCat" unique_id=1988395764 instance=ExtResource("patch")]
 position = Vector2(0, 4)
-face_player = false
 
 [node name="GoalZone" type="Area2D" parent="." unique_id=560963474]
 position = Vector2(928, -66)
@@ -356,7 +355,7 @@ mouse_filter = 2
 color = Color(0.3, 0.55, 0.55, 0.4)
 
 [node name="Door" parent="." unique_id=394886413 instance=ExtResource("door")]
-position = Vector2(615, -46)
+position = Vector2(752, -46)
 next_room_path = "res://scenes/rooms/room_03.tscn"
 require_press = true
 prompt_text = "Press E to climb through"
