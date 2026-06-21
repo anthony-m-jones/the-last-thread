@@ -38,7 +38,7 @@ size = Vector2(1200, 60)
 size = Vector2(40, 1876)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqpni"]
-size = Vector2(137, 1902)
+size = Vector2(137, 2018)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djg8w"]
 size = Vector2(235, 23)
@@ -275,16 +275,16 @@ texture = ExtResource("wall_ivy")
 [node name="WallRight1" type="StaticBody2D" parent="." unique_id=1871349027]
 position = Vector2(1267, 793)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight1" unique_id=1230875300]
-position = Vector2(-48.5, -438)
-shape = SubResource("RectangleShape2D_xqpni")
-
 [node name="Art" type="Sprite2D" parent="WallRight1" unique_id=730232087]
 texture = ExtResource("wall_glass")
 
 [node name="Art2" type="Sprite2D" parent="WallRight1" unique_id=332840166]
 position = Vector2(0, -1211)
 texture = ExtResource("wall_glass")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight1" unique_id=1230875300]
+position = Vector2(-48.5, -380)
+shape = SubResource("RectangleShape2D_xqpni")
 
 [node name="WallLeft2" type="StaticBody2D" parent="." unique_id=1975097513]
 position = Vector2(360, 700)

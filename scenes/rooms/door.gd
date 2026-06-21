@@ -190,13 +190,11 @@ func _go_to_next_room() -> void:
 	# the whole reason ability flags live in GameState and not on the player.
 	if next_room_path.is_empty():
 		# No destination set: just reload this same room (useful while testing).
-		get_tree().reload_current_scene()
+		SceneTransition.reload_current_scene()
 	else:
-		# change_scene_to_file() throws away the current scene and loads the given
-		# one. Simple and perfect for a prototype.
-		# LATER: we can swap this for a fade-to-black transition without changing
-		# anything else about how doors work.
-		get_tree().change_scene_to_file(next_room_path)
+		# SceneTransition fades to black, swaps the scene, then fades back in.
+		# (Abilities still carry over because GameState lives outside the scene.)
+		SceneTransition.change_scene_to_file(next_room_path)
 
 
 # -----------------------------------------------------------------------------

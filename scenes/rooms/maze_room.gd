@@ -81,8 +81,9 @@ func _assign_random_correct_exit() -> void:
 				exit_node.set_correct(i == correct_index)
 
 
-# Called by a MazeExit to travel to the next maze room. change_scene_to_file must
-# be DEFERRED (an exit triggers this from inside a physics callback; Godot forbids
-# freeing collision nodes mid-physics).
+# Called by a MazeExit to travel to the next maze room. SceneTransition fades to
+# black, then swaps the scene — and because the swap happens AFTER its fade-out
+# await (on idle time), it's safe to call from an exit's physics callback (no
+# nodes are freed mid-physics, so no call_deferred is needed).
 func go_to_room(scene_path: String) -> void:
-	get_tree().change_scene_to_file.call_deferred(scene_path)
+	SceneTransition.change_scene_to_file(scene_path)

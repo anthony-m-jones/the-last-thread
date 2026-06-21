@@ -21,6 +21,7 @@ GameState="*res://autoloads/game_state.gd"
 MazeState="*res://autoloads/maze_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 AudioManager="*res://autoloads/audio_manager.gd"
+SceneTransition="*res://autoloads/scene_transition.gd"
 
 [display]
 

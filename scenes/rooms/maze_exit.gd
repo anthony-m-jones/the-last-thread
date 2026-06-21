@@ -164,14 +164,14 @@ func _take() -> void:
 	if room != null and not target.is_empty():
 		room.go_to_room(target)
 	elif not target.is_empty():
-		get_tree().change_scene_to_file.call_deferred(target)
+		SceneTransition.change_scene_to_file(target)
 
 
 # Maze finished — clear maze state and head to the greenhouse.
 func _leave_maze() -> void:
 	var target: String = MazeState.maze_exit_scene
 	MazeState.leave_maze()
-	get_tree().change_scene_to_file.call_deferred(target)
+	SceneTransition.change_scene_to_file(target)
 
 
 # Walk up to find the MazeRoom root (so we can use its go_to_room helper).

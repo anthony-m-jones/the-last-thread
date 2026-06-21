@@ -124,7 +124,7 @@ func _run_finale() -> void:
 	# control here — the game is over.
 	GameState.end_cutscene_hold()
 	if not end_scene_path.is_empty():
-		get_tree().change_scene_to_file.call_deferred(end_scene_path)
+		SceneTransition.change_scene_to_file(end_scene_path)
 
 
 # --- small helpers (same patterns as reveal_on_complete.gd) ---
