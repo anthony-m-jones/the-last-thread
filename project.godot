@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Last Thread"
-run/main_scene="uid://djn6nyhssvt8k"
+run/main_scene="res://scenes/ui/title_screen.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,7 @@ MazeState="*res://autoloads/maze_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 AudioManager="*res://autoloads/audio_manager.gd"
 SceneTransition="*res://autoloads/scene_transition.gd"
+ControlsHud="*res://scenes/ui/controls_hud.tscn"
 
 [display]
 

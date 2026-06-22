@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://dmfliw0hhmdee"]
+
+[ext_resource type="Script" path="res://scenes/ui/controls_hud.gd" id="script"]
+[ext_resource type="FontFile" uid="uid://bctsv71of1b1q" path="res://assets/fonts/Outfit.ttf" id="outfit"]
+[ext_resource type="FontFile" uid="uid://dd0ikqctqgq34" path="res://assets/fonts/CormorantGaramond-SemiBold.ttf" id="cormorant_sb"]
+
+[sub_resource type="FontVariation" id="outfit_600"]
+base_font = ExtResource("outfit")
+variation_opentype = {
+"wght": 600
+}
+
+[sub_resource type="StyleBoxFlat" id="panel_box"]
+content_margin_left = 22.0
+content_margin_top = 16.0
+content_margin_right = 24.0
+content_margin_bottom = 16.0
+bg_color = Color(0.1, 0.05, 0.08, 0.5)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.953, 0.788, 0.545, 0.22)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="key_box"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16, 0.09, 0.13, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.953, 0.788, 0.545, 0.55)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[node name="ControlsHud" type="CanvasLayer"]
+layer = 10
+script = ExtResource("script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = -40.0
+offset_right = 42.0
+offset_bottom = -40.0
+grow_horizontal = 1
+grow_vertical = 0
+theme_override_styles/panel = SubResource("panel_box")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.953, 0.788, 0.545, 0.78)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 11
+text = "C O N T R O L S"
+
+[node name="MoveRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Keys" type="HBoxContainer" parent="Panel/VBox/MoveRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="AKey" type="PanelContainer" parent="Panel/VBox/MoveRow/Keys"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/MoveRow/Keys/AKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 15
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DKey" type="PanelContainer" parent="Panel/VBox/MoveRow/Keys"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/MoveRow/Keys/DKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 15
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoveLabel" type="Label" parent="Panel/VBox/MoveRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_sb")
+theme_override_font_sizes/font_size = 22
+text = "Move"
+
+[node name="TalkRow" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EKey" type="PanelContainer" parent="Panel/VBox/TalkRow"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/TalkRow/EKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 15
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TalkLabel" type="Label" parent="Panel/VBox/TalkRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_sb")
+theme_override_font_sizes/font_size = 22
+text = "Talk"
+
+[node name="JumpRow" type="HBoxContainer" parent="Panel/VBox"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SpaceKey" type="PanelContainer" parent="Panel/VBox/JumpRow"]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/JumpRow/SpaceKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 13
+text = "Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JumpLabel" type="Label" parent="Panel/VBox/JumpRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_sb")
+theme_override_font_sizes/font_size = 22
+text = "Jump"
+
+[node name="WallJumpRow" type="HBoxContainer" parent="Panel/VBox"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SpaceKey" type="PanelContainer" parent="Panel/VBox/WallJumpRow"]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/WallJumpRow/SpaceKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 13
+text = "Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WallLabel" type="Label" parent="Panel/VBox/WallJumpRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_sb")
+theme_override_font_sizes/font_size = 22
+text = "Wall-jump (on a wall)"
+
+[node name="DashRow" type="HBoxContainer" parent="Panel/VBox"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ShiftKey" type="PanelContainer" parent="Panel/VBox/DashRow"]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Panel/VBox/DashRow/ShiftKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = SubResource("outfit_600")
+theme_override_font_sizes/font_size = 13
+text = "Shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DashLabel" type="Label" parent="Panel/VBox/DashRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_sb")
+theme_override_font_sizes/font_size = 22
+text = "Dash"

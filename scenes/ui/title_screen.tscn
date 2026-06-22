@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bafnpqrwpogou"]
+
+[ext_resource type="Script" path="res://scenes/ui/title_screen.gd" id="script"]
+[ext_resource type="Texture2D" uid="uid://b875le5w761tu" path="res://assets/ui/title-bg.png" id="bg"]
+[ext_resource type="FontFile" uid="uid://bctsv71of1b1q" path="res://assets/fonts/Outfit.ttf" id="outfit"]
+[ext_resource type="FontFile" uid="uid://d3nhps2nfp3ex" path="res://assets/fonts/CormorantGaramond-MediumItalic.ttf" id="cormorant_italic"]
+
+[sub_resource type="FontVariation" id="outfit_sb"]
+base_font = ExtResource("outfit")
+variation_opentype = {
+"wght": 600
+}
+
+[sub_resource type="StyleBoxFlat" id="key_box"]
+content_margin_left = 18.0
+content_margin_top = 12.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.13, 0.08, 0.11, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.953, 0.788, 0.545, 0.6)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vignette" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -260.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.047, 0.027, 0.063, 0.32)
+
+[node name="Prompt" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Line1" type="HBoxContainer" parent="Prompt"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Press" type="Label" parent="Prompt/Line1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_italic")
+theme_override_font_sizes/font_size = 30
+text = "Press"
+vertical_alignment = 1
+
+[node name="EnterKey" type="PanelContainer" parent="Prompt/Line1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("key_box")
+
+[node name="Label" type="Label" parent="Prompt/Line1/EnterKey"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.902, 0.741, 1)
+theme_override_fonts/font = SubResource("outfit_sb")
+theme_override_font_sizes/font_size = 16
+text = "ENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Begin" type="Label" parent="Prompt/Line1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 1)
+theme_override_fonts/font = ExtResource("cormorant_italic")
+theme_override_font_sizes/font_size = 30
+text = "to begin"
+vertical_alignment = 1
+
+[node name="Thread" type="ColorRect" parent="Prompt"]
+custom_minimum_size = Vector2(220, 2)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.953, 0.788, 0.545, 0.85)
+
+[node name="Tagline" type="Label" parent="Prompt"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 0.78)
+theme_override_fonts/font = SubResource("outfit_sb")
+theme_override_font_sizes/font_size = 13
+text = "A   T A L E   S P U N   T H R E A D   B Y   T H R E A D"
+horizontal_alignment = 1
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -46.0
+offset_right = 434.0
+offset_bottom = -22.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.984, 0.914, 0.816, 0.55)
+theme_override_fonts/font = ExtResource("outfit")
+theme_override_font_sizes/font_size = 12
+text = "THE LAST THREAD   ·   v0.1"
