@@ -27,12 +27,12 @@ Weaver: ...You'll answer that yourself, by the end. Now. You've forgotten how to
 # --- ABILITY CAT: Pip (grants JUMP) ----------------------------------------
 ~ cat
 A kitten is bouncing off a mushroom for no reason at all, delighted every single time.
-Pip: Hi hi hi! Did you SEE that?! I did it again! Watch — (boing) — AGAIN! [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_11.wav]
+Pip: Hi hi hi! Did you SEE that?! I did it again! Watch — (boing) — AGAIN! [#boing] [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_11.wav]
 Cat: I don't jump. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_14.wav]
 Pip: What? Everybody jumps. You're BUILT for it. Look at your legs! Those are jumping legs! [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_12.wav]
 Cat: It's a long way down. [#voice=res://audio_generation/output/voice/cat/vox_cat_room_01_16.wav]
 Pip: Sure, but the good stuff's UP. You're not scared of falling. You're scared of being ALLOWED. It's okay. You're allowed. [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_13.wav]
-Pip: Watch me, then copy me. The first one's the only hard one. [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_14.wav]
+Pip: Watch me, then copy me. The first one's the only hard one. [#voice=res://audio_generation/output/voice/pip/vox_pip_room_01_14.wav] [#boing]
 => END
 
 
